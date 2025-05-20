@@ -11,6 +11,12 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MMopoetryController" customModule="MissdMgpoo" customModuleProvider="target">
             <connections>
+                <outlet property="ShnigTextView" destination="gwp-FL-gPt" id="fri-v6-Liw"/>
+                <outlet property="abstractInputView" destination="yqR-ZC-UX7" id="6z5-Pc-EkN"/>
+                <outlet property="brushStrokeButton" destination="7YR-cl-BhC" id="NbE-XK-fK7"/>
+                <outlet property="coloDismins" destination="Qhu-FF-Wlo" id="feR-4F-MyM"/>
+                <outlet property="easelActivityIndicator" destination="emY-ZP-N1p" id="gVb-J8-Qfp"/>
+                <outlet property="emotionsTecfield" destination="ViV-5a-9hc" id="Hj4-Ya-Vxu"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -22,7 +28,7 @@
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="facemake" translatesAutoresizingMaskIntoConstraints="NO" id="eYY-el-ixX">
                     <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                 </imageView>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dpF-e2-BIZ">
+                <button opaque="NO" tag="125" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dpF-e2-BIZ">
                     <rect key="frame" x="51" y="638.5" width="120" height="23"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="23" id="Hk8-5M-ZDN"/>
@@ -33,8 +39,11 @@
                     <state key="normal" title="&lt;Privacy Policy&gt;">
                         <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </state>
+                    <connections>
+                        <action selector="dynamicillusions:" destination="-1" eventType="touchUpInside" id="ciK-7Z-IGM"/>
+                    </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="clk-Og-jAD">
+                <button opaque="NO" tag="124" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="clk-Og-jAD">
                     <rect key="frame" x="226" y="618" width="130" height="23"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="130" id="C2g-BC-MS9"/>
@@ -45,6 +54,9 @@
                     <state key="normal" title="&lt;Terms of Service&gt;">
                         <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </state>
+                    <connections>
+                        <action selector="dynamicillusions:" destination="-1" eventType="touchUpInside" id="pM0-Og-Tl5"/>
+                    </connections>
                 </button>
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="masklayerface" translatesAutoresizingMaskIntoConstraints="NO" id="fDW-1C-yOW">
                     <rect key="frame" x="13" y="163" width="349" height="314"/>
@@ -58,7 +70,7 @@
                         <constraint firstAttribute="height" constant="56" id="bBI-gS-vt9"/>
                     </constraints>
                 </imageView>
-                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yqR-ZC-UX7">
+                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yqR-ZC-UX7">
                     <rect key="frame" x="98" y="345.5" width="225" height="50"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="50" id="psj-h9-6y3"/>
@@ -82,6 +94,9 @@
                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                     <state key="normal" backgroundImage="notselCir"/>
                     <state key="selected" backgroundImage="purpersekl"/>
+                    <connections>
+                        <action selector="showPigmentAlert:" destination="-1" eventType="touchUpInside" id="Wz8-JE-e4a"/>
+                    </connections>
                 </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="By continuing you agree to our" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JcQ-y6-M1g">
                     <rect key="frame" x="51" y="622.5" width="175" height="14"/>
@@ -102,6 +117,9 @@
                     <state key="normal" title="Sign in now" backgroundImage="caihBack">
                         <color key="titleColor" systemColor="labelColor"/>
                     </state>
+                    <connections>
+                        <action selector="transitionToGallery:" destination="-1" eventType="touchUpInside" id="cSF-iM-Ac5"/>
+                    </connections>
                 </button>
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="grayINputBack" translatesAutoresizingMaskIntoConstraints="NO" id="n6k-CS-VjM">
                     <rect key="frame" x="31" y="256" width="313" height="56"/>
@@ -125,7 +143,7 @@
                         <constraint firstAttribute="height" constant="44" id="zN2-lE-BcA"/>
                     </constraints>
                 </imageView>
-                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter your email address" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ViV-5a-9hc">
+                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ViV-5a-9hc">
                     <rect key="frame" x="98" y="259" width="225" height="50"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="50" id="L2f-cg-xVJ"/>
@@ -141,6 +159,52 @@
                         <constraint firstAttribute="height" constant="44" id="fzw-8z-rhF"/>
                     </constraints>
                 </imageView>
+                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="emY-ZP-N1p">
+                    <rect key="frame" x="158.5" y="304.5" width="58" height="58"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="58" id="0AH-NI-o30"/>
+                        <constraint firstAttribute="height" constant="58" id="xFH-Xc-xw0"/>
+                    </constraints>
+                    <color key="color" systemColor="systemGreenColor"/>
+                </activityIndicatorView>
+                <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qhu-FF-Wlo">
+                    <rect key="frame" x="13" y="20" width="35" height="33"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="35" id="0dJ-5a-yyz"/>
+                        <constraint firstAttribute="height" constant="33" id="hmT-L4-Orh"/>
+                    </constraints>
+                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                    <state key="normal" backgroundImage="Closeui"/>
+                    <connections>
+                        <action selector="dismissNowingPage:" destination="-1" eventType="touchUpInside" id="hB0-Dq-IG4"/>
+                    </connections>
+                </button>
+                <textView hidden="YES" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="gwp-FL-gPt">
+                    <rect key="frame" x="13" y="152" width="349" height="510"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <mutableString key="text">Mipoo User Terms
+Last Updated: May 10, 2025
+
+Contact: Mipoo@gmail.com
+By using Mipoo, you agree to:
+1.Account Responsibility: You are liable for activity under your account. Impersonation or fake accounts are prohibited.
+2.Content Standards:Upload only original face graffiti designs or legally licensed materials.No content promoting self-harm, harassment, or explicit material.
+3.Community Conduct:Respect other users. Bullying, hate speech, or spam will result in account suspension.Report violations via Mipoo@gmail.com.
+4.Intellectual Property:Mipoo’s trademarks, logos, and interface designs are proprietary. Unauthorized use is prohibited.Infringing content will be removed promptly upon notice.
+5.Termination: Mipoo may suspend accounts for breaches of these terms. Repeated violations lead to permanent bans.
+6.Disclaimer: Mipoo is not responsible for third-party content or offline interactions between users.
+7.Governing Law: Disputes shall be resolved under the laws of [Your Jurisdiction], excluding conflict-of-law principles.
+8.License Grant: Mipoo grants you a non-exclusive, revocable license to use the App solely for creating, sharing, and viewing face graffiti designs and related content.
+9.User Restrictions:You may not upload content that violates intellectual property rights, promotes hate speech, or depicts illegal activities.Reverse engineering, modifying, or distributing App code without explicit permission is prohibited.
+10.Content Ownership: You retain ownership of original face graffiti designs. By uploading content, you grant Mipoo a non-exclusive license to display, store, and technically process it for App functionality.
+11.Termination:Mipoo reserves the right to terminate access immediately for violations of this EULA, including harmful behavior or unauthorized commercial use.Accounts inactive for 12+ months may be deactivated.
+12.Disclaimer: The App is provided "as is." Mipoo disclaims liability for indirect damages arising from technical errors, content misuse, or third-party actions.
+13.Updates: Mipoo may update this EULA periodically. Continued use after updates constitutes acceptance.
+</mutableString>
+                    <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                </textView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -148,6 +212,7 @@
                 <constraint firstItem="Yt4-C7-24M" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="0cw-WR-1Yr"/>
                 <constraint firstItem="fDW-1C-yOW" firstAttribute="top" secondItem="Yt4-C7-24M" secondAttribute="top" constant="-22" id="0sg-22-DRT"/>
                 <constraint firstItem="eYY-el-ixX" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="1RB-N5-Gx7"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="gwp-FL-gPt" secondAttribute="bottom" constant="5" id="1hs-27-NCH"/>
                 <constraint firstItem="A68-k7-2g2" firstAttribute="top" secondItem="ch1-2t-Xve" secondAttribute="bottom" constant="8" id="4yN-Xp-FF0"/>
                 <constraint firstItem="yOl-Qx-919" firstAttribute="centerY" secondItem="ch1-2t-Xve" secondAttribute="centerY" id="51R-GT-0x2"/>
                 <constraint firstItem="ch1-2t-Xve" firstAttribute="centerX" secondItem="n6k-CS-VjM" secondAttribute="centerX" id="5sO-6A-elj"/>
@@ -165,7 +230,9 @@
                 <constraint firstItem="yqR-ZC-UX7" firstAttribute="centerY" secondItem="yOl-Qx-919" secondAttribute="centerY" id="Kul-z1-7mv"/>
                 <constraint firstItem="clk-Og-jAD" firstAttribute="top" secondItem="OyQ-Na-px9" secondAttribute="bottom" constant="100" id="L2k-78-JDy"/>
                 <constraint firstItem="JcQ-y6-M1g" firstAttribute="centerY" secondItem="7YR-cl-BhC" secondAttribute="centerY" id="LYw-9O-axz"/>
+                <constraint firstItem="Qhu-FF-Wlo" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="MRB-6X-WMR"/>
                 <constraint firstItem="yqR-ZC-UX7" firstAttribute="leading" secondItem="yOl-Qx-919" secondAttribute="trailing" constant="8" id="NkE-pH-KoG"/>
+                <constraint firstItem="emY-ZP-N1p" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="NrP-CQ-Dwu"/>
                 <constraint firstItem="OyQ-Na-px9" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="22" id="NsA-2Z-voR"/>
                 <constraint firstItem="ch1-2t-Xve" firstAttribute="top" secondItem="n6k-CS-VjM" secondAttribute="bottom" constant="30.329999999999998" id="PjQ-ra-s8f"/>
                 <constraint firstItem="fDW-1C-yOW" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="13" id="Px4-MU-qKr"/>
@@ -176,20 +243,26 @@
                 <constraint firstItem="dpF-e2-BIZ" firstAttribute="top" secondItem="JcQ-y6-M1g" secondAttribute="bottom" constant="2" id="XRc-5U-2f3"/>
                 <constraint firstItem="Vg2-37-Xc0" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="46" id="a1i-fu-ysS"/>
                 <constraint firstItem="eYY-el-ixX" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="a3i-Qr-9EE"/>
+                <constraint firstItem="emY-ZP-N1p" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="bhO-Mz-Wdu"/>
                 <constraint firstItem="n6k-CS-VjM" firstAttribute="top" secondItem="Yt4-C7-24M" secondAttribute="bottom" constant="30" id="bib-du-u74"/>
                 <constraint firstItem="fDW-1C-yOW" firstAttribute="top" secondItem="A1v-ZG-RAx" secondAttribute="bottom" constant="31" id="dEf-Hg-eFk"/>
                 <constraint firstItem="dpF-e2-BIZ" firstAttribute="leading" secondItem="JcQ-y6-M1g" secondAttribute="leading" id="dVr-4U-wWE"/>
                 <constraint firstItem="yqR-ZC-UX7" firstAttribute="trailing" secondItem="ViV-5a-9hc" secondAttribute="trailing" id="gPT-oJ-fCR"/>
+                <constraint firstItem="Qhu-FF-Wlo" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="13" id="gZ7-6H-yhG"/>
                 <constraint firstAttribute="bottom" secondItem="eYY-el-ixX" secondAttribute="bottom" id="hMe-EH-HTw"/>
                 <constraint firstItem="clk-Og-jAD" firstAttribute="leading" secondItem="JcQ-y6-M1g" secondAttribute="trailing" id="jA9-VW-klR"/>
                 <constraint firstItem="7YR-cl-BhC" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" constant="-26" id="nSi-tf-OYY"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="gwp-FL-gPt" secondAttribute="trailing" constant="13" id="qWA-E0-eij"/>
                 <constraint firstItem="ViV-5a-9hc" firstAttribute="leading" secondItem="Vg2-37-Xc0" secondAttribute="trailing" constant="8" id="utK-kp-L4e"/>
+                <constraint firstItem="gwp-FL-gPt" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="13" id="wsG-nN-Ood"/>
+                <constraint firstItem="gwp-FL-gPt" firstAttribute="top" secondItem="A1v-ZG-RAx" secondAttribute="bottom" constant="20" id="xIm-5k-2u0"/>
                 <constraint firstItem="A1v-ZG-RAx" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="yfI-Ij-GfF"/>
             </constraints>
             <point key="canvasLocation" x="100" y="20.239880059970016"/>
         </view>
     </objects>
     <resources>
+        <image name="Closeui" width="24" height="24"/>
         <image name="MIPooemail" width="44" height="44"/>
         <image name="MIPoopasw" width="44" height="44"/>
         <image name="caihBack" width="332" height="52"/>
@@ -204,6 +277,9 @@
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

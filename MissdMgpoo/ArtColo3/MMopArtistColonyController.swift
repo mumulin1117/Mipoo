@@ -1,20 +1,20 @@
 //
-//  MMopMainController.swift
+//  MMopArtistColonyController.swift
 //  MissdMgpoo
 //
-//  Created by mumu on 2025/5/19.
+//  Created by mumu on 2025/5/20.
 //
 
 import UIKit
 
-class MMopMainController: UITabBarController {
+class MMopArtistColonyController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
-    
+
 
     /*
     // MARK: - Navigation
