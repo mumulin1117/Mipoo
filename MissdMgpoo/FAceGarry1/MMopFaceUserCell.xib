@@ -58,6 +58,11 @@
                 <constraint firstItem="U7w-bz-VJt" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="seH-eL-bjN"/>
             </constraints>
             <size key="customSize" width="380" height="44"/>
+            <connections>
+                <outlet property="beatsLabel" destination="IhU-0V-Qlr" id="vwY-ch-NR2"/>
+                <outlet property="flairView" destination="U7w-bz-VJt" id="6bL-yb-oOV"/>
+                <outlet property="followements" destination="bpZ-mj-nKy" id="GUS-My-Kre"/>
+            </connections>
             <point key="canvasLocation" x="390.83969465648852" y="18.30985915492958"/>
         </collectionViewCell>
     </objects>

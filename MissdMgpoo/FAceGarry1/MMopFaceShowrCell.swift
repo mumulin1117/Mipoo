@@ -9,9 +9,18 @@ import UIKit
 
 class MMopFaceShowrCell: UICollectionViewCell {
 
+    @IBOutlet weak var beatsLabel: UILabel!
+    
+    @IBOutlet weak var statements: UIImageView!
+    
+    
+    @IBOutlet weak var shongStage: UIView!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        self.maskeLayers(radiud: 16)
+        statements.maskeLayers(radiud: 16)
+        shongStage.maskeLayers(radiud: 16)
     }
 
 }

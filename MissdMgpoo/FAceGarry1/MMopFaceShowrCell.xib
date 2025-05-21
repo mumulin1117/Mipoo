@@ -25,7 +25,7 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eJl-Nx-Vhy">
                         <rect key="frame" x="5" y="323" width="255" height="32"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="LjK-Fe-F9Y">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="colno" translatesAutoresizingMaskIntoConstraints="NO" id="LjK-Fe-F9Y">
                                 <rect key="frame" x="0.0" y="0.0" width="32" height="32"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="32" id="1Nt-vh-jLL"/>
@@ -52,16 +52,23 @@
                 </subviews>
             </view>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
                 <constraint firstAttribute="trailing" secondItem="eJl-Nx-Vhy" secondAttribute="trailing" constant="5" id="7z1-d5-7wS"/>
                 <constraint firstItem="eJl-Nx-Vhy" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="5" id="XNC-aX-pkz"/>
                 <constraint firstAttribute="bottom" secondItem="eJl-Nx-Vhy" secondAttribute="bottom" constant="5" id="dJo-bx-QIc"/>
             </constraints>
             <size key="customSize" width="265" height="360"/>
+            <connections>
+                <outlet property="beatsLabel" destination="4Q9-7Z-DEb" id="qzP-gu-2Hn"/>
+                <outlet property="shongStage" destination="eJl-Nx-Vhy" id="R4X-qO-e3f"/>
+                <outlet property="statements" destination="uom-QZ-iaI" id="Zfc-Yq-pXT"/>
+            </connections>
             <point key="canvasLocation" x="353.43511450381681" y="120.42253521126761"/>
         </collectionViewCell>
     </objects>
     <resources>
+        <image name="colno" width="32" height="32"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

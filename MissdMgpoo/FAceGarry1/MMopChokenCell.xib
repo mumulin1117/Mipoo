@@ -25,8 +25,8 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pRc-Cf-ko7">
-                                <rect key="frame" x="140" y="72" width="33" height="15.666666666666671"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pRc-Cf-ko7">
+                                <rect key="frame" x="140" y="72" width="310" height="112"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                 <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -34,9 +34,11 @@
                         </subviews>
                         <color key="backgroundColor" red="0.1450980392" green="0.1450980392" blue="0.1764705882" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstAttribute="trailing" secondItem="pRc-Cf-ko7" secondAttribute="trailing" constant="15" id="2oX-Tv-0Yh"/>
                             <constraint firstItem="fBc-aD-10A" firstAttribute="leading" secondItem="kbD-lb-CBM" secondAttribute="leading" constant="140" id="Kj1-Yb-V33"/>
                             <constraint firstItem="pRc-Cf-ko7" firstAttribute="leading" secondItem="fBc-aD-10A" secondAttribute="leading" id="NMZ-TK-8Kh"/>
                             <constraint firstItem="pRc-Cf-ko7" firstAttribute="top" secondItem="fBc-aD-10A" secondAttribute="bottom" constant="13" id="RZN-T4-bES"/>
+                            <constraint firstAttribute="bottom" secondItem="pRc-Cf-ko7" secondAttribute="bottom" constant="10" id="aP7-gZ-T7L"/>
                             <constraint firstAttribute="trailing" secondItem="fBc-aD-10A" secondAttribute="trailing" constant="15" id="zXX-AZ-jO3"/>
                         </constraints>
                     </view>
@@ -59,6 +61,12 @@
                 </constraints>
             </tableViewCellContentView>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <connections>
+                <outlet property="beatsLabel" destination="fBc-aD-10A" id="Vry-MP-nfc"/>
+                <outlet property="flairView" destination="wA4-xe-2Tc" id="Xom-Wv-CLj"/>
+                <outlet property="grayIfobackgrow" destination="kbD-lb-CBM" id="euK-UD-whi"/>
+                <outlet property="identityLabel" destination="pRc-Cf-ko7" id="WOK-aO-5xA"/>
+            </connections>
             <point key="canvasLocation" x="519.84732824427476" y="-106.33802816901409"/>
         </tableViewCell>
     </objects>
