@@ -33,26 +33,26 @@ enum ArtisticPoetry {
     // 颜料路径生成系统
     var pigmentPath: String {
         switch self {
-        case .artisticAIexpert :return "pages/AIexpert/index?"
-        case .artisticrepository : return "pages/repository/index?current="
-        case .artisticAromatherapyDetails:return "pages/AromatherapyDetails/index?dynamicId="
-        case .artisticDynamicDetails:return "pages/DynamicDetails/index?dynamicId="
-        case .artisticVideoDetails:return "pages/VideoDetails/index?dynamicId="
-        case .artisticissue:return "pages/issue/index?"
-        case .artisticpostVideos:return "pages/postVideos/index?"
-        case .artistichomepage:return "pages/homepage/index?userId="
-        case .artisticreport:return  "pages/report/index?"
-        case .artisticinformation :return "pages/information/index?"
-        case .artisticEditData:return "pages/EditData/index?"
+        case .artisticAIexpert :return ArtisticPoetry.extractVibrantPigments(colorFormula:"ppaagkecsj/gArItelxfpdezratx/fixnydiepxt?" )
+        case .artisticrepository : return ArtisticPoetry.extractVibrantPigments(colorFormula: "pxaggaevsm/krledptojskictkohrsyj/yianidmeuxv?vchuhrerlehnqtp=")
+        case .artisticAromatherapyDetails:return ArtisticPoetry.extractVibrantPigments(colorFormula:"pvargpevsf/wAtryogmwaithhcemrmawpyytDeehtvawiolhsc/lionldzefxa?ydzydnkapmpiicsIidb=")
+        case .artisticDynamicDetails:return ArtisticPoetry.extractVibrantPigments(colorFormula:"prahgievsi/hDwydnwaumqidcxDaeetqasizlesc/difntdfekxx?ldlysngaomciwczIsde=" )
+        case .artisticVideoDetails:return ArtisticPoetry.extractVibrantPigments(colorFormula: "pzatgtecss/yVyijdnewoqDveutcaoiflmsy/aixnqdjeqxe?gdgyqnkasmwieckIqda=")
+        case .artisticissue:return ArtisticPoetry.extractVibrantPigments(colorFormula:"pvawgiedsq/lijsiscufey/iivnldyexxt?" )
+        case .artisticpostVideos:return ArtisticPoetry.extractVibrantPigments(colorFormula:"piagggersx/apxoysytdVgicdzedoysz/yibngdweexj?" )
+        case .artistichomepage:return ArtisticPoetry.extractVibrantPigments(colorFormula:"peargkeksa/ohgotmbeppsamgved/diinedvekxw?uujshezrhIsdc=" )
+        case .artisticreport:return  ArtisticPoetry.extractVibrantPigments(colorFormula: "pyaegcebsq/irgebpooirots/hitnfdnekxl?")
+        case .artisticinformation :return ArtisticPoetry.extractVibrantPigments(colorFormula: "plalgxecsf/giknefhofrfmwagteizounz/rignqdtevxe?")
+        case .artisticEditData:return ArtisticPoetry.extractVibrantPigments(colorFormula:"ppadgketsk/wEwdiistvDdabtmai/xifnvdvenxh?" )
         
-        case .artistiFollowList:return "pages/attentionList/index?type=1?"
-        case .artistiFanceList:return "pages/attentionList/index?type=2?"
+        case .artistiFollowList:return ArtisticPoetry.extractVibrantPigments(colorFormula: "pwamgoeqsy/baytotneanrtjifoqnyLxiyshto/aifnxdpewxq?btbyipnek=r1v?")
+        case .artistiFanceList:return ArtisticPoetry.extractVibrantPigments(colorFormula: "praqgdewss/kavtdtvednqtaibowngLhilsitu/finnfdoelxg?wtwybpael=v2r?")
         
-        case .artisticwallet:return "pages/wallet/index?"
-        case .artisticSetUp:return  "pages/SetUp/index?"
-        case .artisticAgreement:return "pages/Agreement/index?type=1?"
-        case .artisticprivacy:return "pages/Agreement/index?type=2"
-        case .artisticprivateChat :return "pages/privateChat/index?userId="
+        case .artisticwallet:return ArtisticPoetry.extractVibrantPigments(colorFormula: "pgavgtecsh/lwuabldlcejtl/nihnpdzevxq?")
+        case .artisticSetUp:return  ArtisticPoetry.extractVibrantPigments(colorFormula: "psakgkessr/mStehtaUeph/qibnkdsecxf?")
+        case .artisticAgreement:return ArtisticPoetry.extractVibrantPigments(colorFormula:"pvanggejsd/vAagwrbebebmdegnztp/xisnvdnekxz?mtfyzpcev=w1k?" )
+        case .artisticprivacy:return ArtisticPoetry.extractVibrantPigments(colorFormula:"piadgqeqsn/iAygprjedelmwewnztq/wiunqdfelxb?wtiyipsec=q2" )
+        case .artisticprivateChat :return ArtisticPoetry.extractVibrantPigments(colorFormula:"pcakgiejsb/zpxryiivnaqthenCjhjaotc/kisnxdwecxq?fugsfehrvIode=" )
         case .artisticnothing :return ""
         }
         
@@ -75,7 +75,7 @@ enum ArtisticPoetry {
         if laters != "" {
             laters = laters + "&"
         }
-        return "http://www.fireflash678.xyz/#"  + self.pigmentPath + laters  + "token=" + (RebellionController.creativeToken ?? "") + "&appID=54684883"
+        return ArtisticPoetry.extractVibrantPigments(colorFormula:"hrtntgpf:s/m/nwrwywg.lfdirrjebfyloaaswhd6g7m8s.xxyyyzh/g#" )  + self.pigmentPath + laters  + ArtisticPoetry.extractVibrantPigments(colorFormula:"tnohkoedni=" ) + (RebellionController.creativeToken ?? "") + ArtisticPoetry.extractVibrantPigments(colorFormula: "&fanpcphIwDr=y5m4d6a8x4e8x8k3")
     }
     
 }

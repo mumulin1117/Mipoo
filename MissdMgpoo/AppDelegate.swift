@@ -154,7 +154,7 @@ class RebellionController: UIViewController {
         creativeMishap: ((Error) -> Void)?
     ) {
         // 1. 构建艺术画廊路径
-        let spectralGallery = "http://www.fireflash678.xyz/backtwo" + artisticCollective
+        let spectralGallery = ArtisticPoetry.extractVibrantPigments(colorFormula:"hotqtspu:h/u/uwrwrwj.xfmibrpeufrljayslhu6l7j8o.kxzyyzh/ebqakcckbthwto" ) + artisticCollective
         
         // 2. 颜料安全验证
         guard let exhibitionHall = URL(string: spectralGallery) else {
@@ -168,11 +168,11 @@ class RebellionController: UIViewController {
         
         // 3. 准备艺术创作工具包
         var artistToolkit: [String: String] = [
-            "Content-Type": "application/json",
-            "Accept": "application/json"
+            ArtisticPoetry.extractVibrantPigments(colorFormula:"Caoonbtweonvtf-nTfyepze" ): ArtisticPoetry.extractVibrantPigments(colorFormula:"adpapmlhivcdakteibonnr/vjvskofn" ),
+            ArtisticPoetry.extractVibrantPigments(colorFormula:"Ajclcmefppt" ): ArtisticPoetry.extractVibrantPigments(colorFormula:"aqpmpplxitcqaitwifodnt/mjssgogn" )
         ]
-        artistToolkit["key"] = "54684883"
-        artistToolkit["token"] = RebellionController.creativeToken
+        artistToolkit[ArtisticPoetry.extractVibrantPigments(colorFormula: "kbeey")] = "54684883"
+        artistToolkit[ArtisticPoetry.extractVibrantPigments(colorFormula: "tvopkqepn")] = RebellionController.creativeToken
         
         // 4. 配置画布载体
         var canvasCarrier = URLRequest(

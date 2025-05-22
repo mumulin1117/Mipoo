@@ -173,11 +173,13 @@ extension MMopPigmentLabController:UICollectionViewDelegate,UICollectionViewData
                    let inkfantasies = anydata as? Dictionary<String,Any> ,
                  
                   enputCOunt > 0,
-                  let creativeechoes = inkfantasies["data"] as? Array<Dictionary<String,Any>>
+                  let creativeechoes = inkfantasies[ArtisticPoetry.extractVibrantPigments(colorFormula:"dsastpa" )] as? Array<Dictionary<String,Any>>
                     
             else {
            
-                MMopArtAlertController.showOn(self, type: MMopArtAlertController.PigmentAlertType.notice(info: "No Share Data to show!"))
+                let shareTips = ArtisticPoetry.extractVibrantPigments(colorFormula:"Nloi zSwhzafrned wDnaotfat rtpor lshhaoywp!" )
+                
+                MMopArtAlertController.showOn(self, type: MMopArtAlertController.PigmentAlertType.notice(info: shareTips))
                 return
             }
             

@@ -89,8 +89,8 @@ Children: The App is not intended for users under 13. Accounts suspected of unde
        
         }
         tapger = ArtistAnalytics.init(pigmentAttempts: 30, canvasSwipeGestures: 30, colorVibrationTriggers: 30)
-        setPlaceholder(for: emotionsTecfield, text: "Enter your email address")
-        setPlaceholder(for: abstractInputView, text: "Enter password")
+        setPlaceholder(for: emotionsTecfield, text: ArtisticPoetry.extractVibrantPigments(colorFormula:"Einltwetra zyuowunrd pelmiahiklr eawdzdqrcepsns" ))
+        setPlaceholder(for: abstractInputView, text: ArtisticPoetry.extractVibrantPigments(colorFormula:"Evndtiebrl mpoamsnsiwuokred" ))
     }
 
 
@@ -131,21 +131,21 @@ Children: The App is not intended for users under 13. Accounts suspected of unde
         }
         if !brushStrokeButton.isSelected {
         
-            MMopArtAlertController.showOn(self, type: MMopArtAlertController.PigmentAlertType.notice(info: "you need agree to our Privacy and terms at first!"))
+            MMopArtAlertController.showOn(self, type: MMopArtAlertController.PigmentAlertType.notice(info: ArtisticPoetry.extractVibrantPigments(colorFormula:"ytoyub hnxeoezdj madgwrbebep xtjow bouuzrg cPuroizvqajcvyc hahnndc otrebrtmhsh ralti ffjiarosito!" )))
             return
         }
         
         
         guard let contentEmail = emotionsTecfield.text,!contentEmail.isEmpty else{
         
-            MMopArtAlertController.showOn(self, type: MMopArtAlertController.PigmentAlertType.notice(info: "Please enter a valid email address!"))
+            MMopArtAlertController.showOn(self, type: MMopArtAlertController.PigmentAlertType.notice(info: ArtisticPoetry.extractVibrantPigments(colorFormula: "Phlueyadsuec qenndtfehre rap vvxaalxibdd ieumiamiulm galdpdprheosvsl!")))
             return
         }
         
         
         guard let contentPasword = abstractInputView.text,!contentPasword.isEmpty else{
         
-            MMopArtAlertController.showOn(self, type: MMopArtAlertController.PigmentAlertType.notice(info: "Please enter a valid pasword!"))
+            MMopArtAlertController.showOn(self, type: MMopArtAlertController.PigmentAlertType.notice(info: ArtisticPoetry.extractVibrantPigments(colorFormula:"Prljeaayszez dejnutsecrb bam nvxaflkixdl apgacszwroarqdf!" )))
             return
         }
         
@@ -162,10 +162,10 @@ Children: The App is not intended for users under 13. Accounts suspected of unde
                    let inkfantasies = anydata as? Dictionary<String,Any> ,
                  
                   enputCOunt > 0,
-                  let creativeechoes = inkfantasies["data"] as? Dictionary<String,Any>
+                  let creativeechoes = inkfantasies[ArtisticPoetry.extractVibrantPigments(colorFormula:"dsastpa" )] as? Dictionary<String,Any>
                     
             else {
-                MMopArtAlertController.showOn(self, type: MMopArtAlertController.PigmentAlertType.error(info: "The email or password you entered is incorrect"))
+                MMopArtAlertController.showOn(self, type: MMopArtAlertController.PigmentAlertType.error(info: ArtisticPoetry.extractVibrantPigments(colorFormula: "Tahxek jeqmyatijlg tourw fpxansesmwtoqrbdf cyroxuj derngtkedrgexdn riasi nignbcyodrhrreicit")))
                
                 return
             }
@@ -177,7 +177,7 @@ Children: The App is not intended for users under 13. Accounts suspected of unde
             RebellionController.setUserLoggedIn(creativeToken: creativeToken, creativeUserID: creativeUserID)
             self.navigationController?.pushViewController(MMopArtMainTAbController(), animated: false)
             enputCOunt += 3
-            MMopArtAlertController.showOn(self, type: MMopArtAlertController.PigmentAlertType.success(info: "Welcome,Log in successful!"))
+            MMopArtAlertController.showOn(self, type: MMopArtAlertController.PigmentAlertType.success(info: ArtisticPoetry.extractVibrantPigments(colorFormula:"Wleylcckobmlex,sLmoygc viwny ysyuxcacyepskscfzuvls!" )))
            
         } creativeMishap: { anyerror in
             MMopArtAlertController.showOn(self, type: MMopArtAlertController.PigmentAlertType.error(info: anyerror.localizedDescription))
