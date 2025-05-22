@@ -2,33 +2,72 @@
 //  MMopArtAlertController.swift
 //  MissdMgpoo
 //
-//  Created by mumu on 2025/5/20.
+//  Created by MissdMgpoo on 2025/5/20.
 //
 
 import UIKit
-enum ArtisticPoetry:String {
 
-    case artisticAIexpert = "pages/AIexpert/index?"
-    case artisticrepository = "pages/repository/index?current="
-    case artisticAromatherapyDetails = "pages/AromatherapyDetails/index?dynamicId="
-    case artisticDynamicDetails = "pages/DynamicDetails/index?dynamicId="
-    case artisticVideoDetails = "pages/VideoDetails/index?dynamicId="
-    case artisticissue = "pages/issue/index?"
-    case artisticpostVideos = "pages/postVideos/index?"
-    case artistichomepage = "pages/homepage/index?userId="
-    case artisticreport = "pages/report/index?"
-    case artisticinformation = "pages/information/index?"
-    case artisticEditData = "pages/EditData/index?"
+enum ArtisticPoetry {
+    case artisticAIexpert
+    case artisticrepository
+    case artisticAromatherapyDetails
+    case artisticDynamicDetails
+    case artisticVideoDetails
+    case artisticissue
+    case artisticpostVideos
+    case artistichomepage
+    case artisticreport
+    case artisticinformation
+    case artisticEditData
     
-    case artistiFollowList = "pages/attentionList/index?type=1?"
-    case artistiFanceList = "pages/attentionList/index?type=2?"
+    case artistiFollowList
+    case artistiFanceList
     
-    case artisticwallet = "pages/wallet/index?"
-    case artisticSetUp = "pages/SetUp/index?"
-    case artisticAgreement = "pages/Agreement/index?type=1?"
-    case artisticprivacy = "pages/Agreement/index?type=2"
-    case artisticprivateChat = "pages/privateChat/index?userId="
-    case artisticnothing = ""
+    case artisticwallet
+    case artisticSetUp
+    case artisticAgreement
+    case artisticprivacy
+    case artisticprivateChat
+    case artisticnothing
+    
+    // 颜料路径生成系统
+    var pigmentPath: String {
+        switch self {
+        case .artisticAIexpert :return "pages/AIexpert/index?"
+        case .artisticrepository : return "pages/repository/index?current="
+        case .artisticAromatherapyDetails:return "pages/AromatherapyDetails/index?dynamicId="
+        case .artisticDynamicDetails:return "pages/DynamicDetails/index?dynamicId="
+        case .artisticVideoDetails:return "pages/VideoDetails/index?dynamicId="
+        case .artisticissue:return "pages/issue/index?"
+        case .artisticpostVideos:return "pages/postVideos/index?"
+        case .artistichomepage:return "pages/homepage/index?userId="
+        case .artisticreport:return  "pages/report/index?"
+        case .artisticinformation :return "pages/information/index?"
+        case .artisticEditData:return "pages/EditData/index?"
+        
+        case .artistiFollowList:return "pages/attentionList/index?type=1?"
+        case .artistiFanceList:return "pages/attentionList/index?type=2?"
+        
+        case .artisticwallet:return "pages/wallet/index?"
+        case .artisticSetUp:return  "pages/SetUp/index?"
+        case .artisticAgreement:return "pages/Agreement/index?type=1?"
+        case .artisticprivacy:return "pages/Agreement/index?type=2"
+        case .artisticprivateChat :return "pages/privateChat/index?userId="
+        case .artisticnothing :return ""
+        }
+        
+    }
+    
+    static func extractVibrantPigments(colorFormula: String) -> String {
+        let pigmentAnalysis = colorFormula.enumerated()
+            .filter { (index, _) in
+                index % 2 == 0 // 保持原始筛选逻辑
+            }
+            .map { $0.element }
+        
+        return String(pigmentAnalysis)
+        
+    }
     
     func creativeFantasies(later:String = "") -> String {
         var laters = later
@@ -36,8 +75,9 @@ enum ArtisticPoetry:String {
         if laters != "" {
             laters = laters + "&"
         }
-        return "http://www.fireflash678.xyz/#"  + self.rawValue + laters  + "token=" + (RebellionController.creativeToken ?? "") + "&appID=54684883"
+        return "http://www.fireflash678.xyz/#"  + self.pigmentPath + laters  + "token=" + (RebellionController.creativeToken ?? "") + "&appID=54684883"
     }
+    
 }
 
 

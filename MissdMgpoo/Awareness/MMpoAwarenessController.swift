@@ -2,7 +2,7 @@
 //  MMpoAwarenessController.swift
 //  MissdMgpoo
 //
-//  Created by mumu on 2025/5/22.
+//  Created by MissdMgpoo on 2025/5/22.
 //
 
 import UIKit
@@ -32,8 +32,7 @@ class MMpoAwarenessController: UIViewController, WKScriptMessageHandler, WKNavig
     override func viewDidLoad() {
         super.viewDidLoad()
         easelActivityIndicator.startAnimating()
-       
-//        let FuelFlow = WKUserContentController()
+
         
         [
                "triggerCreativeFuelFlow", "handleArtistryBoostConfirmation", "launchCanvasPortalView",
