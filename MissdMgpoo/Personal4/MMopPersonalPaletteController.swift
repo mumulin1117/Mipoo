@@ -50,24 +50,32 @@ class MMopPersonalPaletteController: UIViewController {
     }
 
     @IBAction func abstractClick(_ sender: UIButton) {
+        var misopath = ""
         if sender.tag == 60 {
-            //
+           
+            misopath = ArtisticPoetry.artisticwallet.creativeFantasies()
+            
+           
         }
         if sender.tag == 61 {
-            //
+           
+            misopath = ArtisticPoetry.artisticSetUp.creativeFantasies()
         }
         
         if sender.tag == 62 {
-            //
+            misopath = ArtisticPoetry.artisticEditData.creativeFantasies()
         }
         
         if sender.tag == 63 {
-            //
+            misopath = ArtisticPoetry.artistiFollowList.creativeFantasies()
         }
         if sender.tag == 64 {
-            //
+            misopath = ArtisticPoetry.artistiFanceList.creativeFantasies()
         }
         
+        let nextDiamaVC = MMpoAwarenessController.init(dreams: misopath)
+        nextDiamaVC.hidesBottomBarWhenPushed = true
+        self.navigationController?.pushViewController(nextDiamaVC, animated: true)
     }
     
     

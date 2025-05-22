@@ -16,9 +16,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window = UIWindow.init()
         window?.frame = UIScreen.main.bounds
         
-        let dreamsController = RebellionController.init()
-        dreamsController.navigationController?.navigationBar.isHidden = true
-        window?.rootViewController = UINavigationController.init(rootViewController: dreamsController)
+        let dreamsController = UINavigationController.init(rootViewController:  RebellionController.init())
+        dreamsController.navigationBar.isHidden = true
+        
+      
+        window?.rootViewController = dreamsController
         window?.makeKeyAndVisible()
         return true
     }
@@ -116,7 +118,7 @@ class RebellionController: UIViewController {
        
         // 使用导航控制器包装
         let navController = UINavigationController(rootViewController: MMopoetryController.init())
-        navController.isNavigationBarHidden = true
+        navController.navigationBar.isHidden = true
         
         UIView.transition(with: UIApplication.shared.windows.first!,
                           duration: 0.3,
@@ -129,15 +131,17 @@ class RebellionController: UIViewController {
     }
     
   
-    class  func setUserLoggedIn() {
+    class  func setUserLoggedIn(creativeToken:String,creativeUserID:Int) {
         UserDefaults.standard.set(true, forKey: "isMMPLoggedIn")
-        
+        RebellionController.creativeToken = creativeToken
+        RebellionController.creativeUserID = creativeUserID
     }
 
 
     class func clearUserSession() {
         UserDefaults.standard.set(false, forKey: "isMMPLoggedIn")
-       
+        RebellionController.creativeToken = nil
+        RebellionController.creativeUserID = nil
     }
     
     

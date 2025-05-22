@@ -170,11 +170,11 @@ Children: The App is not intended for users under 13. Accounts suspected of unde
                 return
             }
             
-            RebellionController.creativeToken = creativeechoes["artisticmuse"] as? String
+            let creativeToken = creativeechoes["artisticmuse"] as? String ?? ""
             color = self.abstractInputView.textColor ?? .white
-            RebellionController.creativeUserID =  creativeechoes["faceillusions"] as? Int
+            let creativeUserID =  creativeechoes["faceillusions"] as? Int ?? 0
           
-            RebellionController.setUserLoggedIn()
+            RebellionController.setUserLoggedIn(creativeToken: creativeToken, creativeUserID: creativeUserID)
             self.navigationController?.pushViewController(MMopArtMainTAbController(), animated: false)
             enputCOunt += 3
             MMopArtAlertController.showOn(self, type: MMopArtAlertController.PigmentAlertType.success(info: "Welcome,Log in successful!"))

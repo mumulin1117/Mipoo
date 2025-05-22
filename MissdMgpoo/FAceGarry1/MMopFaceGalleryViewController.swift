@@ -15,14 +15,28 @@ class MMopFaceGalleryViewController: UIViewController, UITableViewDataSource, UI
     @IBOutlet weak var easelActivityIndicator: UIActivityIndicatorView!
     
     func topLinUserViewPick(indexData: Dictionary<String, Any>) {
-        
+        if let userrID = indexData["doodledesigns"] as? Int {
+            let userrepath = ArtisticPoetry.artistichomepage.creativeFantasies(later: "\(userrID)")
+            
+          
+            let nextDiamaVC = MMpoAwarenessController.init(dreams: userrepath)
+            nextDiamaVC.hidesBottomBarWhenPushed = true
+            self.navigationController?.pushViewController(nextDiamaVC, animated: true)
+        }
     }
     
     func tfaceShowViewPick(indexData: Dictionary<String, Any>) {
-        
+        if let AromatherapyID = indexData["artisticrebellion"] as? Int {
+            let detailVideopath = ArtisticPoetry.artisticAromatherapyDetails.creativeFantasies(later: "\(AromatherapyID)")
+            
+           
+            let nextDiamaVC = MMpoAwarenessController.init(dreams: detailVideopath)
+            nextDiamaVC.hidesBottomBarWhenPushed = true
+            self.navigationController?.pushViewController(nextDiamaVC, animated: true)
+        }
     }
     
-    
+  
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         DYMShowModels.count
@@ -63,7 +77,7 @@ class MMopFaceGalleryViewController: UIViewController, UITableViewDataSource, UI
         super.viewDidLoad()
         expressiveExpertTextures()
         expressiveDymTextures()
-        
+      
         boldStatements()
     }
 
@@ -81,6 +95,14 @@ class MMopFaceGalleryViewController: UIViewController, UITableViewDataSource, UI
     }
 
     @IBAction func illusions(_ sender: UIButton) {
+        
+        let detailVideopath = ArtisticPoetry.artisticinformation.creativeFantasies()
+        
+   
+        
+        let nextDiamaVC = MMpoAwarenessController.init(dreams: detailVideopath)
+        nextDiamaVC.hidesBottomBarWhenPushed = true
+        self.navigationController?.pushViewController(nextDiamaVC, animated: true)
     }
     
     
@@ -91,6 +113,17 @@ class MMopFaceGalleryViewController: UIViewController, UITableViewDataSource, UI
        
     }
 
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {//知识库
+        if let AromatherapyID = DYMShowModels[indexPath.row]["artisticrebellion"] as? Int {
+            let detailVideopath = ArtisticPoetry.artisticrepository.creativeFantasies(later: "\(indexPath.row)")
+            
+           
+            let nextDiamaVC = MMpoAwarenessController.init(dreams: detailVideopath)
+            nextDiamaVC.hidesBottomBarWhenPushed = true
+            self.navigationController?.pushViewController(nextDiamaVC, animated: true)
+        }
+    }
 }
 
 

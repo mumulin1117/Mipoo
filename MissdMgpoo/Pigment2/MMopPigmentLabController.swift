@@ -84,11 +84,23 @@ class MMopPigmentLabController: UIViewController {
     }
     
     @IBAction func addNewCommuty(_ sender: UIButton) {
+        let postDym = ArtisticPoetry.artisticissue.creativeFantasies()
+ 
+        let nextDiamaVC = MMpoAwarenessController.init(dreams: postDym)
+        nextDiamaVC.hidesBottomBarWhenPushed = true
+        self.navigationController?.pushViewController(nextDiamaVC, animated: true)
     }
     
     
     
     @IBAction func expertAIGo(_ sender: Any) {
+        let AIexpertpath = ArtisticPoetry.artisticAIexpert.creativeFantasies()
+        
+    
+        
+        let nextDiamaVC = MMpoAwarenessController.init(dreams: AIexpertpath)
+        nextDiamaVC.hidesBottomBarWhenPushed = true
+        self.navigationController?.pushViewController(nextDiamaVC, animated: true)
     }
 }
 
@@ -123,7 +135,7 @@ extension MMopPigmentLabController:UICollectionViewDelegate,UICollectionViewData
                                            context: [.imageTransformer: MMopFaceGalleryViewController.urlImageSize,.storeCacheType : SDImageCacheType.memory.rawValue])
          
         }
-        
+        piocell.Report.addTarget(self, action: #selector(liberation), for: .touchUpInside)
         piocell.followements.text = timestampToDateTimeString(timestamp: fantasiesModels[indexPath.row]["wildcreativity"] as? TimeInterval ?? 1747298547)
         piocell.beatsLabel.text =  fantasiesModels[indexPath.row]["creativeenergy"] as? String
         piocell.liberationLabel.text =  fantasiesModels[indexPath.row]["boldcontrasts"] as? String
@@ -181,5 +193,29 @@ extension MMopPigmentLabController:UICollectionViewDelegate,UICollectionViewData
             MMopArtAlertController.showOn(self, type: MMopArtAlertController.PigmentAlertType.notice(info: anyerror.localizedDescription))
             self.easelActivityIndicator.stopAnimating()
         }
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+       if let artisticrebellion = fantasiesModels[indexPath.row]["artisticrebellion"] as? Int {
+           let detailVideopath = ArtisticPoetry.artisticDynamicDetails.creativeFantasies(later: "\(artisticrebellion)")
+           
+        
+           let nextDiamaVC = MMpoAwarenessController.init(dreams: detailVideopath)
+           nextDiamaVC.hidesBottomBarWhenPushed = true
+           self.navigationController?.pushViewController(nextDiamaVC, animated: true)
+       }
+        
+    }
+    
+    
+    @objc func liberation() {
+        
+        let reportpath = ArtisticPoetry.artisticreport.creativeFantasies()
+    
+        
+        
+        let nextDiamaVC = MMpoAwarenessController.init(dreams: reportpath)
+        nextDiamaVC.hidesBottomBarWhenPushed = true
+        self.navigationController?.pushViewController(nextDiamaVC, animated: true)
     }
 }

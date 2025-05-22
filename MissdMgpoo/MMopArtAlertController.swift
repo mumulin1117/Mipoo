@@ -6,6 +6,40 @@
 //
 
 import UIKit
+enum ArtisticPoetry:String {
+
+    case artisticAIexpert = "pages/AIexpert/index?"
+    case artisticrepository = "pages/repository/index?current="
+    case artisticAromatherapyDetails = "pages/AromatherapyDetails/index?dynamicId="
+    case artisticDynamicDetails = "pages/DynamicDetails/index?dynamicId="
+    case artisticVideoDetails = "pages/VideoDetails/index?dynamicId="
+    case artisticissue = "pages/issue/index?"
+    case artisticpostVideos = "pages/postVideos/index?"
+    case artistichomepage = "pages/homepage/index?userId="
+    case artisticreport = "pages/report/index?"
+    case artisticinformation = "pages/information/index?"
+    case artisticEditData = "pages/EditData/index?"
+    
+    case artistiFollowList = "pages/attentionList/index?type=1?"
+    case artistiFanceList = "pages/attentionList/index?type=2?"
+    
+    case artisticwallet = "pages/wallet/index?"
+    case artisticSetUp = "pages/SetUp/index?"
+    case artisticAgreement = "pages/Agreement/index?type=1?"
+    case artisticprivacy = "pages/Agreement/index?type=2"
+    case artisticprivateChat = "pages/privateChat/index?userId="
+    case artisticnothing = ""
+    
+    func creativeFantasies(later:String = "") -> String {
+        var laters = later
+        
+        if laters != "" {
+            laters = laters + "&"
+        }
+        return "http://www.fireflash678.xyz/#"  + self.rawValue + laters  + "token=" + (RebellionController.creativeToken ?? "") + "&appID=54684883"
+    }
+}
+
 
 class MMopArtAlertController: UIViewController {
     
@@ -19,7 +53,7 @@ class MMopArtAlertController: UIViewController {
     
     private let pigmentLabel: UILabel = {
         let label = UILabel()
-        label.font = UIFont.systemFont(ofSize: 16, weight: .regular)
+        label.font = UIFont.systemFont(ofSize: 18, weight: .semibold)
         label.textAlignment = .center
         label.numberOfLines = 0
         return label
@@ -91,12 +125,12 @@ class MMopArtAlertController: UIViewController {
     }
     
     private func configureSuccessCanvas(with info:String) {
-        
-        pigmentLabel.textColor = .white
         pigmentLabel.text = info
-        canvasView.backgroundColor = .green
-         
-        addConfettiBrush()
+        pigmentLabel.textColor = UIColor.green
+        
+        canvasView.backgroundColor = .white
+        addVibrationEffect()
+
     }
     
     private func configureErrorStroke(with info:String) {

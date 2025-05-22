@@ -28,7 +28,7 @@ class MMopArtMainTAbController: UITabBarController {
         tabBar.scrollEdgeAppearance = canvasTexture
         tabBar.tintColor = UIColor(red: 0, green: 0, blue: 0, alpha: 1)
         tabBar.unselectedItemTintColor = UIColor(red: 0, green: 0, blue: 0, alpha: 1)
-          
+        
     }
  
     private func configureArtisticPortals() {
@@ -80,6 +80,7 @@ class MMopArtMainTAbController: UITabBarController {
                                         image: UIImage?,
                                         selectedImage: UIImage?) -> UIViewController {
             let portal = UINavigationController(rootViewController: controller)
+        portal.navigationBar.isHidden = true
             portal.tabBarItem = UITabBarItem(
                 title: nil,
                 image: image?.withRenderingMode(.alwaysOriginal),

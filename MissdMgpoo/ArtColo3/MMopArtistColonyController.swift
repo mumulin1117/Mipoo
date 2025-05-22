@@ -41,6 +41,7 @@ class MMopArtistColonyController: UIViewController {
         fantasiesView.showsVerticalScrollIndicator = false
         wildIllusions()
         expressiveDymTextures()
+        
     }
 
 
@@ -86,6 +87,11 @@ class MMopArtistColonyController: UIViewController {
     }
     
     @IBAction func vividContrasts(_ sender: UIButton) {
+        let postVideopath = ArtisticPoetry.artisticpostVideos.creativeFantasies()
+        
+        let nextDiamaVC = MMpoAwarenessController.init(dreams: postVideopath)
+        nextDiamaVC.hidesBottomBarWhenPushed = true
+        self.navigationController?.pushViewController(nextDiamaVC, animated: true)
     }
     
     
@@ -116,7 +122,9 @@ extension MMopArtistColonyController:UICollectionViewDelegate,UICollectionViewDa
         
         piocell.beatsLabel.text =  fantasiesModels[indexPath.row]["creativeenergy"] as? String
         piocell.liberationLabel.text =  fantasiesModels[indexPath.row]["boldcontrasts"] as? String
-       
+        piocell.Report.addTarget(self, action: #selector(liberation), for: .touchUpInside)
+        piocell.liberationINK.tag = indexPath.row
+        piocell.liberationINK.addTarget(self, action: #selector(faceIllusions(u:)), for: .touchUpInside)
         return piocell
         
     }
@@ -164,5 +172,40 @@ extension MMopArtistColonyController:UICollectionViewDelegate,UICollectionViewDa
             MMopArtAlertController.showOn(self, type: MMopArtAlertController.PigmentAlertType.notice(info: anyerror.localizedDescription))
             self.easelActivityIndicator.stopAnimating()
         }
+    }
+    
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+       if let artisticrebellion = fantasiesModels[indexPath.row]["artisticrebellion"] as? Int {
+           let detailVideopath = ArtisticPoetry.artisticVideoDetails.creativeFantasies(later: "\(artisticrebellion)")
+           let nextDiamaVC = MMpoAwarenessController.init(dreams: detailVideopath)
+           nextDiamaVC.hidesBottomBarWhenPushed = true
+           self.navigationController?.pushViewController(nextDiamaVC, animated: true)
+           
+       }
+        
+    }
+    
+    @objc func faceIllusions(u:UIButton) {
+        if let artisticrebellion = fantasiesModels[u.tag]["surrealstrokes"] as? Int {
+            let detailVideopath = ArtisticPoetry.artistichomepage.creativeFantasies(later: "\(artisticrebellion)")
+            let nextDiamaVC = MMpoAwarenessController.init(dreams: detailVideopath)
+            nextDiamaVC.hidesBottomBarWhenPushed = true
+            self.navigationController?.pushViewController(nextDiamaVC, animated: true)
+            
+            
+        }
+    }
+    
+    
+    @objc func liberation() {
+        
+        let reportpath = ArtisticPoetry.artisticreport.creativeFantasies()
+        
+        let nextDiamaVC = MMpoAwarenessController.init(dreams: reportpath)
+        nextDiamaVC.hidesBottomBarWhenPushed = true
+        self.navigationController?.pushViewController(nextDiamaVC, animated: true)
+       
+       
     }
 }
