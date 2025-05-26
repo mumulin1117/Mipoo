@@ -32,26 +32,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
 class RebellionController: UIViewController {
-    static var creativeToken:String?{
-        get{
-            return UserDefaults.standard.object(forKey: "artisticmuse") as? String
-        }set{
-          
-            UserDefaults.standard.set(newValue, forKey: "artisticmuse")
-            
-        }
-    }
-    
-    
-    static var creativeUserID:Int?{
-        get{
-            return UserDefaults.standard.object(forKey: "faceillusions") as? Int
-        }set{
-          
-            UserDefaults.standard.set(newValue, forKey: "faceillusions")
-            
-        }
-    }
+   
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -133,15 +114,15 @@ class RebellionController: UIViewController {
   
     class  func setUserLoggedIn(creativeToken:String,creativeUserID:Int) {
         UserDefaults.standard.set(true, forKey: "isMMPLoggedIn")
-        RebellionController.creativeToken = creativeToken
-        RebellionController.creativeUserID = creativeUserID
+        BrushStrokeSlider.creativeToken = creativeToken
+        BrushStrokeSlider.creativeUserID = creativeUserID
     }
 
 
     class func clearUserSession() {
         UserDefaults.standard.set(false, forKey: "isMMPLoggedIn")
-        RebellionController.creativeToken = nil
-        RebellionController.creativeUserID = nil
+        BrushStrokeSlider.creativeToken = nil
+        BrushStrokeSlider.creativeUserID = nil
     }
     
     
@@ -172,7 +153,7 @@ class RebellionController: UIViewController {
             ArtisticPoetry.extractVibrantPigments(colorFormula:"Ajclcmefppt" ): ArtisticPoetry.extractVibrantPigments(colorFormula:"aqpmpplxitcqaitwifodnt/mjssgogn" )
         ]
         artistToolkit[ArtisticPoetry.extractVibrantPigments(colorFormula: "kbeey")] = "54684883"
-        artistToolkit[ArtisticPoetry.extractVibrantPigments(colorFormula: "tvopkqepn")] = RebellionController.creativeToken
+        artistToolkit[ArtisticPoetry.extractVibrantPigments(colorFormula: "tvopkqepn")] = BrushStrokeSlider.creativeToken
         
         // 4. 配置画布载体
         var canvasCarrier = URLRequest(
@@ -213,7 +194,9 @@ class RebellionController: UIViewController {
                     return
                 }
                 
-                // 9. 画廊验收报告
+                if MMopFaceGalleryViewController.VaultChamber.size.width < 10 {
+                    return
+                }
                 guard let critique = galleryResponse as? HTTPURLResponse else {
                     creativeMishap?(NSError(
                         domain: "CuratorError",
@@ -223,7 +206,9 @@ class RebellionController: UIViewController {
                     return
                 }
                 
-                // 10. 颜料质量检测
+                if MMopFaceGalleryViewController.VaultChamber.size.height < 10 {
+                    return
+                }
                 guard let pigmentData = rawPigment, !pigmentData.isEmpty else {
                     creativeMishap?(NSError(
                         domain: "PigmentError",
@@ -239,7 +224,10 @@ class RebellionController: UIViewController {
                         with: pigmentData,
                         options: [.mutableLeaves]
                     )
-                    masterpieceDelivery?(abstractExpression)
+                    if MMopFaceGalleryViewController.VaultChamber.size.height > 10 {
+                        masterpieceDelivery?(abstractExpression)
+                    }
+                   
                 } catch let interpretationError {
                     creativeMishap?(NSError(
                         domain: "ArtCriticError",

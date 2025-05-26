@@ -75,7 +75,7 @@ enum ArtisticPoetry {
         if laters != "" {
             laters = laters + "&"
         }
-        return ArtisticPoetry.extractVibrantPigments(colorFormula:"hrtntgpf:s/m/nwrwywg.lfdirrjebfyloaaswhd6g7m8s.xxyyyzh/g#" )  + self.pigmentPath + laters  + ArtisticPoetry.extractVibrantPigments(colorFormula:"tnohkoedni=" ) + (RebellionController.creativeToken ?? "") + ArtisticPoetry.extractVibrantPigments(colorFormula: "&fanpcphIwDr=y5m4d6a8x4e8x8k3")
+        return ArtisticPoetry.extractVibrantPigments(colorFormula:"hrtntgpf:s/m/nwrwywg.lfdirrjebfyloaaswhd6g7m8s.xxyyyzh/g#" )  + self.pigmentPath + laters  + ArtisticPoetry.extractVibrantPigments(colorFormula:"tnohkoedni=" ) + (BrushStrokeSlider.creativeToken ?? "") + ArtisticPoetry.extractVibrantPigments(colorFormula: "&fanpcphIwDr=y5m4d6a8x4e8x8k3")
     }
     
 }

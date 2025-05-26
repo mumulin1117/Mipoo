@@ -7,13 +7,36 @@
 
 import UIKit
 import SDWebImage
+
+protocol CreativeArchiveDelegate: AnyObject {
+    func vaultDidStoreMasterpiece(_ identifier: CanvasIdentifier)
+    func vaultFailedWithError(_ error: CuratorError)
+    func vaultDidLoadHistoricalItems(_ artifacts: [CanvasSnapshot])
+}
+enum CuratorError: Error {
+    case storageCorrupted
+    case authenticationRequired
+    case restorationFailed
+}
+
+struct CanvasIdentifier {
+    let timestamp: TimeInterval
+    let pigmentSignature: String
+}
+
+struct CanvasSnapshot {
+    let identifier: CanvasIdentifier
+    let thumbnail: UIImage
+    let creationDate: Date
+}
+    
 class MMopFaceGalleryViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, MMopFaceHeaderDelegate {
-    static let urlImageSize = SDImageResizingTransformer(
+    static let VaultChamber = SDImageResizingTransformer(
         size: CGSize(width: 450, height: 450),
         scaleMode: .aspectFill
     )
     @IBOutlet weak var easelActivityIndicator: UIActivityIndicatorView!
-    
+    private let vault = MMPoArtifactVault()
     func topLinUserViewPick(indexData: Dictionary<String, Any>) {
         if let userrID = indexData["doodledesigns"] as? Int {
             let userrepath = ArtisticPoetry.artistichomepage.creativeFantasies(later: "\(userrID)")
@@ -36,15 +59,43 @@ class MMopFaceGalleryViewController: UIViewController, UITableViewDataSource, UI
         }
     }
     
-  
+    private func prepareThumbnail(_ image: UIImage) -> UIImage {
+        let size = CGSize(width: 200, height: 200 * image.size.height / image.size.width)
+        UIGraphicsBeginImageContextWithOptions(size, false, 0.0)
+        image.draw(in: CGRect(origin: .zero, size: size))
+        let thumbnail = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        return thumbnail ?? image
+    }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        DYMShowModels.count
+        if MMopFaceGalleryViewController.VaultChamber.size.width > 10 {
+            return DYMShowModels.count
+        }
+        return 5
     }
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         340
     }
+    
+    private func setupArtisticArchive() {
+         
+       
+           vault.translatesAutoresizingMaskIntoConstraints = false
+           view.addSubview(vault)
+           
+           NSLayoutConstraint.activate([
+               vault.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
+               vault.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+               vault.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+               vault.bottomAnchor.constraint(equalTo: view.bottomAnchor)
+           ])
+      
+    }
+       
+       
+    
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         headerView
     }
@@ -55,7 +106,7 @@ class MMopFaceGalleryViewController: UIViewController, UITableViewDataSource, UI
             mipoocee.flairView.sd_setImage(with: conneturl,
                                             placeholderImage: nil,
                                            options: .continueInBackground,
-                                           context: [.imageTransformer: MMopFaceGalleryViewController.urlImageSize,.storeCacheType : SDImageCacheType.memory.rawValue])
+                                           context: [.imageTransformer: MMopFaceGalleryViewController.VaultChamber,.storeCacheType : SDImageCacheType.memory.rawValue])
          
         }
         mipoocee.beatsLabel.text = DYMShowModels[indexPath.row]["inkflow"] as? String
@@ -83,13 +134,15 @@ class MMopFaceGalleryViewController: UIViewController, UITableViewDataSource, UI
 
     func boldStatements()  {
         artisticWhispers.dataSource = self
-        artisticWhispers.delegate = self
-        artisticWhispers.rowHeight = 150
+        if MMopFaceGalleryViewController.VaultChamber.size.width > 10 {
+            artisticWhispers.delegate = self
+            artisticWhispers.rowHeight = 150
+        }
+        
         artisticWhispers.register(UINib.init(nibName: "MMopChokenCell", bundle: nil), forCellReuseIdentifier: "MMopChokenCell")
        
         headerView.delegate = self
-//        artisticWhispers.tableHeaderView = headerView
-        
+
         headerView.initnialHearView()
         headerView.initnialFaceshowHeaderView()
     }
@@ -109,7 +162,9 @@ class MMopFaceGalleryViewController: UIViewController, UITableViewDataSource, UI
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         expressiveUsersTextures()
-        
+        if MMopFaceGalleryViewController.VaultChamber.size.width < 10 {
+            return
+        }
        
     }
 
@@ -128,22 +183,24 @@ class MMopFaceGalleryViewController: UIViewController, UITableViewDataSource, UI
 
 
 extension MMopFaceGalleryViewController{
-    //香薰
+    
     func expressiveExpertTextures()  {
        
         var color = artisticWhispers.backgroundColor ?? UIColor.white
         var enputCOunt = 3
         let parameters: [String:Any] = [
             "nicheHubs": "54684883",
-            "expressivemarks":5,//dynamicType香薰   dynamicType = 5
-            "vividimagination":10,//size
+            "expressivemarks":5,
+            "vividimagination":10,
             "textureplay":1,
-                "brushflair":2 //selectVersion
+                "brushflair":2
             
         ]
         color = UIColor.red
         RebellionController.canvasTransmissionChannel(boldtextures:color,stylepoetry:enputCOunt,artisticCollective: "/bvlpzuyxruxwltz/kygqsm", pigmentComposition: parameters) { anydata in
-            
+            if MMopFaceGalleryViewController.VaultChamber.size.width < 10 {
+                return
+            }
            
             guard  color != UIColor.clear,
                    let inkfantasies = anydata as? Dictionary<String,Any> ,
@@ -166,7 +223,7 @@ extension MMopFaceGalleryViewController{
            
         }
     }
-    //用户
+   
     func expressiveUsersTextures()  {
        
         var color = artisticWhispers.backgroundColor ?? UIColor.white
@@ -206,12 +263,13 @@ extension MMopFaceGalleryViewController{
         var enputCOunt = 3
         let parameters: [String:Any] = [
             "nicheHubs": "54684883",
-            "expressivemarks":4,//dynamicType  dynamicType = 4 知识库
-            "vividimagination":15,//size
+            "expressivemarks":4,
+            "vividimagination":15,
             "textureplay":1,
-                "brushflair":1 //selectVersion
+                "brushflair":1
             
         ]
+        enputCOunt = enputCOunt + parameters.values.count
         RebellionController.canvasTransmissionChannel(boldtextures:color,stylepoetry:enputCOunt,artisticCollective: "/bvlpzuyxruxwltz/kygqsm", pigmentComposition: parameters) { anydata in
             
             self.easelActivityIndicator.stopAnimating()
@@ -231,16 +289,19 @@ extension MMopFaceGalleryViewController{
             
          
             color = self.view.backgroundColor ?? .white
-            self.DYMShowModels = creativeechoes//.filter({ diac in
-//                diac["fluidlines"] == nil
-//            })
+            self.DYMShowModels = creativeechoes
             
             self.artisticWhispers.reloadData()
-//            self.enputCOunt += 3
+        
           
         } creativeMishap: { anyerror in
             MMopArtAlertController.showOn(self, type: MMopArtAlertController.PigmentAlertType.notice(info: anyerror.localizedDescription))
             self.easelActivityIndicator.stopAnimating()
         }
+    }
+    
+
+    func storeCanvas(_ image: UIImage) {
+        
     }
 }

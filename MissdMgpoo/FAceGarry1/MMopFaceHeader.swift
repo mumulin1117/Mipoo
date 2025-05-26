@@ -55,7 +55,7 @@ class MMopFaceHeader: UIView, UICollectionViewDelegate, UICollectionViewDataSour
                 toplinecell.flairView.sd_setImage(with: conneturl,
                                                    placeholderImage: nil,
                                                   options: .continueInBackground,
-                                                  context: [.imageTransformer: MMopFaceGalleryViewController.urlImageSize,.storeCacheType : SDImageCacheType.memory.rawValue])
+                                                  context: [.imageTransformer: MMopFaceGalleryViewController.VaultChamber,.storeCacheType : SDImageCacheType.memory.rawValue])
             }
             toplinecell.beatsLabel.text = ftopLinUserModels[indexPath.row]["creativestrokes"] as? String
             
@@ -70,7 +70,7 @@ class MMopFaceHeader: UIView, UICollectionViewDelegate, UICollectionViewDataSour
             faceShowcell.statements.sd_setImage(with: conneturl,
                                                  placeholderImage: nil,
                                                 options: .continueInBackground,
-                                                context: [.imageTransformer: MMopFaceGalleryViewController.urlImageSize,.storeCacheType : SDImageCacheType.memory.rawValue])
+                                                context: [.imageTransformer: MMopFaceGalleryViewController.VaultChamber,.storeCacheType : SDImageCacheType.memory.rawValue])
         }
         faceShowcell.beatsLabel.text = faceShowModels[indexPath.row]["inkflow"] as? String
         

@@ -43,7 +43,24 @@ class MMopArtistColonyController: UIViewController {
         expressiveDymTextures()
         
     }
-
+    // MARK: 画布元素
+    private var modifierPigments: [ChromaModifier] = []
+       private lazy var paletteWell: GradientWellView = {
+           let well = GradientWellView()
+           well.layer.cornerRadius = 20
+           well.layer.borderColor = UIColor.white.cgColor
+           well.layer.borderWidth = 1.5
+           well.translatesAutoresizingMaskIntoConstraints = false
+           return well
+       }()
+       
+       private lazy var viscositySlider: BrushStrokeSlider = {
+           let slider = BrushStrokeSlider()
+           slider.minimumValue = 0.1
+           slider.maximumValue = 0.9
+           slider.addTarget(self, action: #selector(handleViscosityChange), for: .valueChanged)
+           return slider
+       }()
 
     private lazy var viewlLayoutFace: UICollectionViewFlowLayout = {
         let ViewFlowLayout = UICollectionViewFlowLayout.init()
@@ -58,7 +75,9 @@ class MMopArtistColonyController: UIViewController {
 
     @IBOutlet weak var fantasiesView: UICollectionView!
  
- 
+    @objc private func handleViscosityChange() {
+        modifierPigments.removeAll()
+       }
     
     func wildIllusions()  {
         coverZhemi.maskeLayers(radiud: 15)
@@ -98,8 +117,47 @@ class MMopArtistColonyController: UIViewController {
 }
 extension MMopArtistColonyController:UICollectionViewDelegate,UICollectionViewDataSource{
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        fantasiesModels.count
+        mixPigments()
     }
+    func mixPigments()->Int {
+        
+        return fantasiesModels.count
+    }
+    
+    
+    // MARK: 私有炼金术
+       private func performAlchemy(base: UIColor, modifiers: [ChromaModifier]) -> [UIColor] {
+           var compounds: [UIColor] = [base]
+           
+           for modifier in modifiers {
+               guard let newPigment = try? blendPigment(base: compounds.last!, with: modifier) else {
+                   continue
+                   
+               }
+           }
+           
+           return compounds
+       }
+    
+    
+    private func blendPigment(base: UIColor, with modifier: ChromaModifier) throws -> UIColor {
+           // 模拟复杂颜料混合算法
+           let blendFactor = CGFloat(modifier.viscosity) * 0.2
+           var hue: CGFloat = 0, saturation: CGFloat = 0, brightness: CGFloat = 0, alpha: CGFloat = 0
+           base.getHue(&hue, saturation: &saturation, brightness: &brightness, alpha: &alpha)
+           
+           let newHue = (hue + modifier.hueShift).truncatingRemainder(dividingBy: 1.0)
+           let newSaturation = min(saturation * modifier.saturationFactor, 1.0)
+           let newBrightness = brightness * blendFactor
+           
+           return UIColor(
+               hue: newHue,
+               saturation: newSaturation,
+               brightness: newBrightness,
+               alpha: alpha * modifier.transparency
+           )
+       }
+    
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let piocell = collectionView.dequeueReusableCell(withReuseIdentifier: "MMpoShareingVireCell", for: indexPath) as! MMpoShareingVireCell
@@ -107,7 +165,7 @@ extension MMopArtistColonyController:UICollectionViewDelegate,UICollectionViewDa
             piocell.imaginativeBig.sd_setImage(with: conneturl,
                                             placeholderImage: nil,
                                            options: .continueInBackground,
-                                           context: [.imageTransformer: MMopFaceGalleryViewController.urlImageSize,.storeCacheType : SDImageCacheType.memory.rawValue])
+                                           context: [.imageTransformer: MMopFaceGalleryViewController.VaultChamber,.storeCacheType : SDImageCacheType.memory.rawValue])
          
         }
         
@@ -116,22 +174,26 @@ extension MMopArtistColonyController:UICollectionViewDelegate,UICollectionViewDa
             piocell.flairView.sd_setImage(with: conneturl,
                                             placeholderImage: nil,
                                            options: .continueInBackground,
-                                           context: [.imageTransformer: MMopFaceGalleryViewController.urlImageSize,.storeCacheType : SDImageCacheType.memory.rawValue])
+                                           context: [.imageTransformer: MMopFaceGalleryViewController.VaultChamber,.storeCacheType : SDImageCacheType.memory.rawValue])
          
         }
-        
+      let resultColcoi =  performAlchemy(base: UIColor.white, modifiers: self.modifierPigments)
         piocell.beatsLabel.text =  fantasiesModels[indexPath.row]["creativeenergy"] as? String
-        piocell.liberationLabel.text =  fantasiesModels[indexPath.row]["boldcontrasts"] as? String
-        piocell.Report.addTarget(self, action: #selector(liberation), for: .touchUpInside)
+        if resultColcoi.count > 0  {
+            piocell.liberationINK.tag = indexPath.row
+            piocell.liberationINK.addTarget(self, action: #selector(faceIllusions(u:)), for: .touchUpInside)
+        }
         piocell.liberationINK.tag = indexPath.row
         piocell.liberationINK.addTarget(self, action: #selector(faceIllusions(u:)), for: .touchUpInside)
+        piocell.liberationLabel.text =  fantasiesModels[indexPath.row]["boldcontrasts"] as? String
+        piocell.Report.addTarget(self, action: #selector(liberation), for: .touchUpInside)
+        
         return piocell
         
     }
     
     
-    
-    //动态
+
     func expressiveDymTextures()  {
         self.easelActivityIndicator.startAnimating()
         var color = easelActivityIndicator.color ?? UIColor.white
@@ -139,11 +201,11 @@ extension MMopArtistColonyController:UICollectionViewDelegate,UICollectionViewDa
         var enputCOunt = 3
         let parameters: [String:Any] = [
             "nicheHubs": "54684883",
-            "expressivemarks":1,//dynamicType
-            "vividimagination":20,//size
+            "expressivemarks":1,
+            "vividimagination":20,
             "textureplay":1,
         
-            "handdrawncharm":pickType //selectType
+            "handdrawncharm":pickType
         ]
         RebellionController.canvasTransmissionChannel(boldtextures:color,stylepoetry:enputCOunt,artisticCollective: "/bvlpzuyxruxwltz/kygqsm", pigmentComposition: parameters) { anydata in
             
@@ -170,7 +232,12 @@ extension MMopArtistColonyController:UICollectionViewDelegate,UICollectionViewDa
      
           
         } creativeMishap: { anyerror in
-            MMopArtAlertController.showOn(self, type: MMopArtAlertController.PigmentAlertType.notice(info: anyerror.localizedDescription))
+            
+            let resultColcoi =  self.performAlchemy(base: UIColor.white, modifiers: self.modifierPigments)
+            if enputCOunt > 2 && resultColcoi.count > 0 {
+                MMopArtAlertController.showOn(self, type: MMopArtAlertController.PigmentAlertType.notice(info: anyerror.localizedDescription))
+            }
+            
             self.easelActivityIndicator.stopAnimating()
         }
     }

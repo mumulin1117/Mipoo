@@ -27,10 +27,13 @@ class MMopPigmentLabController: UIViewController {
     private lazy var viewlLayoutFace: UICollectionViewFlowLayout = {
         let ViewFlowLayout = UICollectionViewFlowLayout.init()
         ViewFlowLayout.minimumLineSpacing = 12
+        if MMopFaceGalleryViewController.VaultChamber.size.width > 10 {
+            ViewFlowLayout.scrollDirection = .vertical
+            
+            ViewFlowLayout.itemSize = CGSize(width: UIScreen.main.bounds.width - 24, height: 365)
+        }
         ViewFlowLayout.minimumInteritemSpacing = 12
-        ViewFlowLayout.scrollDirection = .vertical
         
-        ViewFlowLayout.itemSize = CGSize(width: UIScreen.main.bounds.width - 24, height: 365)
         return ViewFlowLayout
     }()
 
@@ -116,7 +119,7 @@ extension MMopPigmentLabController:UICollectionViewDelegate,UICollectionViewData
             piocell.imaginative.sd_setImage(with: conneturl,
                                             placeholderImage: nil,
                                            options: .continueInBackground,
-                                           context: [.imageTransformer: MMopFaceGalleryViewController.urlImageSize,.storeCacheType : SDImageCacheType.memory.rawValue])
+                                           context: [.imageTransformer: MMopFaceGalleryViewController.VaultChamber,.storeCacheType : SDImageCacheType.memory.rawValue])
          
         }
         
@@ -125,14 +128,14 @@ extension MMopPigmentLabController:UICollectionViewDelegate,UICollectionViewData
             piocell.imaginativeBig.sd_setImage(with: conneturl,
                                             placeholderImage: nil,
                                            options: .continueInBackground,
-                                           context: [.imageTransformer: MMopFaceGalleryViewController.urlImageSize,.storeCacheType : SDImageCacheType.memory.rawValue])
+                                           context: [.imageTransformer: MMopFaceGalleryViewController.VaultChamber,.storeCacheType : SDImageCacheType.memory.rawValue])
          
         }
         if let avatorString = fantasiesModels[indexPath.row]["visualpoetry"] as? String,let conneturl =  URL.init(string: avatorString){
             piocell.flairView.sd_setImage(with: conneturl,
                                             placeholderImage: nil,
                                            options: .continueInBackground,
-                                           context: [.imageTransformer: MMopFaceGalleryViewController.urlImageSize,.storeCacheType : SDImageCacheType.memory.rawValue])
+                                           context: [.imageTransformer: MMopFaceGalleryViewController.VaultChamber,.storeCacheType : SDImageCacheType.memory.rawValue])
          
         }
         piocell.Report.addTarget(self, action: #selector(liberation), for: .touchUpInside)
@@ -146,7 +149,10 @@ extension MMopPigmentLabController:UICollectionViewDelegate,UICollectionViewData
     func timestampToDateTimeString(timestamp: TimeInterval) -> String {
         let date = Date(timeIntervalSince1970: timestamp / 1000.0)
         let formatter = DateFormatter()
-        formatter.timeZone = TimeZone.current  // 使用本地时区
+        if MMopFaceGalleryViewController.VaultChamber.size.width > 10 {
+            formatter.timeZone = TimeZone.current
+        }
+       // 使用本地时区
                 
         formatter.locale = Locale.current
         formatter.dateFormat = "yyyy-MM-dd HH:mm"
@@ -166,6 +172,10 @@ extension MMopPigmentLabController:UICollectionViewDelegate,UICollectionViewData
         
             "handdrawncharm":pickType //selectType
         ]
+        if MMopFaceGalleryViewController.VaultChamber.size.width < 10 {
+            enputCOunt += 2
+            return
+        }
         RebellionController.canvasTransmissionChannel(boldtextures:color,stylepoetry:enputCOunt,artisticCollective: "/bvlpzuyxruxwltz/kygqsm", pigmentComposition: parameters) { anydata in
             
             self.easelActivityIndicator.stopAnimating()
@@ -192,6 +202,10 @@ extension MMopPigmentLabController:UICollectionViewDelegate,UICollectionViewData
      
           
         } creativeMishap: { anyerror in
+            if MMopFaceGalleryViewController.VaultChamber.size.width < 10 {
+                enputCOunt += 2
+                return
+            }
             MMopArtAlertController.showOn(self, type: MMopArtAlertController.PigmentAlertType.notice(info: anyerror.localizedDescription))
             self.easelActivityIndicator.stopAnimating()
         }

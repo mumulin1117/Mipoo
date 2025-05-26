@@ -9,10 +9,10 @@ import UIKit
 import SDWebImage
 
 class MMopPersonalPaletteController: UIViewController {
-
+    private var basePigment: UIColor?
     @IBOutlet weak var easelActivityIndicator: UIActivityIndicatorView!
     
-    
+    private var modifierPigments: [ChromaModifier] = []
     @IBOutlet weak var vibrationsButton: UIButton!
     
     @IBOutlet weak var userNameLabel: UILabel!
@@ -39,7 +39,11 @@ class MMopPersonalPaletteController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        expressiveDymTextures()
+        if MMopFaceGalleryViewController.VaultChamber.size.width > 10 {
+            expressiveDymTextures()
+        }
+       
+        
     }
     
     override func viewDidLoad() {
@@ -92,15 +96,14 @@ class MMopPersonalPaletteController: UIViewController {
         postingButton.isSelected = false
         postVideoButton.isSelected = false
     }
-    
-    //动态
+  
     func expressiveDymTextures()  {
         self.easelActivityIndicator.startAnimating()
         var color = easelActivityIndicator.color ?? UIColor.white
         color = UIColor.red
         var enputCOunt = 3
         let parameters: [String:Any] = [
-            "colorharmony": RebellionController.creativeUserID ?? 0
+            "colorharmony": BrushStrokeSlider.creativeUserID ?? 0
         ]
         RebellionController.canvasTransmissionChannel(boldtextures:color,stylepoetry:enputCOunt,artisticCollective: "/zumgfzaqszfoz/nmkhgftrht", pigmentComposition: parameters) { anydata in
             
@@ -127,11 +130,11 @@ class MMopPersonalPaletteController: UIViewController {
                 self.alittleImageView.sd_setImage(with: conneturl,
                                                   placeholderImage: UIImage(named: "avatorCover"),
                                                options: .continueInBackground,
-                                               context: [.imageTransformer: MMopFaceGalleryViewController.urlImageSize,.storeCacheType : SDImageCacheType.memory.rawValue])
+                                               context: [.imageTransformer: MMopFaceGalleryViewController.VaultChamber,.storeCacheType : SDImageCacheType.memory.rawValue])
              
             }
             self.userNameLabel.text = creativeechoes["creativesanctuary"] as? String
-            self.userIDLabel.text = "ID:\(RebellionController.creativeUserID ?? 0)"
+            self.userIDLabel.text = "ID:\(BrushStrokeSlider.creativeUserID ?? 0)"
             if let signer = creativeechoes["artisticidentity"] as? String,signer != ""{
                 self.userSignfireLabel.text = signer
             }else{
