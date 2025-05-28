@@ -39,7 +39,7 @@ class MMopFaceGalleryViewController: UIViewController, UITableViewDataSource, UI
     private let vault = MMPoArtifactVault()
     func topLinUserViewPick(indexData: Dictionary<String, Any>) {
         if let userrID = indexData["doodledesigns"] as? Int {
-            let userrepath = ArtisticPoetry.artistichomepage.creativeFantasies(later: "\(userrID)")
+            let userrepath = ArtisticPoetry.artistarvividnation.creativeFantasies(later: "\(userrID)")
             
           
             let nextDiamaVC = MMpoAwarenessController.init(dreams: userrepath)
@@ -50,7 +50,7 @@ class MMopFaceGalleryViewController: UIViewController, UITableViewDataSource, UI
     
     func tfaceShowViewPick(indexData: Dictionary<String, Any>) {
         if let AromatherapyID = indexData["artisticrebellion"] as? Int {
-            let detailVideopath = ArtisticPoetry.artisticAromatherapyDetails.creativeFantasies(later: "\(AromatherapyID)")
+            let detailVideopath = ArtisticPoetry.artistiFacenarratives.creativeFantasies(later: "\(AromatherapyID)")
             
            
             let nextDiamaVC = MMpoAwarenessController.init(dreams: detailVideopath)
@@ -149,7 +149,7 @@ class MMopFaceGalleryViewController: UIViewController, UITableViewDataSource, UI
 
     @IBAction func illusions(_ sender: UIButton) {
         
-        let detailVideopath = ArtisticPoetry.artisticinformation.creativeFantasies()
+        let detailVideopath = ArtisticPoetry.artistarfantasies.creativeFantasies()
         
    
         

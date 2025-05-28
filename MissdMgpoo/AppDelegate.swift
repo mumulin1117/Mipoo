@@ -6,7 +6,7 @@
 //
 
 import UIKit
-
+import SwiftyStoreKit
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
@@ -19,13 +19,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let dreamsController = UINavigationController.init(rootViewController:  RebellionController.init())
         dreamsController.navigationBar.isHidden = true
         
-      
+        vibrantShades()
         window?.rootViewController = dreamsController
+        
         window?.makeKeyAndVisible()
         return true
     }
 
-  
+    func vibrantShades()  {
+        SwiftyStoreKit.completeTransactions(atomically: true) { _ in
+            
+        }
+    }
 
 
 }
@@ -71,7 +76,7 @@ class RebellionController: UIViewController {
             
             // 延迟0.5秒保证启动页展示完整
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
-                if hasLoggedInUser {
+                if hasLoggedInUser == true {
                     self.pushToMainTabBarController()
                 } else {
                     self.pickUpvisualDreams()

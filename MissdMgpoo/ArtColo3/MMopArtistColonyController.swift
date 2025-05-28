@@ -106,7 +106,7 @@ class MMopArtistColonyController: UIViewController {
     }
     
     @IBAction func vividContrasts(_ sender: UIButton) {
-        let postVideopath = ArtisticPoetry.artisticpostVideos.creativeFantasies()
+        let postVideopath = ArtisticPoetry.artistarPoetry.creativeFantasies()
         
         let nextDiamaVC = MMpoAwarenessController.init(dreams: postVideopath)
         nextDiamaVC.hidesBottomBarWhenPushed = true
@@ -245,7 +245,7 @@ extension MMopArtistColonyController:UICollectionViewDelegate,UICollectionViewDa
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
        if let artisticrebellion = fantasiesModels[indexPath.row]["artisticrebellion"] as? Int {
-           let detailVideopath = ArtisticPoetry.artisticVideoDetails.creativeFantasies(later: "\(artisticrebellion)")
+           let detailVideopath = ArtisticPoetry.artistirealms.creativeFantasies(later: "\(artisticrebellion)")
            let nextDiamaVC = MMpoAwarenessController.init(dreams: detailVideopath)
            nextDiamaVC.hidesBottomBarWhenPushed = true
            self.navigationController?.pushViewController(nextDiamaVC, animated: true)
@@ -256,7 +256,7 @@ extension MMopArtistColonyController:UICollectionViewDelegate,UICollectionViewDa
     
     @objc func faceIllusions(u:UIButton) {
         if let artisticrebellion = fantasiesModels[u.tag]["surrealstrokes"] as? Int {
-            let detailVideopath = ArtisticPoetry.artistichomepage.creativeFantasies(later: "\(artisticrebellion)")
+            let detailVideopath = ArtisticPoetry.artistarvividnation.creativeFantasies(later: "\(artisticrebellion)")
             let nextDiamaVC = MMpoAwarenessController.init(dreams: detailVideopath)
             nextDiamaVC.hidesBottomBarWhenPushed = true
             self.navigationController?.pushViewController(nextDiamaVC, animated: true)

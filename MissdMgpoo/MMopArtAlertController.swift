@@ -8,51 +8,51 @@
 import UIKit
 
 enum ArtisticPoetry {
-    case artisticAIexpert
+    case artisticitevibes
     case artisticrepository
-    case artisticAromatherapyDetails
-    case artisticDynamicDetails
-    case artisticVideoDetails
-    case artisticissue
-    case artisticpostVideos
-    case artistichomepage
+    case artistiFacenarratives
+    case artistisymphony
+    case artistirealms
+    case artistarDoodle
+    case artistarPoetry
+    case artistarvividnation
     case artisticreport
-    case artisticinformation
-    case artisticEditData
+    case artistarfantasies
+    case artistarrhythm
     
-    case artistiFollowList
-    case artistiFanceList
+    case artistasymphony
+    case artistevolution
     
-    case artisticwallet
-    case artisticSetUp
-    case artisticAgreement
-    case artisticprivacy
-    case artisticprivateChat
+    case artisteunique
+    case artistechaos
+    case artisteillusions
+    case masterpieces
+    case arttexture
     case artisticnothing
     
     // 颜料路径生成系统
     var pigmentPath: String {
         switch self {
-        case .artisticAIexpert :return ArtisticPoetry.extractVibrantPigments(colorFormula:"ppaagkecsj/gArItelxfpdezratx/fixnydiepxt?" )
+        case .artisticitevibes :return ArtisticPoetry.extractVibrantPigments(colorFormula:"ppaagkecsj/gArItelxfpdezratx/fixnydiepxt?" )
         case .artisticrepository : return ArtisticPoetry.extractVibrantPigments(colorFormula: "pxaggaevsm/krledptojskictkohrsyj/yianidmeuxv?vchuhrerlehnqtp=")
-        case .artisticAromatherapyDetails:return ArtisticPoetry.extractVibrantPigments(colorFormula:"pvargpevsf/wAtryogmwaithhcemrmawpyytDeehtvawiolhsc/lionldzefxa?ydzydnkapmpiicsIidb=")
-        case .artisticDynamicDetails:return ArtisticPoetry.extractVibrantPigments(colorFormula:"prahgievsi/hDwydnwaumqidcxDaeetqasizlesc/difntdfekxx?ldlysngaomciwczIsde=" )
-        case .artisticVideoDetails:return ArtisticPoetry.extractVibrantPigments(colorFormula: "pzatgtecss/yVyijdnewoqDveutcaoiflmsy/aixnqdjeqxe?gdgyqnkasmwieckIqda=")
-        case .artisticissue:return ArtisticPoetry.extractVibrantPigments(colorFormula:"pvawgiedsq/lijsiscufey/iivnldyexxt?" )
-        case .artisticpostVideos:return ArtisticPoetry.extractVibrantPigments(colorFormula:"piagggersx/apxoysytdVgicdzedoysz/yibngdweexj?" )
-        case .artistichomepage:return ArtisticPoetry.extractVibrantPigments(colorFormula:"peargkeksa/ohgotmbeppsamgved/diinedvekxw?uujshezrhIsdc=" )
+        case .artistiFacenarratives:return ArtisticPoetry.extractVibrantPigments(colorFormula:"pvargpevsf/wAtryogmwaithhcemrmawpyytDeehtvawiolhsc/lionldzefxa?ydzydnkapmpiicsIidb=")
+        case .artistisymphony:return ArtisticPoetry.extractVibrantPigments(colorFormula:"prahgievsi/hDwydnwaumqidcxDaeetqasizlesc/difntdfekxx?ldlysngaomciwczIsde=" )
+        case .artistirealms:return ArtisticPoetry.extractVibrantPigments(colorFormula: "pzatgtecss/yVyijdnewoqDveutcaoiflmsy/aixnqdjeqxe?gdgyqnkasmwieckIqda=")
+        case .artistarDoodle:return ArtisticPoetry.extractVibrantPigments(colorFormula:"pvawgiedsq/lijsiscufey/iivnldyexxt?" )
+        case .artistarPoetry:return ArtisticPoetry.extractVibrantPigments(colorFormula:"piagggersx/apxoysytdVgicdzedoysz/yibngdweexj?" )
+        case .artistarvividnation:return ArtisticPoetry.extractVibrantPigments(colorFormula:"peargkeksa/ohgotmbeppsamgved/diinedvekxw?uujshezrhIsdc=" )
         case .artisticreport:return  ArtisticPoetry.extractVibrantPigments(colorFormula: "pyaegcebsq/irgebpooirots/hitnfdnekxl?")
-        case .artisticinformation :return ArtisticPoetry.extractVibrantPigments(colorFormula: "plalgxecsf/giknefhofrfmwagteizounz/rignqdtevxe?")
-        case .artisticEditData:return ArtisticPoetry.extractVibrantPigments(colorFormula:"ppadgketsk/wEwdiistvDdabtmai/xifnvdvenxh?" )
+        case .artistarfantasies :return ArtisticPoetry.extractVibrantPigments(colorFormula: "plalgxecsf/giknefhofrfmwagteizounz/rignqdtevxe?")
+        case .artistarrhythm:return ArtisticPoetry.extractVibrantPigments(colorFormula:"ppadgketsk/wEwdiistvDdabtmai/xifnvdvenxh?" )
         
-        case .artistiFollowList:return ArtisticPoetry.extractVibrantPigments(colorFormula: "pwamgoeqsy/baytotneanrtjifoqnyLxiyshto/aifnxdpewxq?btbyipnek=r1v?")
-        case .artistiFanceList:return ArtisticPoetry.extractVibrantPigments(colorFormula: "praqgdewss/kavtdtvednqtaibowngLhilsitu/finnfdoelxg?wtwybpael=v2r?")
+        case .artistasymphony:return ArtisticPoetry.extractVibrantPigments(colorFormula: "pwamgoeqsy/baytotneanrtjifoqnyLxiyshto/aifnxdpewxq?btbyipnek=r1v?")
+        case .artistevolution:return ArtisticPoetry.extractVibrantPigments(colorFormula: "praqgdewss/kavtdtvednqtaibowngLhilsitu/finnfdoelxg?wtwybpael=v2r?")
         
-        case .artisticwallet:return ArtisticPoetry.extractVibrantPigments(colorFormula: "pgavgtecsh/lwuabldlcejtl/nihnpdzevxq?")
-        case .artisticSetUp:return  ArtisticPoetry.extractVibrantPigments(colorFormula: "psakgkessr/mStehtaUeph/qibnkdsecxf?")
-        case .artisticAgreement:return ArtisticPoetry.extractVibrantPigments(colorFormula:"pvanggejsd/vAagwrbebebmdegnztp/xisnvdnekxz?mtfyzpcev=w1k?" )
-        case .artisticprivacy:return ArtisticPoetry.extractVibrantPigments(colorFormula:"piadgqeqsn/iAygprjedelmwewnztq/wiunqdfelxb?wtiyipsec=q2" )
-        case .artisticprivateChat :return ArtisticPoetry.extractVibrantPigments(colorFormula:"pcakgiejsb/zpxryiivnaqthenCjhjaotc/kisnxdwecxq?fugsfehrvIode=" )
+        case .artisteunique:return ArtisticPoetry.extractVibrantPigments(colorFormula: "pgavgtecsh/lwuabldlcejtl/nihnpdzevxq?")
+        case .artistechaos:return  ArtisticPoetry.extractVibrantPigments(colorFormula: "psakgkessr/mStehtaUeph/qibnkdsecxf?")
+        case .artisteillusions:return ArtisticPoetry.extractVibrantPigments(colorFormula:"pvanggejsd/vAagwrbebebmdegnztp/xisnvdnekxz?mtfyzpcev=w1k?" )
+        case .masterpieces:return ArtisticPoetry.extractVibrantPigments(colorFormula:"piadgqeqsn/iAygprjedelmwewnztq/wiunqdfelxb?wtiyipsec=q2" )
+        case .arttexture :return ArtisticPoetry.extractVibrantPigments(colorFormula:"pcakgiejsb/zpxryiivnaqthenCjhjaotc/kisnxdwecxq?fugsfehrvIode=" )
         case .artisticnothing :return ""
         }
         

@@ -177,7 +177,7 @@ Children: The App is not intended for users under 13. Accounts suspected of unde
             RebellionController.setUserLoggedIn(creativeToken: creativeToken, creativeUserID: creativeUserID)
             self.navigationController?.pushViewController(MMopArtMainTAbController(), animated: false)
             enputCOunt += 3
-            MMopArtAlertController.showOn(self, type: MMopArtAlertController.PigmentAlertType.success(info: ArtisticPoetry.extractVibrantPigments(colorFormula:"Wleylcckobmlex,sLmoygc viwny ysyuxcacyepskscfzuvls!" )))
+           
            
         } creativeMishap: { anyerror in
             MMopArtAlertController.showOn(self, type: MMopArtAlertController.PigmentAlertType.error(info: anyerror.localizedDescription))

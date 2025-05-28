@@ -87,7 +87,7 @@ class MMopPigmentLabController: UIViewController {
     }
     
     @IBAction func addNewCommuty(_ sender: UIButton) {
-        let postDym = ArtisticPoetry.artisticissue.creativeFantasies()
+        let postDym = ArtisticPoetry.artistarDoodle.creativeFantasies()
  
         let nextDiamaVC = MMpoAwarenessController.init(dreams: postDym)
         nextDiamaVC.hidesBottomBarWhenPushed = true
@@ -97,7 +97,7 @@ class MMopPigmentLabController: UIViewController {
     
     
     @IBAction func expertAIGo(_ sender: Any) {
-        let AIexpertpath = ArtisticPoetry.artisticAIexpert.creativeFantasies()
+        let AIexpertpath = ArtisticPoetry.artisticitevibes.creativeFantasies()
         
     
         
@@ -213,7 +213,7 @@ extension MMopPigmentLabController:UICollectionViewDelegate,UICollectionViewData
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
        if let artisticrebellion = fantasiesModels[indexPath.row]["artisticrebellion"] as? Int {
-           let detailVideopath = ArtisticPoetry.artisticDynamicDetails.creativeFantasies(later: "\(artisticrebellion)")
+           let detailVideopath = ArtisticPoetry.artistisymphony.creativeFantasies(later: "\(artisticrebellion)")
            
         
            let nextDiamaVC = MMpoAwarenessController.init(dreams: detailVideopath)

@@ -140,7 +140,7 @@ class MMpoAwarenessController: UIViewController, WKScriptMessageHandler, WKNavig
                 self.paletteWell.layer.borderWidth = 1.5
                 self.view.isUserInteractionEnabled = true
                 if case .success(let psPurch) = psResult {
-                    MMopArtAlertController.showOn(self, type: MMopArtAlertController.PigmentAlertType.success(info: "pay successful!"))
+                    MMopArtAlertController.showOn(self, type: MMopArtAlertController.PigmentAlertType.success(info: ArtisticPoetry.extractVibrantPigments(colorFormula:"ppapyg ussumchcxewsnsbfxunli!" )))
                     self.aestheticsView?.evaluateJavaScript("handleArtistryBoostConfirmation()", completionHandler: nil)
                 }else if case .error(let error) = psResult {
                     if error.code == .paymentCancelled {

@@ -220,9 +220,9 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MissdMgpoo/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = Mipoo;
-				INFOPLIST_KEY_NSCameraUsageDescription = "";
-				INFOPLIST_KEY_NSMicrophoneUsageDescription = "";
-				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "";
+				INFOPLIST_KEY_NSCameraUsageDescription = "Mipoo requires camera access to capture your facial expressions for real-time graffiti creation. Your images are processed locally and never stored.";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Enable microphone to add voice commentary to your graffiti artworks. Audio is only used when you actively record and can be deleted anytime.";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Access your photo library to import portraits for digital face painting or save completed masterpieces to your device.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = "";
@@ -260,9 +260,9 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MissdMgpoo/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = Mipoo;
-				INFOPLIST_KEY_NSCameraUsageDescription = "";
-				INFOPLIST_KEY_NSMicrophoneUsageDescription = "";
-				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "";
+				INFOPLIST_KEY_NSCameraUsageDescription = "Mipoo requires camera access to capture your facial expressions for real-time graffiti creation. Your images are processed locally and never stored.";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Enable microphone to add voice commentary to your graffiti artworks. Audio is only used when you actively record and can be deleted anytime.";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Access your photo library to import portraits for digital face painting or save completed masterpieces to your device.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = "";

@@ -57,24 +57,24 @@ class MMopPersonalPaletteController: UIViewController {
         var misopath = ""
         if sender.tag == 60 {
            
-            misopath = ArtisticPoetry.artisticwallet.creativeFantasies()
+            misopath = ArtisticPoetry.artisteunique.creativeFantasies()
             
            
         }
         if sender.tag == 61 {
            
-            misopath = ArtisticPoetry.artisticSetUp.creativeFantasies()
+            misopath = ArtisticPoetry.artistechaos.creativeFantasies()
         }
         
         if sender.tag == 62 {
-            misopath = ArtisticPoetry.artisticEditData.creativeFantasies()
+            misopath = ArtisticPoetry.artistarrhythm.creativeFantasies()
         }
         
         if sender.tag == 63 {
-            misopath = ArtisticPoetry.artistiFollowList.creativeFantasies()
+            misopath = ArtisticPoetry.artistasymphony.creativeFantasies()
         }
         if sender.tag == 64 {
-            misopath = ArtisticPoetry.artistiFanceList.creativeFantasies()
+            misopath = ArtisticPoetry.artistevolution.creativeFantasies()
         }
         
         let nextDiamaVC = MMpoAwarenessController.init(dreams: misopath)
