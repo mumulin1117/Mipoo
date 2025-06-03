@@ -147,7 +147,7 @@ class MMopArtAlertController: UIViewController {
         
         
        
-        pigmentLabel.frame = CGRect(x: 15, y:0, width: canvasView.frame.width - 30, height: 70)
+        pigmentLabel.frame = CGRect(x: 30, y:0, width: canvasView.frame.width - 60, height: 75)
         pigmentLabel.center = self.view.center
         view.addSubview(pigmentLabel)
     }
