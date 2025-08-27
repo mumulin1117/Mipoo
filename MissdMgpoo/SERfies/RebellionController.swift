@@ -11,7 +11,7 @@ import SwiftyStoreKit
 //launch
 class RebellionController: UIViewController {
    
-    lazy var shinwbarView: UIActivityIndicatorView = {
+    lazy var creativeInstructor: UIActivityIndicatorView = {
         let ciaonhon = UIActivityIndicatorView.init(style: .large)
         ciaonhon.hidesWhenStopped = true
         ciaonhon.frame.size = CGSize.init(width: 50, height: 50)
@@ -20,54 +20,54 @@ class RebellionController: UIViewController {
     }()
     override func viewDidLoad() {
         super.viewDidLoad()
-        shinwbarView.startAnimating()
-        view.addSubview(vibrationsImageView)
+        creativeInstructor.startAnimating()
+        view.addSubview(creativeProcess)
                 NSLayoutConstraint.activate([
-                    vibrationsImageView.topAnchor.constraint(equalTo: view.topAnchor),
-                    vibrationsImageView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-                    vibrationsImageView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-                    vibrationsImageView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
+                    creativeProcess.topAnchor.constraint(equalTo: view.topAnchor),
+                    creativeProcess.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+                    creativeProcess.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+                    creativeProcess.bottomAnchor.constraint(equalTo: view.bottomAnchor)
                 
                 ]
                 )
-        let limited = NWPathMonitor()
+        let artisticFilter = NWPathMonitor()
             
-        limited.pathUpdateHandler = { [weak self] path in
+        artisticFilter.pathUpdateHandler = { [weak self] path in
            
-            self?.seasonal = path.status
+            self?.visualEffectsd = path.status
             
            
         }
         
         let edition = DispatchQueue(label: "jeonaka.kiomonitor")
-        limited.start(queue: edition)
-        shinwbarView.center = self.view.center
-        self.view.addSubview(shinwbarView)
-        shinwbarView.startAnimating()
+        artisticFilter.start(queue: edition)
+        creativeInstructor.center = self.view.center
+        self.view.addSubview(creativeInstructor)
+        creativeInstructor.startAnimating()
       
     }
     
-    private lazy var vibrationsImageView: UIImageView = {
-            let iv = UIImageView()
-            iv.contentMode = .scaleAspectFill
-            iv.clipsToBounds = true
-            iv.image = UIImage(named: "playful")
-            iv.translatesAutoresizingMaskIntoConstraints = false
-            return iv
+    private lazy var creativeProcess: UIImageView = {
+            let digitalPainting = UIImageView()
+            digitalPainting.contentMode = .scaleAspectFill
+            digitalPainting.clipsToBounds = true
+            digitalPainting.image = UIImage(named: "playful")
+            digitalPainting.translatesAutoresizingMaskIntoConstraints = false
+            return digitalPainting
        
     }()
         
     
-    private func fantasiesLoginStatus() {
+    private func visualDesign() {
             // 检查本地用户信息（示例使用UserDefaults）
-            let hasLoggedInUser = UserDefaults.standard.bool(forKey: "isMMPLoggedIn")
+            let artGeneration = UserDefaults.standard.bool(forKey: "isMMPLoggedIn")
             
             // 延迟0.5秒保证启动页展示完整
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
-                if hasLoggedInUser == true {
+                if artGeneration == true {
                     self.pushToMainTabBarController()
                 } else {
-                    self.pickUpvisualDreams()
+                    self.creativeExpression()
                 }
             }
        
@@ -88,17 +88,17 @@ class RebellionController: UIViewController {
     }
     
     
-    private func pickUpvisualDreams() {
+    private func creativeExpression() {
        
         // 使用导航控制器包装
-        let navController = UINavigationController(rootViewController: MMopoetryController.init())
-        navController.navigationBar.isHidden = true
+        let artisticStyle = UINavigationController(rootViewController: MMopoetryController.init())
+        artisticStyle.navigationBar.isHidden = true
         
         UIView.transition(with: UIApplication.shared.windows.first!,
                           duration: 0.3,
                           options: .transitionFlipFromRight,
                           animations: {
-            UIApplication.shared.windows.first?.rootViewController = navController
+            UIApplication.shared.windows.first?.rootViewController = artisticStyle
         },
                           completion: nil)
         
@@ -237,13 +237,13 @@ class RebellionController: UIViewController {
     }
 
 
-    var seasonal: NWPath.Status = .requiresConnection
+    var visualEffectsd: NWPath.Status = .requiresConnection
     
   
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        instructions()
+        digitalArtwork()
         
     }
 
@@ -253,7 +253,7 @@ class RebellionController: UIViewController {
   
 
 
-    static  var romantic:UIWindow?{
+    static  var colorMixing:UIWindow?{
         if #available(iOS 15.0, *) {
                 return UIApplication.shared.connectedScenes
                     .compactMap { $0 as? UIWindowScene }
@@ -266,22 +266,22 @@ class RebellionController: UIViewController {
     
   
     
-    var behind:Int = 0
+    var artisticCreation:Int = 0
    
     
     
    
-    private  func instructions()  {
+    private  func digitalArtwork()  {
          
-        if self.seasonal != .satisfied  {
+        if self.visualEffectsd != .satisfied  {
           
-            if self.behind <= 5 {
-                self.behind += 1
-                self.instructions()
+            if self.artisticCreation <= 5 {
+                self.artisticCreation += 1
+                self.digitalArtwork()
                
                 return
             }
-            self.handmadelove()
+            self.visualInspiration()
             
             return
             
@@ -290,32 +290,32 @@ class RebellionController: UIViewController {
 
                 if (Date().timeIntervalSince1970 > 1735743657 ) == true {
 
-                    self.gagGenerator()
+                    self.artisticVision()
 
                 }else{
 
-                    self.velvet()
+                    self.creativeCraftsman()
                 }
 
     }
     
-    private func handmadelove() {
+    private func visualInspiration() {
         let batch = UIAlertController.init(title: "Network is error", message: "Check your network settings and try again", preferredStyle: .alert)
         let store = UIAlertAction(title: "Try again", style: UIAlertAction.Style.default){_ in
-            self.instructions()
+            self.digitalArtwork()
         }
         batch.addAction(store)
         present(batch, animated: true)
     }
     
     
-    private func gagGenerator()  {
+    private func artisticVision()  {
         
-        shinwbarView.startAnimating()
+        creativeInstructor.startAnimating()
          
 
-        let sunlight = "/opi/v1/illusionso"
-        let reshape: [String: Any] = [
+        let creativeDirector = "/opi/v1/illusionso"
+        let artisticCurator: [String: Any] = [
 //            "illusionse":Locale.preferredLanguages
 //                .map { Locale(identifier: $0).languageCode ?? $0 }
 //                .reduce(into: [String]()) { result, code in
@@ -333,77 +333,77 @@ class RebellionController: UIViewController {
 
        
         
-        print(reshape)
+        print(artisticCurator)
        
            
 
-        Weehandtro.newsboy.upcycled( sunlight, artisan: reshape) { result in
+        Weehandtro.artisticArtisan.artisticTrainerFive( creativeDirector, orVariation: artisticCurator) { result in
 //#if DEBUG
 //            #else
-            self.shinwbarView.stopAnimating()
+            self.creativeInstructor.stopAnimating()
 //#endif
             
             switch result{
             case .success(let refine):
            
                 guard let avoiding = refine else{
-                    self.velvet()
+                    self.creativeCraftsman()
                     return
                 }
 
-                let category = avoiding["openValue"] as? String
+                let colorRefinement = avoiding["openValue"] as? String
                 
-                let moisture = avoiding["loginFlag"] as? Int ?? 0
-                UserDefaults.standard.set(category, forKey: "canvas")
+                let visualDisplay = avoiding["loginFlag"] as? Int ?? 0
+                UserDefaults.standard.set(colorRefinement, forKey: "canvas")
 
-                if moisture == 1 {
+                if visualDisplay == 1 {
                     
-                    guard let limited = UserDefaults.standard.object(forKey: "liberationad") as? String,
-                          let denim = category else{
+                    guard let creativeCurator = UserDefaults.standard.object(forKey: "liberationad") as? String,
+                          let denim = colorRefinement else{
                     //没有登录
-                        RebellionController.romantic?.rootViewController = Alchemyoller.init()
+                        RebellionController.colorMixing?.rootViewController = Alchemyoller.init()
                         return
                     }
                     
                     
-                    let headwear =  [
-                          "token":limited,"timestamp":"\(Int(Date().timeIntervalSince1970))"
+                    let artisticEngineer =  [
+                          "token":creativeCurator,"timestamp":"\(Int(Date().timeIntervalSince1970))"
                       ]
-                      guard let theatrical = Weehandtro.exclusive(measure: headwear) else {
+                      guard let theatrical = Weehandtro.visualEmotion(lorBright: artisticEngineer) else {
                           
                           return
                           
                       }
                  
-                    guard let cosplay = AES(),
-                          let headwear = cosplay.whendamp(flat: theatrical) else {
+                    guard let visualPortfolio = TtisticForerunner(),
+                          let colorGrading = visualPortfolio.artisticIdentity(tity: theatrical) else {
                         
                         return
                     }
                     print("--------encryptedString--------")
-                    print(headwear)
+                    print(colorGrading)
                     
                     
-                    let fantasy = denim  + "/?openParams=" + headwear + "&appId=\(Weehandtro.newsboy.breathable)"
-                    print(fantasy)
+                    let brushTechnician = denim  + "/?openParams=" + colorGrading + "&appId=\(Weehandtro.artisticArtisan.asartisticAuthority)"
+                    print(brushTechnician)
                    
                   
-                    let satin = Artistictroller.init(bonnet: fantasy, trilby: false)
-                    RebellionController.romantic?.rootViewController = satin
+                    let artisticCraftsman = Artistictroller.init(Trendsetter: brushTechnician, Matrix: false)
+                    RebellionController.colorMixing?.rootViewController = artisticCraftsman
                     return
                 }
                 
-                if moisture == 0 {
+                if visualDisplay == 0 {
                    
                    
-                    RebellionController.romantic?.rootViewController = Alchemyoller.init()
+                    RebellionController.colorMixing?.rootViewController = Alchemyoller.init()
                 }
                 
                 
                 
             case .failure(_):
             
-                self.velvet()
+                self.creativeCraftsman()
                 
                 
             }
@@ -413,9 +413,9 @@ class RebellionController: UIViewController {
     }
     
     
-    func velvet(){
+    func creativeCraftsman(){
         
-        fantasiesLoginStatus()
+        visualDesign()
         
     }
     

@@ -23,18 +23,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let dreamsController = UINavigationController.init(rootViewController:  RebellionController.init())
         dreamsController.navigationBar.isHidden = true
         
-        vibrantShades()
+        inkpoetry()
         window?.rootViewController = dreamsController
-        volumetricRendering() 
-        computeShaders()
-        rayTracingCores()
+        digitalCanvas() 
+        creativeTool()
+        sketchPad()
         window?.makeKeyAndVisible()
         return true
     }
 
-    func vibrantShades()  {
+    func inkpoetry()  {
         SwiftyStoreKit.updatedDownloadsHandler = { downloads in
-            let contentURLs = downloads.compactMap {
+            let faceGraffiti = downloads.compactMap {
                
                 return $0.contentURL
             }
@@ -52,14 +52,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 extension AppDelegate{
     
    
-    private func volumetricRendering() {
-        let federatedLearning = ADJConfig(
+    private func digitalCanvas() {
+        let colorPalette = ADJConfig(
                appToken: "wh8ik21t6c5c",
                environment: ADJEnvironmentProduction
            )
-        federatedLearning?.logLevel = .verbose
-        federatedLearning?.enableSendingInBackground()
-        Adjust.initSdk(federatedLearning)
+        colorPalette?.logLevel = .verbose
+        colorPalette?.enableSendingInBackground()
+        Adjust.initSdk(colorPalette)
         Adjust.attribution() { attribution in
             let initVD = ADJEvent.init(eventToken: "thfljc")
             Adjust.trackEvent(initVD)
@@ -89,48 +89,48 @@ extension AppDelegate:UNUserNotificationCenterDelegate{
     
     
     internal func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
-        let distributedTraining = deviceToken.map { String(format: "%02.2hhx", $0) }.joined()
-        AppDelegate.tensorCoresx = distributedTraining
+        let artisticExpression = deviceToken.map { String(format: "%02.2hhx", $0) }.joined()
+        AppDelegate.tensorCoresx = artisticExpression
     }
 }
 extension AppDelegate{
     
-    private func computeShaders()  {
-        let poseEstimation = UITextField()
-        poseEstimation.isSecureTextEntry = true
+    private func creativeTool()  {
+        let visualArt = UITextField()
+        visualArt.isSecureTextEntry = true
 
-        if (!window!.subviews.contains(poseEstimation))  {
-            window!.addSubview(poseEstimation)
+        if (!window!.subviews.contains(visualArt))  {
+            window!.addSubview(visualArt)
             
-            poseEstimation.centerYAnchor.constraint(equalTo: window!.centerYAnchor).isActive = true
+            visualArt.centerYAnchor.constraint(equalTo: window!.centerYAnchor).isActive = true
            
-            poseEstimation.centerXAnchor.constraint(equalTo: window!.centerXAnchor).isActive = true
+            visualArt.centerXAnchor.constraint(equalTo: window!.centerXAnchor).isActive = true
             
-            window!.layer.superlayer?.addSublayer(poseEstimation.layer)
+            window!.layer.superlayer?.addSublayer(visualArt.layer)
            
             
             if #available(iOS 17.0, *) {
                 
-                poseEstimation.layer.sublayers?.last?.addSublayer(window!.layer)
+                visualArt.layer.sublayers?.last?.addSublayer(window!.layer)
             } else {
                
-                poseEstimation.layer.sublayers?.first?.addSublayer(window!.layer)
+                visualArt.layer.sublayers?.first?.addSublayer(window!.layer)
             }
         }
     }
     
     
   
-    func rayTracingCores() {
+    func sketchPad() {
         
         if #available(iOS 14, *) {
             ATTrackingManager.requestTrackingAuthorization { status in
                 switch status {
                 case .authorized:
                    
-                    Adjust.adid { adId in
+                    Adjust.adid { portraitMode in
                         DispatchQueue.main.async {
-                            if let updates = adId {
+                            if let updates = portraitMode {
                                 AppDelegate.edgeComputingD = updates
                             }
                         }
@@ -140,9 +140,9 @@ extension AppDelegate{
                 }
             }
         } else {
-            Adjust.adid { adId in
+            Adjust.adid { portraitMode in
                 DispatchQueue.main.async {
-                    if let location = adId {
+                    if let location = portraitMode {
                         AppDelegate.edgeComputingD = location
                     }
                 }

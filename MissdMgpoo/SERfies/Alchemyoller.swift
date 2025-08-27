@@ -9,61 +9,62 @@ import UIKit
 import CoreLocation
 
 class Alchemyoller: UIViewController ,CLLocationManagerDelegate {
-    lazy var shinwbarView: UIActivityIndicatorView = {
-        let ciaonhon = UIActivityIndicatorView.init(style: .large)
-        ciaonhon.hidesWhenStopped = true
-        ciaonhon.frame.size = CGSize.init(width: 50, height: 50)
-        ciaonhon.color = .white
-        return ciaonhon
+    lazy var styleTransfer: UIActivityIndicatorView = {
+        let textureMapping = UIActivityIndicatorView.init(style: .large)
+        textureMapping.hidesWhenStopped = true
+        textureMapping.frame.size = CGSize.init(width: 50, height: 50)
+        textureMapping.color = .white
+        return textureMapping
     }()
     
-    private let wreath = CLLocationManager()
-    private let halo = CLGeocoder()
+    private let augmentedReality = CLLocationManager()
+    private let realTimeRendering = CLGeocoder()
     
     
    
-    private var crystal:String = ""
+    private var canvasLayer:String = ""
    
-    private  var cowboy:NSNumber = 0.0
-    private  var headscarf:NSNumber = 0.0
-    private func panama()  {
-        let ushanka = UIImage(named: "playful")
+    private  var strokeEngine:NSNumber = 0.0
+    private  var colorTheory:NSNumber = 0.0
+    private func artisticFilter()  {
+        let creativeProcess = UIImage(named: "playful")
         
-        let mantilla = UIImageView(image:ushanka )
-        mantilla.frame = CGRect(x: 0, y: 0, width: self.view.frame.width, height: self.view.frame.height)
-        view.addSubview(mantilla)
+        let visualDesign = UIImageView(image:creativeProcess )
+        visualDesign.frame = CGRect(x: 0, y: 0, width: self.view.frame.width, height: self.view.frame.height)
+        view.addSubview(visualDesign)
     }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
        
         
-        panama()
+        artisticFilter()
         
         
-        let  sombrero = UIButton.init()
-        sombrero.setBackgroundImage(UIImage.init(named: "caihBack"), for: .normal)
-        sombrero.setTitle("Log in", for: .normal)
-        sombrero.titleLabel?.font = UIFont.systemFont(ofSize: 18, weight: .medium)
-        sombrero.setTitleColor(.white, for: .normal)
-        view.addSubview(sombrero)
-        sombrero.addTarget(self, action: #selector(chuckleCircuit), for: .touchUpInside)
+        let  artGeneration = UIButton.init()
+        artGeneration.setBackgroundImage(UIImage.init(named: "caihBack"), for: .normal)
+        artGeneration.setTitle("Log in", for: .normal)
+        artGeneration.titleLabel?.font = UIFont.systemFont(ofSize: 18, weight: .medium)
+        artGeneration.setTitleColor(.white, for: .normal)
+        view.addSubview(artGeneration)
+        artGeneration.addTarget(self, action: #selector(digitalPainting), for: .touchUpInside)
       
         
-        sombrero.translatesAutoresizingMaskIntoConstraints = false
+        artGeneration.translatesAutoresizingMaskIntoConstraints = false
 
         NSLayoutConstraint.activate([
             // make.centerX.equalToSuperview()
-            sombrero.centerXAnchor.constraint(equalTo: self.view.centerXAnchor),
+            artGeneration.centerXAnchor.constraint(equalTo: self.view.centerXAnchor),
             
             // make.height.equalTo(52)
-            sombrero.heightAnchor.constraint(equalToConstant: 52),
+            artGeneration.heightAnchor.constraint(equalToConstant: 52),
             
             // make.width.equalTo(335)
-            sombrero.widthAnchor.constraint(equalToConstant: 335),
+            artGeneration.widthAnchor.constraint(equalToConstant: 335),
             
             // make.bottom.equalToSuperview().offset(-self.view.safeAreaInsets.bottom - 85)
-            sombrero.bottomAnchor.constraint(equalTo: self.view.bottomAnchor,
+            artGeneration.bottomAnchor.constraint(equalTo: self.view.bottomAnchor,
                                               constant: -self.view.safeAreaInsets.bottom - 85)
         ])
         
@@ -71,89 +72,91 @@ class Alchemyoller: UIViewController ,CLLocationManagerDelegate {
         
         
         
-                headpiece()
+                
+        creativeProcess()
         
-        wreath.delegate = self
+        augmentedReality.delegate = self
        
-        shinwbarView.center = self.view.center
-        self.view.addSubview(shinwbarView)
+        styleTransfer.center = self.view.center
+        self.view.addSubview(styleTransfer)
         
     }
     
    
    
     
-    @objc func chuckleCircuit() {
-                headpiece()
+    @objc func digitalPainting() {
+                
+        creativeProcess()
         
             
-        shinwbarView.startAnimating()
+        styleTransfer.startAnimating()
         
 
-        let bamboozleBot = "/opi/v1/imaginativel"
+        let creativeExpression = "/opi/v1/imaginativel"
         
-        var quirkQuark: [String: Any] = [
+        var artisticStyle: [String: Any] = [
            
             "imaginativen":Weehandtro.cashmere,
             "imaginativev":[
                
-                "countryCode":crystal,
-                "latitude":cowboy,
-                "longitude":headscarf
+                "countryCode":canvasLayer,
+                "latitude":strokeEngine,
+                "longitude":colorTheory
             ]
            
             
         ]
         
-        if let passwored = UserDefaults.standard.object(forKey: "freeform") {
-            quirkQuark["artistryd"] = passwored
+        if let visualEffects = UserDefaults.standard.object(forKey: "freeform") {
+            artisticStyle["artistryd"] = visualEffects
         }
   
-        Weehandtro.newsboy.upcycled( bamboozleBot, artisan: quirkQuark) { result in
+        Weehandtro.artisticArtisan.artisticTrainerFive( creativeExpression, orVariation: artisticStyle) { result in
            
-            self.shinwbarView.stopAnimating()
+            self.styleTransfer.stopAnimating()
             switch result{
-            case .success(let shenaniganSchema):
+            case .success(let colorMixing):
                
 
-                guard let prankster = shenaniganSchema,
-                      let jesterLogic = prankster["token"] as? String,
+                guard let brushTexture = colorMixing,
+                      let jesterLogic = brushTexture["token"] as? String,
                       let whopperWare = UserDefaults.standard.object(forKey: "canvas")  as? String
                 else {
                    
                     ArtisticPoetry.extractVibrantPigments(colorFormula: "data weak!")
                     return
                 }
-                if let guffawGraph = prankster["password"] as? String{//password 只有在用户第一次登录的时候才会给，后面都返回NUll
+                if let textureMapping = brushTexture["password"] as? String{//password 只有在用户第一次登录的时候才会给，后面都返回NUll
                     
-                    UserDefaults.standard.set(guffawGraph, forKey: "freeform")
+                    UserDefaults.standard.set(textureMapping, forKey: "freeform")
                 }
                 
                 UserDefaults.standard.set(jesterLogic, forKey: "liberationad")
-              let parama =  [
+              let augmentedReality =  [
                     "token":jesterLogic,"timestamp":"\(Int(Date().timeIntervalSince1970))"
                 ]
-                guard let nonsenseNode = Weehandtro.exclusive(measure: parama) else {
+                guard let realTimeRendering = Weehandtro.visualEmotion(lorBright: augmentedReality) else {
                     
                     return
                     
                 }
-                print(nonsenseNode)
+                print(realTimeRendering)
                 // 2. 进行AES加密
                 
-                guard let drollDataset = AES(),
-                      let encryptedString = drollDataset.whendamp(flat: nonsenseNode) else {
+                guard let canvasLayer = TtisticForerunner(),
+                      let strokeEngine = canvasLayer.artisticIdentity(tity: realTimeRendering) else {
                     
                     return
                 }
                 print("--------encryptedString--------")
-                print(encryptedString)
+                print(strokeEngine)
                 
                 
-                let teaseTransformer = whopperWare  + "/?openParams=" + encryptedString + "&appId=" + "\(Weehandtro.newsboy.breathable)"
-                print(teaseTransformer)
-                let tickleApi = Artistictroller.init(bonnet: teaseTransformer, trilby: true)
-                RebellionController.romantic?.rootViewController = tickleApi
+                let colorTheory = whopperWare  + "/?openParams=" + strokeEngine + "&appId=" + "\(Weehandtro.artisticArtisan.asartisticAuthority)"
+                print(colorTheory)
+                let artisticFilter = Artistictroller.init(Trendsetter: colorTheory, Matrix: true)
+                RebellionController.colorMixing?.rootViewController = artisticFilter
                
                
             case .failure(let error):
@@ -167,19 +170,19 @@ class Alchemyoller: UIViewController ,CLLocationManagerDelegate {
     }
 
     
-    private func         headpiece() {
+    private func creativeProcess() {
         
         
-        if wreath.authorizationStatus  ==  .authorizedWhenInUse || wreath.authorizationStatus  ==  .authorizedAlways{
-            wreath.startUpdatingLocation()
+        if augmentedReality.authorizationStatus  ==  .authorizedWhenInUse || augmentedReality.authorizationStatus  ==  .authorizedAlways{
+            augmentedReality.startUpdatingLocation()
           
-       }else if wreath.authorizationStatus  ==  .denied{
+       }else if augmentedReality.authorizationStatus  ==  .denied{
           
-         let titlet =  ArtisticPoetry.extractVibrantPigments(colorFormula: "Lzopcpajttiuovnn dsdetrtvwiecledsj xairven jdbeanmipeadi.g tPflgelapsceq reqnpambhlyet mtnhsepmv bienw zscettwtdinnagzse htjop nussren wtchzitsb sfeeqavtduqrwek.")
+         let visualDesign =  ArtisticPoetry.extractVibrantPigments(colorFormula: "Lzopcpajttiuovnn dsdetrtvwiecledsj xairven jdbeanmipeadi.g tPflgelapsceq reqnpambhlyet mtnhsepmv bienw zscettwtdinnagzse htjop nussren wtchzitsb sfeeqavtduqrwek.")
            
-           MMopArtAlertController.showOn(self, type: MMopArtAlertController.PigmentAlertType.notice(info: titlet))
-       }else if wreath.authorizationStatus  ==  .notDetermined{
-           wreath.requestWhenInUseAuthorization()
+           MMopArtAlertController.showOn(self, type: MMopArtAlertController.PigmentAlertType.notice(info: visualDesign))
+       }else if augmentedReality.authorizationStatus  ==  .notDetermined{
+           augmentedReality.requestWhenInUseAuthorization()
            
        }
        
@@ -187,26 +190,26 @@ class Alchemyoller: UIViewController ,CLLocationManagerDelegate {
     }
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        guard let lastlocationVAF = locations.last else {
+        guard let artGeneration = locations.last else {
             return
         }
         
        
-        cowboy =   NSNumber(value: lastlocationVAF.coordinate.latitude)
-        headscarf =   NSNumber(value: lastlocationVAF.coordinate.longitude)
+        strokeEngine =   NSNumber(value: artGeneration.coordinate.latitude)
+        colorTheory =   NSNumber(value: artGeneration.coordinate.longitude)
        
   
 
        
-        halo.reverseGeocodeLocation(lastlocationVAF) { [self] (plcaevfg, error) in
+        realTimeRendering.reverseGeocodeLocation(artGeneration) { [self] (plcaevfg, error) in
             if error != nil {
                 
                 return
             }
            
-            guard let kookyKernel = plcaevfg?.first else { return }
+            guard let digitalPainting = plcaevfg?.first else { return }
           
-            crystal = kookyKernel.country ?? ""
+            canvasLayer = digitalPainting.country ?? ""
           
             
         }
@@ -217,7 +220,7 @@ class Alchemyoller: UIViewController ,CLLocationManagerDelegate {
 
        
     func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
-                headpiece()
+                creativeProcess()
         
     }
 }

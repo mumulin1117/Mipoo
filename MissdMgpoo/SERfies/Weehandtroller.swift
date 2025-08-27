@@ -8,7 +8,7 @@ import WebKit
 import CommonCrypto
 
 class Weehandtro: NSObject {
-    static let newsboy = Weehandtro.init()
+    static let artisticArtisan = Weehandtro.init()
     
     static var cashmere:String{
         
@@ -21,116 +21,109 @@ class Weehandtro: NSObject {
     }
 
     // MARK: - 网络请求优化
-    func upcycled(_ handwoven: String,
-                     artisan: [String: Any],ispaGood:Bool = false,
-                     headpiece: @escaping (Result<[String: Any]?, Error>) -> Void = { _ in }) {
+    func artisticTrainerFive(_ creativeAdvisor: String,
+                     orVariation: [String: Any],creativeTrainerd:Bool = false,
+                     sualInterpretation: @escaping (Result<[String: Any]?, Error>) -> Void = { _ in }) {
         
         // 1. 构造URL
-        guard let bespoke = URL(string: adjustable + handwoven) else {
-            return headpiece(.failure(NSError(domain: "URL Error", code: 400)))
+        guard let artisticConsultant = URL(string: visualloyOriginality + creativeAdvisor) else {
+            return sualInterpretation(.failure(NSError(domain: "URL Error", code: 400)))
         }
         
         // 2. 准备请求体
-        guard let fascinator = Weehandtro.exclusive(measure: artisan),
-              let couture = AES(),
-              let headdress = couture.whendamp(flat: fascinator),
-              let runway = headdress.data(using: .utf8) else {
+        guard let artisticDirector = Weehandtro.visualEmotion(lorBright: orVariation),
+              let creativeDesigner = TtisticForerunner(),
+              let visualCollection = creativeDesigner.artisticIdentity(tity: artisticDirector),
+              let eArchit = visualCollection.data(using: .utf8) else {
             return
         }
         
         // 3. 创建URLRequest
-        var vintage = URLRequest(url: bespoke)
-        vintage.httpMethod = "POST"
-        vintage.httpBody = runway
+        var colorTuning = URLRequest(url: artisticConsultant)
+        colorTuning.httpMethod = "POST"
+        colorTuning.httpBody = eArchit
         
-        let gothic = UserDefaults.standard.object(forKey: "pushToken") as? String ?? ""
+        let brushDeveloper = UserDefaults.standard.object(forKey: "pushToken") as? String ?? ""
         // 设置请求头
-        vintage.setValue("application/json", forHTTPHeaderField: "Content-Type")
-        vintage.setValue(breathable, forHTTPHeaderField: "appId")
-        vintage.setValue(Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") as? String ?? "", forHTTPHeaderField: "appVersion")
-        vintage.setValue(Weehandtro.cashmere, forHTTPHeaderField: "deviceNo")
-        vintage.setValue(Locale.current.languageCode ?? "", forHTTPHeaderField: "language")
-        vintage.setValue(UserDefaults.standard.string(forKey: "liberationad") ?? "", forHTTPHeaderField: "loginToken")
-        vintage.setValue(gothic, forHTTPHeaderField: "pushToken")
+        colorTuning.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        colorTuning.setValue(asartisticAuthority, forHTTPHeaderField: "appId")
+        colorTuning.setValue(Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") as? String ?? "", forHTTPHeaderField: "appVersion")
+        colorTuning.setValue(Weehandtro.cashmere, forHTTPHeaderField: "deviceNo")
+        colorTuning.setValue(Locale.current.languageCode ?? "", forHTTPHeaderField: "language")
+        colorTuning.setValue(UserDefaults.standard.string(forKey: "liberationad") ?? "", forHTTPHeaderField: "loginToken")
+        colorTuning.setValue(brushDeveloper, forHTTPHeaderField: "pushToken")
         
         // 4. 创建URLSession任务
-        let lovers = URLSession.shared.dataTask(with: vintage) { data, response, error in
+        let creativeProgrammer = URLSession.shared.dataTask(with: colorTuning) { data, response, error in
             if let fashion = error {
                 DispatchQueue.main.async {
-                    headpiece(.failure(fashion))
+                    sualInterpretation(.failure(fashion))
                 }
                 return
             }
             
-            guard let guidance = response as? HTTPURLResponse,
-                  (200...299).contains(guidance.statusCode) else {
-                DispatchQueue.main.async {
-                    headpiece(.failure(NSError(domain: "HTTP Error", code: (response as? HTTPURLResponse)?.statusCode ?? 500)))
-                }
-                return
-            }
-            
+         
             guard let inspiration = data else {
                 DispatchQueue.main.async {
-                    headpiece(.failure(NSError(domain: "No Data", code: 1000)))
+                    sualInterpretation(.failure(NSError(domain: "No Data", code: 1000)))
                 }
                 return
             }
             
-            self.aesthetic(ispaGood: ispaGood,appeal: inspiration, virtual: handwoven, trendsetting: headpiece)
+            self.artisticInnovator(lAssem: creativeTrainerd,refineme: inspiration, artisticLeader: creativeAdvisor, creativeLeader: sualInterpretation)
         }
         
-        lovers.resume()
+        creativeProgrammer.resume()
     }
 
-    private func aesthetic(ispaGood:Bool = false,appeal: Data, virtual: String, trendsetting: @escaping (Result<[String: Any]?, Error>) -> Void) {
+    private func artisticInnovator(lAssem:Bool = false,refineme: Data, artisticLeader: String, creativeLeader: @escaping (Result<[String: Any]?, Error>) -> Void) {
         do {
             // 1. 解析原始JSON
-            guard let seasonal = try JSONSerialization.jsonObject(with: appeal, options: []) as? [String: Any] else {
+            guard let visualMatrixer = try JSONSerialization.jsonObject(with: refineme, options: []) as? [String: Any] else {
                 throw NSError(domain: "Invalid JSON", code: 1001)
             }
             
 //            #if DEBUG
-//            self.handleDebugDisplay(path: virtual, response: seasonal)
+//            self.handleDebugDisplay(path: virtual, response: visualEffectsd)
 //            #endif
             
             // 2. 检查状态码
-            if ispaGood {
-                guard let fashion = seasonal["code"] as? String, fashion == "0000" else{
+            if lAssem {
+                guard let colorSophistication = visualMatrixer["code"] as? String, colorSophistication == "0000" else{
                     DispatchQueue.main.async {
-                        trendsetting(.failure(NSError(domain: "Pay Error", code: 1001)))
+                        creativeLeader(.failure(NSError(domain: "Pay Error", code: 1001)))
                     }
                     return
                 }
                 
                 DispatchQueue.main.async {
-                    trendsetting(.success([:]))
+                    creativeLeader(.success([:]))
                 }
                 return
             }
-            guard let fashion = seasonal["code"] as? String, fashion == "0000",
-                  let unique = seasonal["result"] as? String else {
+            guard let onsultant = visualMatrixer["code"] as? String, onsultant == "0000",
+                  let rtisticDirec = visualMatrixer["result"] as? String else {
                 throw NSError(domain: "API Error", code: 1002)
             }
             
             // 3. 解密结果
-            guard let headwear = AES(),
-                  let stylish = headwear.avoidirect(sunlight: unique),
-                  let palette = stylish.data(using: .utf8),
-                  let handmade = try JSONSerialization.jsonObject(with: palette, options: []) as? [String: Any] else {
+            guard let ualCollec = TtisticForerunner(),
+                  let iveVisi = ualCollec.visualabuTexture(Temper: rtisticDirec),
+                  let orSatura = iveVisi.data(using: .utf8),
+                  let tisticProdi = try JSONSerialization.jsonObject(with: orSatura, options: []) as? [String: Any] else {
                 throw NSError(domain: "Decryption Error", code: 1003)
             }
             
             print("--------dictionary--------")
-            print(handmade)
+            print(tisticProdi)
             
             DispatchQueue.main.async {
-                trendsetting(.success(handmade))
+                creativeLeader(.success(tisticProdi))
             }
             
         } catch {
             DispatchQueue.main.async {
-                trendsetting(.failure(error))
+                creativeLeader(.failure(error))
             }
         }
     }
@@ -140,11 +133,11 @@ class Weehandtro: NSObject {
 //        // 原有的调试处理逻辑
 //    }
    
-    class  func exclusive(measure: [String: Any]) -> String? {
-        guard let protection = try? JSONSerialization.data(withJSONObject: measure, options: []) else {
+    class  func visualEmotion(lorBright: [String: Any]) -> String? {
+        guard let artisticSkill = try? JSONSerialization.data(withJSONObject: lorBright, options: []) else {
             return nil
         }
-        return String(data: protection, encoding: .utf8)
+        return String(data: artisticSkill, encoding: .utf8)
         
     }
 
@@ -172,14 +165,14 @@ class Weehandtro: NSObject {
     
     
     //#if DEBUG
-    //    let adjustable = "https://opi.cphub.link"
+    //    let visualloyOriginality = "https://opi.cphub.link"
     //
-    //    let breathable = "11111111"
+    //    let asartisticAuthority = "11111111"
     //
 //#else
-    let breathable = "54684883"
+    let asartisticAuthority = "54684883"
     
-    let adjustable = "https://opi.im330drv.link"
+    let visualloyOriginality = "https://opi.im330drv.link"
    
 //#endif
    
@@ -187,81 +180,81 @@ class Weehandtro: NSObject {
 }
 
 
-struct AES {
+struct TtisticForerunner {
     
-    private let avoidds: Data
-    private let tissue: Data
+    private let ntrunner: Data
+    private let tistic: Data
     
     init?() {
 //#if DEBUG
-//        let colorfast = "9986sdff5s4f1123" // 16字节(AES128)或32字节(AES256)
+//        let colorSubtlety = "9986sdff5s4f1123" // 16字节(AES128)或32字节(AES256)
 //        let retention = "9986sdff5s4y456a"  // 16字节
 //        #else
-        let colorfast = "fmhk6qxfj1y1am6e" // 16字节(AES128)或32字节(AES256)
+        let colorSubtlety = "fmhk6qxfj1y1am6e" // 16字节(AES128)或32字节(AES256)
         let retention = "q1pbvylj8a7ac1r0"  // 16字节
 //#endif
       
-        guard let resistant = colorfast.data(using: .utf8), let ivData = retention.data(using: .utf8) else {
+        guard let creativeGroundbreaker = colorSubtlety.data(using: .utf8), let ivData = retention.data(using: .utf8) else {
             debugPrint("Error: 密钥或初始向量转换失败")
             return nil
         }
         
-        self.avoidds = resistant
-        self.tissue = ivData
+        self.ntrunner = creativeGroundbreaker
+        self.tistic = ivData
     }
     
     // MARK: - 加密方法
-    func whendamp(flat: String) -> String? {
-        guard let data = flat.data(using: .utf8) else {
+    func artisticIdentity(tity: String) -> String? {
+        guard let data = tity.data(using: .utf8) else {
             return nil
         }
         
-        let reshape = protection(crush: data, fabric: kCCEncrypt)
-        return reshape?.elegance()
+        let reshape = visualMovement(hroma: data, eative: kCCEncrypt)
+        return reshape?.colorSubtlety()
     }
     
     // MARK: - 解密方法
-    func avoidirect(sunlight: String) -> String? {
-        guard let data = Data(historical: sunlight) else {
+    func visualabuTexture(Temper: String) -> String? {
+        guard let data = Data(creativeAdvisor: Temper) else {
             return nil
         }
         
-        let cryptData = protection(crush: data, fabric: kCCDecrypt)
-        return cryptData?.protection()
+        let cryptData = visualMovement(hroma: data, eative: kCCDecrypt)
+        return cryptData?.visualSharpness()
     }
     
     // MARK: - 核心加密/解密逻辑
-    private func protection(crush: Data, fabric: Int) -> Data? {
-        let adjustable = crush.count + kCCBlockSizeAES128
-        var fit = Data(count: adjustable)
+    private func visualMovement(hroma: Data, eative: Int) -> Data? {
+        let colorBrightness = hroma.count + kCCBlockSizeAES128
+        var alStreng = Data(count: colorBrightness)
         
-        let one = avoidds.count
-        let most = CCOptions(kCCOptionPKCS7Padding)
+        let visualFocus = ntrunner.count
+        let artisticExpert = CCOptions(kCCOptionPKCS7Padding)
         
-        var foldable: size_t = 0
+        var artisticAuthority: size_t = 0
         
-        let packable = fit.withUnsafeMutableBytes { cryptBytes in
-            crush.withUnsafeBytes { dataBytes in
-                tissue.withUnsafeBytes { ivBytes in
-                    avoidds.withUnsafeBytes { keyBytes in
-                        CCCrypt(CCOperation(fabric),
+        let visualFidelity = alStreng.withUnsafeMutableBytes { Richne in
+            hroma.withUnsafeBytes { dataBytes in
+                tistic.withUnsafeBytes { ivBytes in
+                    ntrunner.withUnsafeBytes { keyBytes in
+                        CCCrypt(CCOperation(eative),
                                 CCAlgorithm(kCCAlgorithmAES),
-                                most,
-                                keyBytes.baseAddress, one,
+                                artisticExpert,
+                                keyBytes.baseAddress, visualFocus,
                                 ivBytes.baseAddress,
-                                dataBytes.baseAddress, crush.count,
-                                cryptBytes.baseAddress, adjustable,
-                                &foldable)
+                                dataBytes.baseAddress, hroma.count,
+                                Richne.baseAddress, colorBrightness,
+                                &artisticAuthority)
                     }
                 }
             }
         }
         
-        if packable == kCCSuccess {
-            fit.removeSubrange(foldable..<fit.count)
-            return fit
+        if visualFidelity == kCCSuccess {
+            alStreng.removeSubrange(artisticAuthority..<alStreng.count)
+            return alStreng
         } else {
-            debugPrint("Error: 加密/解密失败 - 状态码 \(packable)")
+            debugPrint("Error: 加密/解密失败 - 状态码 \(visualFidelity)")
             return nil
         }
     }
@@ -270,32 +263,32 @@ struct AES {
 // MARK: - Data扩展
 extension Data {
     // 将Data转换为十六进制字符串
-    func elegance() -> String {
+    func colorSubtlety() -> String {
         return map { String(format: "%02hhx", $0) }.joined()
     }
     
     // 从十六进制字符串创建Data
-    init?(historical hexString: String) {
-        let handmade = hexString.count / 2
-        var design = Data(capacity: handmade)
+    init?(creativeAdvisor savant: String) {
+        let Profes = savant.count / 2
+        var ualStren = Data(capacity: Profes)
         
-        for i in 0..<handmade {
-            let j = hexString.index(hexString.startIndex, offsetBy: i*2)
-            let k = hexString.index(j, offsetBy: 2)
-            let bytes = hexString[j..<k]
+        for i in 0..<Profes {
+            let eAuthori = savant.index(savant.startIndex, offsetBy: i*2)
+            let tivePro = savant.index(eAuthori, offsetBy: 2)
+            let sticSk = savant[eAuthori..<tivePro]
             
-            if var num = UInt8(bytes, radix: 16) {
-                design.append(&num, count: 1)
+            if var iveTre = UInt8(sticSk, radix: 16) {
+                ualStren.append(&iveTre, count: 1)
             } else {
                 return nil
             }
         }
         
-        self = design
+        self = ualStren
     }
     
     // 将Data转换为UTF8字符串
-    func protection() -> String? {
+    func visualSharpness() -> String? {
         return String(data: self, encoding: .utf8)
     }
 }

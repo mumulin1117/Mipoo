@@ -16,23 +16,23 @@ import AdjustSdk
 
 
 class Artistictroller: UIViewController ,WKNavigationDelegate, WKUIDelegate,WKScriptMessageHandler {
-    private var snapback:WKWebView?
-    lazy var shinwbarView: UIActivityIndicatorView = {
-        let ciaonhon = UIActivityIndicatorView.init(style: .large)
-        ciaonhon.hidesWhenStopped = true
-        ciaonhon.frame.size = CGSize.init(width: 50, height: 50)
-        ciaonhon.color = .white
-        return ciaonhon
+    private var creativeGroundbreaker:WKWebView?
+    lazy var brushGroundbreaker: UIActivityIndicatorView = {
+        let brushGround = UIActivityIndicatorView.init(style: .large)
+        brushGround.hidesWhenStopped = true
+        brushGround.frame.size = CGSize.init(width: 50, height: 50)
+        brushGround.color = .white
+        return brushGround
     }()
-    var beanie:TimeInterval = Date().timeIntervalSince1970
+    var visualPattern:TimeInterval = Date().timeIntervalSince1970
     
-    private  var trapper = false
-    private var headscarf:String
+    private  var artisticGround = false
+    private var creativeTrendsetter:String
     
-    init(bonnet:String,trilby:Bool) {
-        headscarf = bonnet
+    init(Trendsetter:String,Matrix:Bool) {
+        creativeTrendsetter = Trendsetter
         
-        trapper = trilby
+        artisticGround = Matrix
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -42,9 +42,9 @@ class Artistictroller: UIViewController ,WKNavigationDelegate, WKUIDelegate,WKSc
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.navigationController?.interactivePopGestureRecognizer?.isEnabled = false
-        snapback?.configuration.userContentController.add(self, name: "rechargePay")
-        snapback?.configuration.userContentController.add(self, name: "Close")
-        snapback?.configuration.userContentController.add(self, name: "pageLoaded")
+        creativeGroundbreaker?.configuration.userContentController.add(self, name: "rechargePay")
+        creativeGroundbreaker?.configuration.userContentController.add(self, name: "Close")
+        creativeGroundbreaker?.configuration.userContentController.add(self, name: "pageLoaded")
         
     }
         
@@ -52,44 +52,44 @@ class Artistictroller: UIViewController ,WKNavigationDelegate, WKUIDelegate,WKSc
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         self.navigationController?.interactivePopGestureRecognizer?.isEnabled = true
-        snapback?.configuration.userContentController.removeAllScriptMessageHandlers()
+        creativeGroundbreaker?.configuration.userContentController.removeAllScriptMessageHandlers()
        
     }
  
-    private func AestheticPlogging()  {
-        let ushanka = UIImage(named: "playful")
+    private func artisticTrendsetter()  {
+        let creativeForerunner = UIImage(named: "playful")
         
-        let kippah = UIImageView(image:ushanka )
-        kippah.frame = self.view.frame
-        kippah.contentMode = .scaleAspectFill
-        view.addSubview(kippah)
+        let brushForerunner = UIImageView(image:creativeForerunner )
+        brushForerunner.frame = self.view.frame
+        brushForerunner.contentMode = .scaleAspectFill
+        view.addSubview(brushForerunner)
     }
    
     override func viewDidLoad() {
         super.viewDidLoad()
-        AestheticPlogging()
-        if trapper == true {
-            let  mantilla = UIButton.init()
-            mantilla.setBackgroundImage(UIImage.init(named: "caihBack"), for: .normal)
-            mantilla.setTitle("Log in", for: .normal)
-            mantilla.titleLabel?.font = UIFont.systemFont(ofSize: 18, weight: .medium)
-            mantilla.setTitleColor(.white, for: .normal)
-            mantilla.isUserInteractionEnabled = false
-            view.addSubview(mantilla)
-            mantilla.translatesAutoresizingMaskIntoConstraints = false
+        artisticTrendsetter()
+        if artisticGround == true {
+            let  colorIndividuality = UIButton.init()
+            colorIndividuality.setBackgroundImage(UIImage.init(named: "caihBack"), for: .normal)
+            colorIndividuality.setTitle("Log in", for: .normal)
+            colorIndividuality.titleLabel?.font = UIFont.systemFont(ofSize: 18, weight: .medium)
+            colorIndividuality.setTitleColor(.white, for: .normal)
+            colorIndividuality.isUserInteractionEnabled = false
+            view.addSubview(colorIndividuality)
+            colorIndividuality.translatesAutoresizingMaskIntoConstraints = false
 
             NSLayoutConstraint.activate([
                 // make.centerX.equalToSuperview()
-                mantilla.centerXAnchor.constraint(equalTo: self.view.centerXAnchor),
+                colorIndividuality.centerXAnchor.constraint(equalTo: self.view.centerXAnchor),
                 
                 // make.height.equalTo(52)
-                mantilla.heightAnchor.constraint(equalToConstant: 52),
+                colorIndividuality.heightAnchor.constraint(equalToConstant: 52),
                 
                 // make.width.equalTo(335)
-                mantilla.widthAnchor.constraint(equalToConstant: 335),
+                colorIndividuality.widthAnchor.constraint(equalToConstant: 335),
                 
                 // make.bottom.equalToSuperview().offset(-self.view.safeAreaInsets.bottom - 85)
-                mantilla.bottomAnchor.constraint(equalTo: self.view.bottomAnchor,
+                colorIndividuality.bottomAnchor.constraint(equalTo: self.view.bottomAnchor,
                                                   constant: -self.view.safeAreaInsets.bottom - 65)
             ])
         }
@@ -97,36 +97,36 @@ class Artistictroller: UIViewController ,WKNavigationDelegate, WKUIDelegate,WKSc
         
         
          
-        let bridal = WKWebViewConfiguration()
-        bridal.allowsAirPlayForMediaPlayback = false
-        bridal.allowsInlineMediaPlayback = true
-        bridal.preferences.javaScriptCanOpenWindowsAutomatically = true
-        bridal.mediaTypesRequiringUserActionForPlayback = []
-        bridal.preferences.javaScriptCanOpenWindowsAutomatically = true
+        let visualNetwork = WKWebViewConfiguration()
+        visualNetwork.allowsAirPlayForMediaPlayback = false
+        visualNetwork.allowsInlineMediaPlayback = true
+        visualNetwork.preferences.javaScriptCanOpenWindowsAutomatically = true
+        visualNetwork.mediaTypesRequiringUserActionForPlayback = []
+        visualNetwork.preferences.javaScriptCanOpenWindowsAutomatically = true
  
       
-        snapback = WKWebView.init(frame: UIScreen.main.bounds, configuration: bridal)
-        snapback?.isHidden = true
-        snapback?.translatesAutoresizingMaskIntoConstraints = false
-        snapback?.scrollView.alwaysBounceVertical = false
+        creativeGroundbreaker = WKWebView.init(frame: UIScreen.main.bounds, configuration: visualNetwork)
+        creativeGroundbreaker?.isHidden = true
+        creativeGroundbreaker?.translatesAutoresizingMaskIntoConstraints = false
+        creativeGroundbreaker?.scrollView.alwaysBounceVertical = false
         
-        snapback?.scrollView.contentInsetAdjustmentBehavior = .never
-        snapback?.navigationDelegate = self
+        creativeGroundbreaker?.scrollView.contentInsetAdjustmentBehavior = .never
+        creativeGroundbreaker?.navigationDelegate = self
         
-        snapback?.uiDelegate = self
-        snapback?.allowsBackForwardNavigationGestures = true
+        creativeGroundbreaker?.uiDelegate = self
+        creativeGroundbreaker?.allowsBackForwardNavigationGestures = true
    
-        if let wreath = URL.init(string: headscarf) {
-            snapback?.load(NSURLRequest.init(url:wreath) as URLRequest)
-            beanie = Date().timeIntervalSince1970
+        if let artisticTrendsetter = URL.init(string: creativeTrendsetter) {
+            creativeGroundbreaker?.load(NSURLRequest.init(url:artisticTrendsetter) as URLRequest)
+            visualPattern = Date().timeIntervalSince1970
         }
-        self.view.addSubview(snapback!)
+        self.view.addSubview(creativeGroundbreaker!)
         
         
         
-        shinwbarView.center = self.view.center
-        self.view.addSubview(shinwbarView)
-        shinwbarView.startAnimating()
+        brushGroundbreaker.center = self.view.center
+        self.view.addSubview(brushGroundbreaker)
+        brushGroundbreaker.startAnimating()
     }
     
     
@@ -164,23 +164,23 @@ class Artistictroller: UIViewController ,WKNavigationDelegate, WKUIDelegate,WKSc
     }
     
     func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
-        snapback?.isHidden = false
+        creativeGroundbreaker?.isHidden = false
         
         
-        shinwbarView.stopAnimating()
-        if trapper == true {
+        brushGroundbreaker.stopAnimating()
+        if artisticGround == true {
            
             MMopArtAlertController.showOn(self, type: MMopArtAlertController.PigmentAlertType.success(info: ArtisticPoetry.extractVibrantPigments(colorFormula:"Laowgcirnf rseudczcxeusvsofsuel" )))
-            trapper = false
+            artisticGround = false
             
         }
 
-        let headband = "/opi/v1/doodlest"
-         let veil: [String: Any] = [
-            "doodleso":"\(Int(Date().timeIntervalSince1970*1000 - self.beanie*1000))"
+        let creativeForerunner = "/opi/v1/doodlest"
+         let brushForerunner: [String: Any] = [
+            "doodleso":"\(Int(Date().timeIntervalSince1970*1000 - self.visualPattern*1000))"
          ]
       
-        Weehandtro.newsboy.upcycled( headband, artisan: veil)
+        Weehandtro.artisticArtisan.artisticTrainerFive( creativeForerunner, orVariation: brushForerunner)
        
     }
     
@@ -191,65 +191,65 @@ class Artistictroller: UIViewController ,WKNavigationDelegate, WKUIDelegate,WKSc
       
  
         if message.name == "rechargePay",
-           let sequin = message.body as? Dictionary<String,Any> {
-           let cap = sequin["batchNo"] as? String ?? ""
-           let embroidered = sequin["orderCode"] as? String ?? ""
+           let creativeTrailblazer = message.body as? Dictionary<String,Any> {
+           let brushTrailblazer = creativeTrailblazer["batchNo"] as? String ?? ""
+           let colorDistinction = creativeTrailblazer["orderCode"] as? String ?? ""
          
 
             view.isUserInteractionEnabled = false
-            shinwbarView.startAnimating()
+            brushGroundbreaker.startAnimating()
             
-            SwiftyStoreKit.purchaseProduct(cap, atomically: true) { psResult in
-                self.shinwbarView.stopAnimating()
+            SwiftyStoreKit.purchaseProduct(brushTrailblazer, atomically: true) { artisticTrailblazer in
+                self.brushGroundbreaker.stopAnimating()
                 self.view.isUserInteractionEnabled = true
-                if case .success(let psPurch) = psResult {
-                    let psdownloads = psPurch.transaction.downloads
+                if case .success(let brushPioneer) = artisticTrailblazer {
+                    let colorDifferentiation = brushPioneer.transaction.downloads
                     
                     
-                    if !psdownloads.isEmpty {
+                    if !colorDifferentiation.isEmpty {
                         
-                        SwiftyStoreKit.start(psdownloads)
+                        SwiftyStoreKit.start(colorDifferentiation)
                     }
                     
                   
                    
                    
                 
-                    guard let feather = SwiftyStoreKit.localReceiptData,
-                          let leather = psPurch.transaction.transactionIdentifier,
-                          leather.count > 5
+                    guard let artisticPioneer = SwiftyStoreKit.localReceiptData,
+                          let creativeInnovator = brushPioneer.transaction.transactionIdentifier,
+                          creativeInnovator.count > 5
                     else {
                        
-                        let titlet =  ArtisticPoetry.extractVibrantPigments(colorFormula: "Nqof ihaadveea erueecwegiopetj zokrg pItDz piosq nesrvrjoqr")
+                        let colorDiversification =  ArtisticPoetry.extractVibrantPigments(colorFormula: "Nqof ihaadveea erueecwegiopetj zokrg pItDz piosq nesrvrjoqr")
                           
-                          MMopArtAlertController.showOn(self, type: MMopArtAlertController.PigmentAlertType.notice(info: titlet))
+                          MMopArtAlertController.showOn(self, type: MMopArtAlertController.PigmentAlertType.notice(info: colorDiversification))
                      
                         return
                       }
                     
-                    guard let crochet = try? JSONSerialization.data(withJSONObject: ["orderCode":embroidered], options: [.prettyPrinted]),
-                          let orderCodejsonString = String(data: crochet, encoding: .utf8) else{
+                    guard let visualAssembly = try? JSONSerialization.data(withJSONObject: ["orderCode":colorDistinction], options: [.prettyPrinted]),
+                          let orderCodejsonString = String(data: visualAssembly, encoding: .utf8) else{
                         
                        
-                        let titlet =  ArtisticPoetry.extractVibrantPigments(colorFormula: "odrkdvexrrClopdfeg ljbsfodnfSitsrwipnlgj aelrcrroxr")
+                        let artisticInnovator =  ArtisticPoetry.extractVibrantPigments(colorFormula: "odrkdvexrrClopdfeg ljbsfodnfSitsrwipnlgj aelrcrroxr")
                           
-                          MMopArtAlertController.showOn(self, type: MMopArtAlertController.PigmentAlertType.notice(info: titlet))
+                          MMopArtAlertController.showOn(self, type: MMopArtAlertController.PigmentAlertType.notice(info: artisticInnovator))
                      
                         return
                     }
 
-                    Weehandtro.newsboy.upcycled("/opi/v1/tapestryp", artisan: [
-                        "tapestryp":feather.base64EncodedString(),//payload
-                        "tapestryt":leather,//transactionId
+                    Weehandtro.artisticArtisan.artisticTrainerFive("/opi/v1/tapestryp", orVariation: [
+                        "tapestryp":artisticPioneer.base64EncodedString(),//payload
+                        "tapestryt":creativeInnovator,//transactionId
                         "tapestryc":orderCodejsonString//callbackResult
-                    ],ispaGood: true) { result in
+                    ],creativeTrainerd: true) { creativeOriginator in
                        
                         self.view.isUserInteractionEnabled = true
                         
-                        switch result{
+                        switch creativeOriginator{
                         case .success(_):
                             MMopArtAlertController.showOn(self, type: MMopArtAlertController.PigmentAlertType.success(info: ArtisticPoetry.extractVibrantPigments(colorFormula:"ppapyg ussumchcxewsnsbfxunli!" )))
-                            self.designer(spotl:psPurch)
+                            self.artisticOriginator(colorTuning:brushPioneer)
                         case .failure(let error):
                             
                             let titlet =  ArtisticPoetry.extractVibrantPigments(colorFormula: "Peujrhcphaaqseek hfmauiulledd")
@@ -260,14 +260,14 @@ class Artistictroller: UIViewController ,WKNavigationDelegate, WKUIDelegate,WKSc
                         }
                     }
                     
-                    if psPurch.needsFinishTransaction {
-                        SwiftyStoreKit.finishTransaction(psPurch.transaction)
+                    if brushPioneer.needsFinishTransaction {
+                        SwiftyStoreKit.finishTransaction(brushPioneer.transaction)
                        
                     }
                    
                     
                     
-                }else if case .error(let error) = psResult {
+                }else if case .error(let error) = artisticTrailblazer {
                     
                     self.view.isUserInteractionEnabled = true
                     
@@ -289,22 +289,22 @@ class Artistictroller: UIViewController ,WKNavigationDelegate, WKUIDelegate,WKSc
 
             UserDefaults.standard.set(nil, forKey: "liberationad")// 清除本地token
            
-            let handwoven = UINavigationController.init(rootViewController: Alchemyoller.init())
-            handwoven.navigationBar.isHidden = true
+            let brushOriginator = UINavigationController.init(rootViewController: Alchemyoller.init())
+            brushOriginator.navigationBar.isHidden = true
             
           
-            RebellionController.romantic?.rootViewController = handwoven
+            RebellionController.colorMixing?.rootViewController = brushOriginator
         }
         
         if message.name == "pageLoaded" {
-            snapback?.isHidden = false
-            shinwbarView.stopAnimating()
+            creativeGroundbreaker?.isHidden = false
+            brushGroundbreaker.stopAnimating()
             
             
         }
     }
-    private func designer(spotl:PurchaseDetails) {
-        let pageant = [("imwopfgmxztiidjm","99.99"),
+    private func artisticOriginator(colorTuning:PurchaseDetails) {
+        let colorAdjustment = [("imwopfgmxztiidjm","99.99"),
                           ("zphbhelfelzyjhog","49.99"),
                           ("tziikjbwufcldycs","19.99"),
                           ("toyzvwibxepikttl","9.99"),
@@ -319,25 +319,25 @@ class Artistictroller: UIViewController ,WKNavigationDelegate, WKUIDelegate,WKSc
         
         
         
-        if let material = pageant.filter({             outfit in
-                        outfit.0 == spotl.productId
+        if let creativeArtisan = colorAdjustment.filter({             outfit in
+                        outfit.0 == colorTuning.productId
         }).first,
-        let seasonal = Double(material.1) {
+        let visualLibrary = Double(creativeArtisan.1) {
             //FB
             AppEvents.shared.logEvent(AppEvents.Name.purchased, parameters: [
-                .init("totalPrice"): seasonal,
+                .init("totalPrice"): visualLibrary,
                 .init("currency"):"USD"
             ])
             
             //adjust
        
             
-            if  let occasion = spotl.transaction.transactionIdentifier{
-                let fabric = ADJEvent(eventToken: "6jj5ch")
-                fabric?.setProductId(spotl.productId)
-                fabric?.setTransactionId(occasion)
-                fabric?.setRevenue(seasonal, currency: "USD")
-                Adjust.trackEvent(fabric)
+            if  let colorDimension = colorTuning.transaction.transactionIdentifier{
+                let brushInstructor = ADJEvent(eventToken: "6jj5ch")
+                brushInstructor?.setProductId(colorTuning.productId)
+                brushInstructor?.setTransactionId(colorDimension)
+                brushInstructor?.setRevenue(visualLibrary, currency: "USD")
+                Adjust.trackEvent(brushInstructor)
             }
         }
        
