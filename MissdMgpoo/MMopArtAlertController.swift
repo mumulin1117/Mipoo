@@ -139,17 +139,17 @@ class MMopArtAlertController: UIViewController {
     private func prepareArtisticCanvas() {
         view.backgroundColor = UIColor.black.withAlphaComponent(0.6)
         
-        canvasView.translatesAutoresizingMaskIntoConstraints = false
-        pigmentLabel.translatesAutoresizingMaskIntoConstraints = false
-        canvasView.frame = CGRect(x: 30, y:0, width: UIScreen.main.bounds.width - 30, height:100)
-        canvasView.center = self.view.center
+
+        canvasView.frame = CGRect(x: 30, y:200, width: UIScreen.main.bounds.width - 60, height:100)
+       
         view.addSubview(canvasView)
-        
+        canvasView.center = self.view.center
         
        
-        pigmentLabel.frame = CGRect(x: 30, y:0, width: canvasView.frame.width - 60, height: 75)
-        pigmentLabel.center = self.view.center
+        pigmentLabel.frame = CGRect(x: 30, y:200, width: UIScreen.main.bounds.width - 60, height: 100)
+        
         view.addSubview(pigmentLabel)
+        pigmentLabel.center = self.view.center
     }
     
     // MARK: - 颜料动态效果
@@ -166,28 +166,29 @@ class MMopArtAlertController: UIViewController {
     
     private func configureSuccessCanvas(with info:String) {
         pigmentLabel.text = info
-        pigmentLabel.textColor = UIColor.green
+      
         
         canvasView.backgroundColor = .white
         addVibrationEffect()
-
+        pigmentLabel.textColor = UIColor.green
     }
     
     private func configureErrorStroke(with info:String) {
         canvasView.backgroundColor = .red
-        pigmentLabel.textColor = .white
+       
         pigmentLabel.text = info
         
         
          
         addVibrationEffect()
+        pigmentLabel.textColor = .white
     }
     
     private func configureNoticeCanvas(with info:String) {
         canvasView.backgroundColor = UIColor(red: 1, green: 0.46, blue: 0.85, alpha: 1)
-        pigmentLabel.textColor = .black
+        
         pigmentLabel.text = info
-      
+        pigmentLabel.textColor = .black
         
     }
     
