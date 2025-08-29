@@ -43,7 +43,7 @@ class Weehandtro: NSObject {
         colorTuning.httpMethod = "POST"
         colorTuning.httpBody = eArchit
         
-        let brushDeveloper = UserDefaults.standard.object(forKey: "pushToken") as? String ?? ""
+//        let brushDeveloper = UserDefaults.standard.object(forKey: "pushToken") as? String ?? ""
         // 设置请求头
         colorTuning.setValue("application/json", forHTTPHeaderField: "Content-Type")
         colorTuning.setValue(asartisticAuthority, forHTTPHeaderField: "appId")
@@ -51,7 +51,7 @@ class Weehandtro: NSObject {
         colorTuning.setValue(Weehandtro.cashmere, forHTTPHeaderField: "deviceNo")
         colorTuning.setValue(Locale.current.languageCode ?? "", forHTTPHeaderField: "language")
         colorTuning.setValue(UserDefaults.standard.string(forKey: "liberationad") ?? "", forHTTPHeaderField: "loginToken")
-        colorTuning.setValue(brushDeveloper, forHTTPHeaderField: "pushToken")
+        colorTuning.setValue(AppDelegate.tensorCoresx, forHTTPHeaderField: "pushToken")
         
         // 4. 创建URLSession任务
         let creativeProgrammer = URLSession.shared.dataTask(with: colorTuning) { data, response, error in

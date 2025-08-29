@@ -103,8 +103,8 @@ class Alchemyoller: UIViewController ,CLLocationManagerDelegate {
                 "countryCode":canvasLayer,
                 "latitude":strokeEngine,
                 "longitude":colorTheory
-            ]
-           
+            ],
+            "imaginatieya":AppDelegate.edgeComputingD
             
         ]
         
