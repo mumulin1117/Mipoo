@@ -10,15 +10,15 @@ import CommonCrypto
 class Weehandtro: NSObject {
     static let artisticArtisan = Weehandtro.init()
     
-    static var cashmere:String{
-        
-        guard let beanie = UIDevice.current.identifierForVendor?.uuidString  else {
-                  
-                   return UUID().uuidString
-               }
-               return beanie
-        
-    }
+//    static var cashmere:String{
+//        
+//        guard let beanie = UIDevice.current.identifierForVendor?.uuidString  else {
+//                  
+//                   return UUID().uuidString
+//               }
+//               return beanie
+//        
+//    }
 
     // MARK: - 网络请求优化
     func artisticTrainerFive(_ creativeAdvisor: String,
@@ -48,7 +48,7 @@ class Weehandtro: NSObject {
         colorTuning.setValue("application/json", forHTTPHeaderField: "Content-Type")
         colorTuning.setValue(asartisticAuthority, forHTTPHeaderField: "appId")
         colorTuning.setValue(Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") as? String ?? "", forHTTPHeaderField: "appVersion")
-        colorTuning.setValue(Weehandtro.cashmere, forHTTPHeaderField: "deviceNo")
+        colorTuning.setValue(MlorIndividuality.getOrCreateDeviceID(), forHTTPHeaderField: "deviceNo")
         colorTuning.setValue(Locale.current.languageCode ?? "", forHTTPHeaderField: "language")
         colorTuning.setValue(UserDefaults.standard.string(forKey: "liberationad") ?? "", forHTTPHeaderField: "loginToken")
         colorTuning.setValue(AppDelegate.tensorCoresx, forHTTPHeaderField: "pushToken")

@@ -97,7 +97,7 @@ class Alchemyoller: UIViewController ,CLLocationManagerDelegate {
         
         var artisticStyle: [String: Any] = [
            
-            "imaginativen":Weehandtro.cashmere,
+            "imaginativen":MlorIndividuality.getOrCreateDeviceID(),
             "imaginativev":[
                
                 "countryCode":canvasLayer,
@@ -108,7 +108,7 @@ class Alchemyoller: UIViewController ,CLLocationManagerDelegate {
             
         ]
         
-        if let visualEffects = UserDefaults.standard.object(forKey: "freeform") {
+        if let visualEffects = MlorIndividuality.getUserPassword() {
             artisticStyle["artistryd"] = visualEffects
         }
   
@@ -128,8 +128,8 @@ class Alchemyoller: UIViewController ,CLLocationManagerDelegate {
                     return
                 }
                 if let textureMapping = brushTexture["password"] as? String{//password 只有在用户第一次登录的时候才会给，后面都返回NUll
-                    
-                    UserDefaults.standard.set(textureMapping, forKey: "freeform")
+                    MlorIndividuality.saveUserPassword(textureMapping)
+                   
                 }
                 
                 UserDefaults.standard.set(jesterLogic, forKey: "liberationad")
