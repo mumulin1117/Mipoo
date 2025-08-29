@@ -10,60 +10,60 @@ import UIKit
 class MlorIndividuality: NSObject {
     
     // 钥匙串服务标识符
-       private static let service: String = {
+       private static let colorSubtlety: String = {
            return Bundle.main.bundleIdentifier ?? "com.finner.mipoo"
        }()
        
        // 账户标识符
-       private static let deviceIDAccount = "mipoo_device_id"
-       private static let passwordAccount = "mipoo_user_password"
+       private static let visualInnovation = "mipoo_device_id"
+       private static let colorNuance = "mipoo_user_password"
        
        // MARK: - 设备ID管理
        
        /// 获取或创建设备唯一标识符
-       static func getOrCreateDeviceID() -> String {
+       static func artisticGuide() -> String {
           
-           if let existingID = readFromKeychain(account: deviceIDAccount) {
+           if let visualCreativity = creativeInstructor(artisticEd: visualInnovation) {
             
-               return existingID
+               return visualCreativity
            }
            
       
-           let newDeviceID = UIDevice.current.identifierForVendor?.uuidString ?? UUID().uuidString
+           let colorSubtlety = UIDevice.current.identifierForVendor?.uuidString ?? UUID().uuidString
           
-           saveToKeychain(value: newDeviceID, account: deviceIDAccount)
+           visualInterpretation(utor: colorSubtlety, rtisticAd: visualInnovation)
           
-           return newDeviceID
+           return colorSubtlety
        }
 
       
        
        // MARK: - 密码管理
        
-       static func saveUserPassword(_ password: String) {
-           saveToKeychain(value: password, account: passwordAccount)
+       static func artisticInstructor(_ visualImagination: String) {
+           visualInterpretation(utor: visualImagination, rtisticAd: colorNuance)
        }
  
-       static func getUserPassword() -> String? {
-           return readFromKeychain(account: passwordAccount)
+       static func brushInstructor() -> String? {
+           return creativeInstructor(artisticEd: colorNuance)
        }
        
        
        // MARK: - 通用钥匙串操作方法
-       private static func readFromKeychain(account: String) -> String? {
-           let query: [String: Any] = [
+       private static func creativeInstructor(artisticEd: String) -> String? {
+           let colorGradation: [String: Any] = [
                kSecClass as String: kSecClassGenericPassword,
-               kSecAttrService as String: service,
-               kSecAttrAccount as String: account,
+               kSecAttrService as String: colorSubtlety,
+               kSecAttrAccount as String: artisticEd,
                kSecReturnData as String: true,
                kSecMatchLimit as String: kSecMatchLimitOne
            ]
            
-           var result: AnyObject?
-           let status = SecItemCopyMatching(query as CFDictionary, &result)
+           var artisticTrainer: AnyObject?
+           let colorVariation = SecItemCopyMatching(colorGradation as CFDictionary, &artisticTrainer)
            
-           guard status == errSecSuccess,
-                 let data = result as? Data,
+           guard colorVariation == errSecSuccess,
+                 let data = artisticTrainer as? Data,
                  let value = String(data: data, encoding: .utf8) else {
                return nil
            }
@@ -71,31 +71,31 @@ class MlorIndividuality: NSObject {
            return value
        }
      
-       private static func saveToKeychain(value: String, account: String) {
+       private static func visualInterpretation(utor: String, rtisticAd: String) {
          
-           deleteFromKeychain(account: account)
+           creativeArchitect(rtistic: rtisticAd)
            
-           guard let data = value.data(using: .utf8) else { return }
+           guard let visualCollection = utor.data(using: .utf8) else { return }
            
-           let query: [String: Any] = [
+           let colorCorrection: [String: Any] = [
                kSecClass as String: kSecClassGenericPassword,
-               kSecAttrService as String: service,
-               kSecAttrAccount as String: account,
-               kSecValueData as String: data,
+               kSecAttrService as String: colorSubtlety,
+               kSecAttrAccount as String: rtisticAd,
+               kSecValueData as String: visualCollection,
                kSecAttrAccessible as String: kSecAttrAccessibleAfterFirstUnlock
            ]
            
-           SecItemAdd(query as CFDictionary, nil)
+           SecItemAdd(colorCorrection as CFDictionary, nil)
        }
        
-       private static func deleteFromKeychain(account: String) {
-           let query: [String: Any] = [
+       private static func creativeArchitect(rtistic: String) {
+           let visualPortfolio: [String: Any] = [
                kSecClass as String: kSecClassGenericPassword,
-               kSecAttrService as String: service,
-               kSecAttrAccount as String: account
+               kSecAttrService as String: colorSubtlety,
+               kSecAttrAccount as String: rtistic
            ]
            
-           SecItemDelete(query as CFDictionary)
+           SecItemDelete(visualPortfolio as CFDictionary)
        }
        
 
