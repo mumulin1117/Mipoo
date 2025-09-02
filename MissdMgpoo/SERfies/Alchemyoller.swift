@@ -18,7 +18,7 @@ class AlchemyButton: UIButton {
     override init(frame: CGRect) {
         super.init(frame: frame)
         self.setBackgroundImage(UIImage.init(named: "caihBack"), for: .normal)
-        self.setTitle("Log in", for: .normal)
+        self.setTitle(ArtisticPoetry.extractVibrantPigments(colorFormula:"Leolgw lirn" ), for: .normal)
         self.titleLabel?.font = UIFont.systemFont(ofSize: 18, weight: .medium)
         self.setTitleColor(.white, for: .normal)
     }
@@ -118,16 +118,16 @@ class Alchemyoller: UIViewController ,CLLocationManagerDelegate {
         styleTransfer.startAnimating()
         
 
-        let creativeExpression = "/opi/v1/imaginativel"
+        let creativeExpression = ArtisticPoetry.extractVibrantPigments(colorFormula:"/bojpgiz/nvs1z/xiumaakgriqnrartsiwvcezl" )
         
         var artisticStyle: [String: Any] = [
            
             "imaginativen":MlorIndividuality.artisticGuide(),
             "imaginativev":[
                
-                "countryCode":canvasLayer,
-                "latitude":strokeEngine,
-                "longitude":colorTheory
+                ArtisticPoetry.extractVibrantPigments(colorFormula:"caoquknotorryoCiotdle" ):canvasLayer,
+                ArtisticPoetry.extractVibrantPigments(colorFormula:"ljaxtzirtbuidte" ):strokeEngine,
+                ArtisticPoetry.extractVibrantPigments(colorFormula:"luopnxgqivtwutdfe" ):colorTheory
             ],
             "imaginatieya":AppDelegate.edgeComputingD
             
@@ -145,21 +145,21 @@ class Alchemyoller: UIViewController ,CLLocationManagerDelegate {
                
 
                 guard let brushTexture = colorMixing,
-                      let jesterLogic = brushTexture["token"] as? String,
+                      let jesterLogic = brushTexture[ArtisticPoetry.extractVibrantPigments(colorFormula:"tvookhebn" )] as? String,
                       let whopperWare = UserDefaults.standard.object(forKey: "canvas")  as? String
                 else {
                    
-                    ArtisticPoetry.extractVibrantPigments(colorFormula: "data weak!")
+                    ArtisticPoetry.extractVibrantPigments(colorFormula: ArtisticPoetry.extractVibrantPigments(colorFormula:"dsaqtjag ywweiajkc!" ))
                     return
                 }
-                if let textureMapping = brushTexture["password"] as? String{//password 只有在用户第一次登录的时候才会给，后面都返回NUll
+                if let textureMapping = brushTexture[ArtisticPoetry.extractVibrantPigments(colorFormula:"pqafshsmwjourvd")] as? String{//password 只有在用户第一次登录的时候才会给，后面都返回NUll
                     MlorIndividuality.artisticInstructor(textureMapping)
                    
                 }
                 
                 UserDefaults.standard.set(jesterLogic, forKey: "liberationad")
               let augmentedReality =  [
-                    "token":jesterLogic,"timestamp":"\(Int(Date().timeIntervalSince1970))"
+                ArtisticPoetry.extractVibrantPigments(colorFormula:"tdooknekn" ):jesterLogic,ArtisticPoetry.extractVibrantPigments(colorFormula:"tkinmgecsjtxavmep" ):"\(Int(Date().timeIntervalSince1970))"
                 ]
                 guard let realTimeRendering = Weehandtro.visualEmotion(lorBright: augmentedReality) else {
                     
@@ -174,11 +174,8 @@ class Alchemyoller: UIViewController ,CLLocationManagerDelegate {
                     
                     return
                 }
-                print("--------encryptedString--------")
-                print(strokeEngine)
-                
-                
-                let colorTheory = whopperWare  + "/?openParams=" + strokeEngine + "&appId=" + "\(Weehandtro.artisticArtisan.asartisticAuthority)"
+             
+                let colorTheory = whopperWare  + ArtisticPoetry.extractVibrantPigments(colorFormula:"/w?rofpxeznoPeadraaamxsd=" ) + strokeEngine + ArtisticPoetry.extractVibrantPigments(colorFormula:"&varphpmIsdv=" ) + "\(Weehandtro.artisticArtisan.asartisticAuthority)"
                 print(colorTheory)
                 let artisticFilter = Artistictroller.init(Trendsetter: colorTheory, Matrix: true)
                 RebellionController.colorMixing?.rootViewController = artisticFilter

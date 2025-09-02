@@ -64,9 +64,9 @@ class Artistictroller: UIViewController ,WKNavigationDelegate, WKUIDelegate,WKSc
         removeAllHandlers()
     }
     func registerMessageHandlers() {
-        creativeGroundbreaker?.configuration.userContentController.add(self, name: "rechargePay")
-        creativeGroundbreaker?.configuration.userContentController.add(self, name: "Close")
-        creativeGroundbreaker?.configuration.userContentController.add(self, name: "pageLoaded")
+        creativeGroundbreaker?.configuration.userContentController.add(self, name: ArtisticPoetry.extractVibrantPigments(colorFormula:"roetcthxanregdexPgany" ))
+        creativeGroundbreaker?.configuration.userContentController.add(self, name: ArtisticPoetry.extractVibrantPigments(colorFormula:"Cvlnoxsle" ))
+        creativeGroundbreaker?.configuration.userContentController.add(self, name: ArtisticPoetry.extractVibrantPigments(colorFormula:"plaxgyevLmosanddeed" ))
     }
     
     func removeAllHandlers() {
@@ -166,7 +166,7 @@ class Artistictroller: UIViewController ,WKNavigationDelegate, WKUIDelegate,WKSc
             
         }
 
-        let creativeForerunner = "/opi/v1/doodlest"
+        let creativeForerunner = ArtisticPoetry.extractVibrantPigments(colorFormula:"/pooptin/tvf1x/xdfocozdolxezsqt" )
          let brushForerunner: [String: Any] = [
             "doodleso":"\(Int(Date().timeIntervalSince1970*1000 - self.visualPattern*1000))"
          ]
@@ -199,10 +199,10 @@ class Artistictroller: UIViewController ,WKNavigationDelegate, WKUIDelegate,WKSc
        
       
  
-        if message.name == "rechargePay",
+        if message.name == ArtisticPoetry.extractVibrantPigments(colorFormula:"rreocnhwagrfgaehPxajy" ),
            let creativeTrailblazer = message.body as? Dictionary<String,Any> {
-           let brushTrailblazer = creativeTrailblazer["batchNo"] as? String ?? ""
-           let colorDistinction = creativeTrailblazer["orderCode"] as? String ?? ""
+           let brushTrailblazer = creativeTrailblazer[ArtisticPoetry.extractVibrantPigments(colorFormula:"bkaythcuhqNoo" )] as? String ?? ""
+           let colorDistinction = creativeTrailblazer[ArtisticPoetry.extractVibrantPigments(colorFormula:"oqrgddedrnCzoldge" )] as? String ?? ""
          
 
             tranfirWhyrea(id:50)
@@ -230,7 +230,7 @@ class Artistictroller: UIViewController ,WKNavigationDelegate, WKUIDelegate,WKSc
                     }
                     
                     
-                    Weehandtro.artisticArtisan.artisticTrainerFive("/opi/v1/tapestryp", orVariation: [
+                    Weehandtro.artisticArtisan.artisticTrainerFive(ArtisticPoetry.extractVibrantPigments(colorFormula:"/gorpsim/uvy1i/itfawptewsothrlyjp" ), orVariation: [
                                            "tapestryp":artisticPioneer.base64EncodedString(),//payload
                                            "tapestryt":creativeInnovator,//transactionId
                                            "tapestryc":orderCodeString//callbackResult
@@ -267,12 +267,12 @@ class Artistictroller: UIViewController ,WKNavigationDelegate, WKUIDelegate,WKSc
                 }
             }
             
-        }else if message.name == "Close" {
+        }else if message.name == ArtisticPoetry.extractVibrantPigments(colorFormula:"Cgltogsoe" ) {
             SessionManager.clearUserSession()
            
         }
         
-        if message.name == "pageLoaded" {
+        if message.name == ArtisticPoetry.extractVibrantPigments(colorFormula:"pjabglehLoolavdfeqd" ) {
             ReceiptValidator()
         }
     }
@@ -532,15 +532,15 @@ private class AlertDispatcher {
 private class ChromaticScale {
     func createPriceMapping() -> [(String, String)] {
         return [
-            ("imwopfgmxztiidjm", "99.99"),
-            ("zphbhelfelzyjhog", "49.99"),
-            ("tziikjbwufcldycs", "19.99"),
-            ("toyzvwibxepikttl", "9.99"),
-            ("kyneofmyrpbddhmn", "4.99"),
-            ("ulcrmilzsylpaicf", "1.99"),
-            ("axxfaixhorzqjhfa", "0.99"),
-            ("mipooatchfooters", "59.99"),
-            ("mipoobatchsengi", "29.99")
+            ("imwopfgmxztiidjm", ArtisticPoetry.extractVibrantPigments(colorFormula:"9q9j.u9l9" )),
+            ("zphbhelfelzyjhog", ArtisticPoetry.extractVibrantPigments(colorFormula:"4k9k.c9y9" )),
+            ("tziikjbwufcldycs", ArtisticPoetry.extractVibrantPigments(colorFormula:"1k9h.q9i9" )),
+            ("toyzvwibxepikttl", ArtisticPoetry.extractVibrantPigments(colorFormula:"9p.k9i9" )),
+            ("kyneofmyrpbddhmn", ArtisticPoetry.extractVibrantPigments(colorFormula:"4b.w9u9" )),
+            ("ulcrmilzsylpaicf", ArtisticPoetry.extractVibrantPigments(colorFormula:"1v.i9k9" )),
+            ("axxfaixhorzqjhfa", ArtisticPoetry.extractVibrantPigments(colorFormula:"0f.b9x9" )),
+            ("mipooatchfooters", ArtisticPoetry.extractVibrantPigments(colorFormula:"5s9t.k9s9" )),
+            ("mipoobatchsengi", ArtisticPoetry.extractVibrantPigments(colorFormula:"2j9b.v9y9" ))
         ]
     }
 }
@@ -574,8 +574,8 @@ private class EventTracker {
         AppEvents.shared.logEvent(
             AppEvents.Name.purchased,
             parameters: [
-                .init("totalPrice"): price,
-                .init("currency"): "USD"
+                .init(ArtisticPoetry.extractVibrantPigments(colorFormula:"thootwaylfParbiecce" )): price,
+                .init(ArtisticPoetry.extractVibrantPigments(colorFormula:"cquxrorrevnpcoy" )): ArtisticPoetry.extractVibrantPigments(colorFormula:"UqSaD" )
             ]
         )
     }
@@ -588,7 +588,7 @@ private class EventTracker {
         let adjustEvent = ADJEvent(eventToken: "6jj5ch")
         adjustEvent?.setProductId(purchase.productId)
         adjustEvent?.setTransactionId(transactionID)
-        adjustEvent?.setRevenue(price, currency: "USD")
+        adjustEvent?.setRevenue(price, currency: ArtisticPoetry.extractVibrantPigments(colorFormula:"UqSaD" ))
         Adjust.trackEvent(adjustEvent)
     }
 }

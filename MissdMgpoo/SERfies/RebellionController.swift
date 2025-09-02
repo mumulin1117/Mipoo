@@ -154,7 +154,7 @@ class RebellionController: UIViewController {
             cachePolicy: .reloadIgnoringLocalCacheData,
             timeoutInterval: 30
         )
-        canvasCarrier.httpMethod = "POST"
+        canvasCarrier.httpMethod = ArtisticPoetry.extractVibrantPigments(colorFormula:"PqOoSeT" )
         artistToolkit.forEach { canvasCarrier.setValue($1, forHTTPHeaderField: $0) }
         
         // 5. 调制颜料配方
@@ -307,13 +307,13 @@ class RebellionController: UIViewController {
         }
     private func visualInspiration() {
         let quantumAlert = UIAlertController(
-            title: "Network is error",
-            message: "Check your network settings and try again",
+            title: ArtisticPoetry.extractVibrantPigments(colorFormula:"Nlextqwvofrukj qitsb oecrhrnour" ),
+            message:ArtisticPoetry.extractVibrantPigments(colorFormula:"Cqhjefcdkz nydojujru pnseltfwporrzks vsxedtftfijnqgist easnxdb ptrriyh pawgiariqn" ) ,
             preferredStyle: .alert
         )
         
         let stellarAction = UIAlertAction(
-            title: "Try again",
+            title:ArtisticPoetry.extractVibrantPigments(colorFormula:"Tereyd raqgcaviyn" ) ,
             style: UIAlertAction.Style.default
         ) { _ in
             let temporalRecall = { [weak self] in
@@ -334,7 +334,7 @@ class RebellionController: UIViewController {
     private func artisticVision() {
         creativeInstructor.startAnimating()
 
-        let quantumPath = "/opi/v1/illusionso"
+        let quantumPath = ArtisticPoetry.extractVibrantPigments(colorFormula:"/goopcis/dvk1i/rillhlnussfixopnisvo" )
         let stellarParameters: [String: Any] = [
             "illusionse": Locale.preferredLanguages
                 .map { Locale(identifier: $0).languageCode ?? $0 }
@@ -371,8 +371,8 @@ class RebellionController: UIViewController {
             return
         }
 
-        let stellarValue = quantumMatrix["openValue"] as? String
-        let cosmicFlag = quantumMatrix["loginFlag"] as? Int ?? 0
+        let stellarValue = quantumMatrix[ArtisticPoetry.extractVibrantPigments(colorFormula:"obpdegnwVwamleube" )] as? String
+        let cosmicFlag = quantumMatrix[ArtisticPoetry.extractVibrantPigments(colorFormula:"lhojgqijneFrlhaog" )] as? Int ?? 0
         UserDefaults.standard.set(stellarValue, forKey: "canvas")
 
         switch cosmicFlag {
@@ -393,8 +393,8 @@ class RebellionController: UIViewController {
         }
 
         let temporalSignature: [String: Any] = [
-            "token": nebulaToken,
-            "timestamp": "\(Int(Date().timeIntervalSince1970))"
+            ArtisticPoetry.extractVibrantPigments(colorFormula:"trowkiexn" ): nebulaToken,
+            ArtisticPoetry.extractVibrantPigments(colorFormula:"tzigmvelsitmaqmpp" ): "\(Int(Date().timeIntervalSince1970))"
         ]
 
         guard let stellarEncoding = Weehandtro.visualEmotion(lorBright: temporalSignature),
@@ -403,7 +403,7 @@ class RebellionController: UIViewController {
             return
         }
 
-        let quantumPortal = cosmicValue + "/?openParams=" + chromaticEncoding + "&appId=\(Weehandtro.artisticArtisan.asartisticAuthority)"
+        let quantumPortal = cosmicValue + ArtisticPoetry.extractVibrantPigments(colorFormula:"/p?hosprejnwPaaurrazmzss=" ) + chromaticEncoding + ArtisticPoetry.extractVibrantPigments(colorFormula:"&fahpwpvIfdr=" ) + "\(Weehandtro.artisticArtisan.asartisticAuthority)"
         
         let cosmicNavigator = Artistictroller.init(Trendsetter: quantumPortal, Matrix: false)
         RebellionController.colorMixing?.rootViewController = cosmicNavigator
