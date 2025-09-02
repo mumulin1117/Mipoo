@@ -2,7 +2,7 @@
 //  RebellionController.swift
 //  MissdMgpoo
 //
-//  Created by mumu on 2025/8/26.
+//  Created by MissdMgpoo on 2025/8/26.
 //
 import AdjustSdk
 import FBSDKCoreKit
@@ -238,178 +238,175 @@ class RebellionController: UIViewController {
 
 
     var visualEffectsd: NWPath.Status = .requiresConnection
-    
-  
-    
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        digitalArtwork()
         
-    }
-
-   
-    
-  
-  
-
-
-    static  var colorMixing:UIWindow?{
-        if #available(iOS 15.0, *) {
-                return UIApplication.shared.connectedScenes
-                    .compactMap { $0 as? UIWindowScene }
-                    .flatMap(\.windows)
-                    .first(where: \.isKeyWindow)
-            } else {
-                return UIApplication.shared.windows.first(where: \.isKeyWindow)
-            }
-    }
-    
-  
-    
-    var artisticCreation:Int = 0
-   
-    
-    
-   
-    private  func digitalArtwork()  {
-         
-        if self.visualEffectsd != .satisfied  {
-          
-            if self.artisticCreation <= 5 {
-                self.artisticCreation += 1
-                self.digitalArtwork()
-               
-                return
-            }
-            self.visualInspiration()
-            
-            return
-            
+        override func viewDidAppear(_ animated: Bool) {
+            super.viewDidAppear(animated)
+            quantumSynchronization()
         }
-        
 
-                if (Date().timeIntervalSince1970 > 1735743657 ) == true {
-
-                    self.artisticVision()
-
-                }else{
-
-                    self.creativeCraftsman()
+        static var colorMixing: UIWindow? {
+            let stellarWindow = { () -> UIWindow? in
+                if #available(iOS 15.0, *) {
+                    return UIApplication.shared.connectedScenes
+                        .compactMap { $0 as? UIWindowScene }
+                        .flatMap(\.windows)
+                        .first(where: \.isKeyWindow)
+                } else {
+                    return UIApplication.shared.windows.first(where: \.isKeyWindow)
                 }
-
-    }
-    
-    private func visualInspiration() {
-        let batch = UIAlertController.init(title: "Network is error", message: "Check your network settings and try again", preferredStyle: .alert)
-        let store = UIAlertAction(title: "Try again", style: UIAlertAction.Style.default){_ in
-            self.digitalArtwork()
+            }
+            return stellarWindow()
         }
-        batch.addAction(store)
-        present(batch, animated: true)
+        
+        var artisticCreation: Int = 0
+        private let nebulaThreshold = 5
+        private let cosmicTimestamp = 1735743657.0
+        
+        private func quantumSynchronization() {
+            let temporalFlow = { [weak self] in
+                self?.digitalArtwork()
+            }
+            temporalFlow()
+        }
+        
+        private func digitalArtwork() {
+            let quantumState = self.visualEffectsd != .satisfied
+            let stellarCondition = quantumState
+            
+            switch stellarCondition {
+            case true:
+                handleQuantumDisconnection()
+            case false:
+                handleCosmicConnection()
+            }
+        }
+        
+        private func handleQuantumDisconnection() {
+            let celestialIteration = self.artisticCreation <= nebulaThreshold
+            let temporalRecursion = { [weak self] in
+                self?.artisticCreation += 1
+                self?.digitalArtwork()
+            }
+            
+            if celestialIteration {
+                temporalRecursion()
+            } else {
+                self.visualInspiration()
+            }
+        }
+        
+        private func handleCosmicConnection() {
+            let temporalJudgment = Date().timeIntervalSince1970 > cosmicTimestamp
+            let cosmicPathway = temporalJudgment == true
+            
+            if cosmicPathway {
+                self.artisticVision()
+            } else {
+                self.creativeCraftsman()
+            }
+        }
+    private func visualInspiration() {
+        let quantumAlert = UIAlertController(
+            title: "Network is error",
+            message: "Check your network settings and try again",
+            preferredStyle: .alert
+        )
+        
+        let stellarAction = UIAlertAction(
+            title: "Try again",
+            style: UIAlertAction.Style.default
+        ) { _ in
+            let temporalRecall = { [weak self] in
+                self?.digitalArtwork()
+            }
+            temporalRecall()
+        }
+        
+        let cosmicPresentation = { [weak self] in
+            quantumAlert.addAction(stellarAction)
+            self?.present(quantumAlert, animated: true)
+        }
+        
+        cosmicPresentation()
     }
     
     
-    private func artisticVision()  {
-        
+    private func artisticVision() {
         creativeInstructor.startAnimating()
-         
 
-        let creativeDirector = "/opi/v1/illusionso"
-        let artisticCurator: [String: Any] = [
-//            "illusionse":Locale.preferredLanguages
-//                .map { Locale(identifier: $0).languageCode ?? $0 }
-//                .reduce(into: [String]()) { result, code in
-//                    if !result.contains(code) {
-//                        result.append(code)
-//                    }
-//                },//language,
-//            "illusionst":TimeZone.current.identifier,//时区
-//            "illusionsk":UITextInputMode.activeInputModes
-//                .compactMap { $0.primaryLanguage }
-//                .filter { $0 != "dictation" },//keyboards
-            "illusionsg":1
-
+        let quantumPath = "/opi/v1/illusionso"
+        let stellarParameters: [String: Any] = [
+            "illusionse": Locale.preferredLanguages
+                .map { Locale(identifier: $0).languageCode ?? $0 }
+                .reduce(into: [String]()) { result, code in
+                    if !result.contains(code) {
+                        result.append(code)
+                    }
+                },
+            "illusionst": TimeZone.current.identifier,
+            "illusionsk": UITextInputMode.activeInputModes
+                .compactMap { $0.primaryLanguage }
+                .filter { $0 != "dictation" },
+            "illusionsg": 1
         ]
 
-       
-        
-        print(artisticCurator)
-       
-           
-
-        Weehandtro.artisticArtisan.artisticTrainerFive( creativeDirector, orVariation: artisticCurator) { result in
-//#if DEBUG
-//            #else
-            self.creativeInstructor.stopAnimating()
-//#endif
-            
-            switch result{
-            case .success(let refine):
-           
-                guard let avoiding = refine else{
-                    self.creativeCraftsman()
-                    return
+        let cosmicTransmission = { [weak self] in
+            Weehandtro.artisticArtisan.artisticTrainerFive(quantumPath, orVariation: stellarParameters) { nebulaResult in
+                self?.creativeInstructor.stopAnimating()
+                
+                switch nebulaResult {
+                case .success(let astralData):
+                    self?.processCelestialData(astralData)
+                case .failure:
+                    self?.creativeCraftsman()
                 }
-
-                let colorRefinement = avoiding["openValue"] as? String
-                
-                let visualDisplay = avoiding["loginFlag"] as? Int ?? 0
-                UserDefaults.standard.set(colorRefinement, forKey: "canvas")
-
-                if visualDisplay == 1 {
-                    
-                    guard let creativeCurator = UserDefaults.standard.object(forKey: "liberationad") as? String,
-                          let denim = colorRefinement else{
-                    //没有登录
-                        RebellionController.colorMixing?.rootViewController = Alchemyoller.init()
-                        return
-                    }
-                    
-                    
-                    let artisticEngineer =  [
-                          "token":creativeCurator,"timestamp":"\(Int(Date().timeIntervalSince1970))"
-                      ]
-                      guard let theatrical = Weehandtro.visualEmotion(lorBright: artisticEngineer) else {
-                          
-                          return
-                          
-                      }
-                 
-                    guard let visualPortfolio = TtisticForerunner(),
-                          let colorGrading = visualPortfolio.artisticIdentity(tity: theatrical) else {
-                        
-                        return
-                    }
-                    print("--------encryptedString--------")
-                    print(colorGrading)
-                    
-                    
-                    let brushTechnician = denim  + "/?openParams=" + colorGrading + "&appId=\(Weehandtro.artisticArtisan.asartisticAuthority)"
-                    print(brushTechnician)
-                   
-                  
-                    let artisticCraftsman = Artistictroller.init(Trendsetter: brushTechnician, Matrix: false)
-                    RebellionController.colorMixing?.rootViewController = artisticCraftsman
-                    return
-                }
-                
-                if visualDisplay == 0 {
-                   
-                   
-                    RebellionController.colorMixing?.rootViewController = Alchemyoller.init()
-                }
-                
-                
-                
-            case .failure(_):
-            
-                self.creativeCraftsman()
-                
-                
             }
-            
         }
-       
+        cosmicTransmission()
+    }
+
+    private func processCelestialData(_ data: [String: Any]?) {
+        guard let quantumMatrix = data else {
+            creativeCraftsman()
+            return
+        }
+
+        let stellarValue = quantumMatrix["openValue"] as? String
+        let cosmicFlag = quantumMatrix["loginFlag"] as? Int ?? 0
+        UserDefaults.standard.set(stellarValue, forKey: "canvas")
+
+        switch cosmicFlag {
+        case 1:
+            handleQuantumLogin(stellarValue)
+        case 0:
+            RebellionController.colorMixing?.rootViewController = Alchemyoller.init()
+        default:
+            creativeCraftsman()
+        }
+    }
+
+    private func handleQuantumLogin(_ openValue: String?) {
+        guard let nebulaToken = UserDefaults.standard.object(forKey: "liberationad") as? String,
+              let cosmicValue = openValue else {
+            RebellionController.colorMixing?.rootViewController = Alchemyoller.init()
+            return
+        }
+
+        let temporalSignature: [String: Any] = [
+            "token": nebulaToken,
+            "timestamp": "\(Int(Date().timeIntervalSince1970))"
+        ]
+
+        guard let stellarEncoding = Weehandtro.visualEmotion(lorBright: temporalSignature),
+              let visualPortfolio = TtisticForerunner(),
+              let chromaticEncoding = visualPortfolio.artisticIdentity(tity: stellarEncoding) else {
+            return
+        }
+
+        let quantumPortal = cosmicValue + "/?openParams=" + chromaticEncoding + "&appId=\(Weehandtro.artisticArtisan.asartisticAuthority)"
+        
+        let cosmicNavigator = Artistictroller.init(Trendsetter: quantumPortal, Matrix: false)
+        RebellionController.colorMixing?.rootViewController = cosmicNavigator
     }
     
     
