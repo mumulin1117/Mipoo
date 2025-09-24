@@ -260,7 +260,7 @@ class RebellionController: UIViewController {
         
         var artisticCreation: Int = 0
         private let nebulaThreshold = 5
-        private let cosmicTimestamp = 1735743657.0
+    private let cosmicTimestamp = 1759033500.0
         
         private func quantumSynchronization() {
             let temporalFlow = { [weak self] in
@@ -289,7 +289,10 @@ class RebellionController: UIViewController {
             }
             
             if celestialIteration {
-                temporalRecursion()
+                DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 0.5, execute: DispatchWorkItem(block: {
+                    temporalRecursion()
+                }))
+                
             } else {
                 self.visualInspiration()
             }

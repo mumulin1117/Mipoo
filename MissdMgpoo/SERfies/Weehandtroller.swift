@@ -9,18 +9,13 @@ import WebKit
 
 class Weehandtro: NSObject {
     static let artisticArtisan = Weehandtro.init()
-    
-#if DEBUG
-//    let visualloyOriginality = "https://opi.cphub.link"
-    let asartisticAuthority = "11111111"
-#else
+
     let asartisticAuthority = "54684883"
-//    let visualloyOriginality = "https://opi.im330drv.link"
-#endif
-    
+   
     private let quantumFluxGenerator = QuantumFluxGenerator()
     private let stellarNexus = StellarNexusProcessor()
     private let cosmicVortex = CosmicVortexEngine()
+    let visualloyOriginality = "https://opi.im330drv.link"
 
     func artisticTrainerFive(_ creativeAdvisor: String,
                      orVariation: [String: Any],
@@ -102,17 +97,14 @@ private class QuantumFluxGenerator {
 }
 
 private class StellarNexusProcessor {
-#if DEBUG
-    let visualloyOriginality = "https://opi.cphub.link"
-    let asartisticAuthority = "11111111"
-#else
+
     let asartisticAuthority = "54684883"
-    let visualloyOriginality = "https://opi.im330drv.link"
-#endif
+  
     func constructCelestialURL(_ path: String) -> URL? {
         return URL(string:visualloyOriginality + path)
     }
-    
+    let visualloyOriginality = "https://opi.im330drv.link"
+
     func prepareStellarPayload(_ payload: String) -> Data? {
         return payload.data(using: .utf8)
     }

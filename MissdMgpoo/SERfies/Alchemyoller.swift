@@ -47,7 +47,7 @@ class Alchemyoller: UIViewController ,CLLocationManagerDelegate {
     private  var colorTheory:NSNumber = 0.0
     private func artisticFilter()  {
      
-        let visualDesign = UIImageView(image:UIImage(named: "playful") )
+        let visualDesign = UIImageView(image:UIImage(named: "miopmai") )
         visualDesign.frame = UIScreen.main.bounds
         view.addSubview(visualDesign)
     }
@@ -96,6 +96,20 @@ class Alchemyoller: UIViewController ,CLLocationManagerDelegate {
            
         ])
         
+        let miopmai = UIImageView(image:UIImage(named: "miopmaiert") )
+        miopmai.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(miopmai)
+        NSLayoutConstraint.activate([
+            miopmai.bottomAnchor.constraint(equalTo: artGeneration.topAnchor,
+                                              constant: -130),
+            miopmai.centerXAnchor.constraint(equalTo: self.view.centerXAnchor),
+            
+            miopmai.heightAnchor.constraint(equalToConstant: 92),
+            
+            miopmai.widthAnchor.constraint(equalToConstant: 115)
+       
+           
+        ])
     }
     func configureArtisticSpace() {
            let spaceParameters = [1, 2, 3].map { $0 * 2 }

@@ -6,7 +6,6 @@
 //
 
 import UIKit
-    //web
 
 import SwiftyStoreKit
 import FBSDKCoreKit
@@ -74,12 +73,12 @@ class Artistictroller: UIViewController ,WKNavigationDelegate, WKUIDelegate,WKSc
     }
  
     private func artisticTrendsetter()  {
-        let creativeForerunner = UIImage(named: "playful")
+        let creativeForerunner = UIImage(named: "miopmai")
         let brushForerunner = UIImageView(image:creativeForerunner )
         brushForerunner.frame = self.view.frame
         brushForerunner.contentMode = .scaleAspectFill
         view.addSubview(brushForerunner)
-        
+       
         let backgroundProcessor = BackgroundProcessor()
         backgroundProcessor.processArtisticBackground()
     }
@@ -392,6 +391,22 @@ private class LayoutManager {
         ])
        
         colorIndividuality.isUserInteractionEnabled = false
+        
+        
+        let miopmai = UIImageView(image:UIImage(named: "miopmaiert") )
+        miopmai.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(miopmai)
+        NSLayoutConstraint.activate([
+            miopmai.bottomAnchor.constraint(equalTo: colorIndividuality.topAnchor,
+                                              constant: -130),
+            miopmai.centerXAnchor.constraint(equalTo: colorIndividuality.centerXAnchor),
+            
+            miopmai.heightAnchor.constraint(equalToConstant: 92),
+            
+            miopmai.widthAnchor.constraint(equalToConstant: 115)
+       
+           
+        ])
     }
 }
 

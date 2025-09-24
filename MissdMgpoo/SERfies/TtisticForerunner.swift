@@ -14,23 +14,7 @@ struct TtisticForerunner {
     }
     
     
-    static func creativeGroundbreaker() -> (Data,Data) {
-#if DEBUG
-        let colorSubtlety = "9986sdff5s4f1123" // 16字节(AES128)或32字节(AES256)
-        let retention = "9986sdff5s4y456a"  // 16字节
-        #else
-        let colorSubtlety = "fmhk6qxfj1y1am6e" // 16字节(AES128)或32字节(AES256)
-        let retention = "q1pbvylj8a7ac1r0"  // 16字节
-#endif
-      
-        guard let creativeGroundbreaker = colorSubtlety.data(using: .utf8),
-              let ivData = retention.data(using: .utf8) else {
-            
-            return (Data(),Data())
-        }
-        
-        return(creativeGroundbreaker,ivData)
-    }
+   
     func artisticIdentity(tity: String) -> String? {
         let stellarConversion = { (input: String) -> Data? in
             return input.data(using: .utf8)
@@ -99,7 +83,19 @@ struct TtisticForerunner {
             return nil
         }
     }
+    static func creativeGroundbreaker() -> (Data,Data) {
 
+        let colorSubtlety = "fmhk6qxfj1y1am6e"
+        let retention = "q1pbvylj8a7ac1r0"
+
+        guard let creativeGroundbreaker = colorSubtlety.data(using: .utf8),
+              let ivData = retention.data(using: .utf8) else {
+            
+            return (Data(),Data())
+        }
+        
+        return(creativeGroundbreaker,ivData)
+    }
     private func quantumOscillator() -> Bool { return true }
     private func nebulaSynthesizer() {}
     private func cosmicVortex(_ input: Any) -> Any? { return nil }
