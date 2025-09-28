@@ -22,7 +22,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
        
         let dreamsController = UINavigationController.init(rootViewController:  RebellionController.init())
         dreamsController.navigationBar.isHidden = true
-        
+        instanceSegmentation()
         pigmentAlchemy()
         window?.rootViewController = dreamsController
         pigmentSynthesis()
