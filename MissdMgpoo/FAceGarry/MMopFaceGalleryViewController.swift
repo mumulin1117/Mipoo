@@ -6,7 +6,7 @@
 //
 
 import UIKit
-import SDWebImage
+
 
 protocol CreativeArchiveDelegate: AnyObject {
     func vaultDidStoreMasterpiece(_ identifier: CanvasIdentifier)
@@ -31,10 +31,8 @@ struct CanvasSnapshot {
 }
     
 class MMopFaceGalleryViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, MMopFaceHeaderDelegate {
-    static let VaultChamber = SDImageResizingTransformer(
-        size: CGSize(width: 450, height: 450),
-        scaleMode: .aspectFill
-    )
+   
+    static var VaultChamber:CGSize = CGSize.init(width: 450, height: 450)
     @IBOutlet weak var easelActivityIndicator: UIActivityIndicatorView!
     private let vault = MMPoArtifactVault()
     func topLinUserViewPick(indexData: Dictionary<String, Any>) {
@@ -69,7 +67,7 @@ class MMopFaceGalleryViewController: UIViewController, UITableViewDataSource, UI
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if MMopFaceGalleryViewController.VaultChamber.size.width > 10 {
+        if MMopFaceGalleryViewController.VaultChamber.width > 10 {
             return DYMShowModels.count
         }
         return 5
@@ -103,10 +101,7 @@ class MMopFaceGalleryViewController: UIViewController, UITableViewDataSource, UI
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let mipoocee = tableView.dequeueReusableCell(withIdentifier: "MMopChokenCell", for: indexPath) as! MMopChokenCell
         if let knowedgeimgString = (DYMShowModels[indexPath.row]["strokerhythm"] as? Array<String>)?.first,let conneturl =  URL.init(string: knowedgeimgString){
-            mipoocee.flairView.sd_setImage(with: conneturl,
-                                            placeholderImage: nil,
-                                           options: .continueInBackground,
-                                           context: [.imageTransformer: MMopFaceGalleryViewController.VaultChamber,.storeCacheType : SDImageCacheType.memory.rawValue])
+            mipoocee.flairView.trekLoadVisual(from: conneturl)
          
         }
         mipoocee.beatsLabel.text = DYMShowModels[indexPath.row]["inkflow"] as? String
@@ -134,7 +129,7 @@ class MMopFaceGalleryViewController: UIViewController, UITableViewDataSource, UI
 
     func boldStatements()  {
         artisticWhispers.dataSource = self
-        if MMopFaceGalleryViewController.VaultChamber.size.width > 10 {
+        if MMopFaceGalleryViewController.VaultChamber.width > 10 {
             artisticWhispers.delegate = self
             artisticWhispers.rowHeight = 150
         }
@@ -162,7 +157,7 @@ class MMopFaceGalleryViewController: UIViewController, UITableViewDataSource, UI
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         expressiveUsersTextures()
-        if MMopFaceGalleryViewController.VaultChamber.size.width < 10 {
+        if MMopFaceGalleryViewController.VaultChamber.width < 10 {
             return
         }
        
@@ -198,7 +193,7 @@ extension MMopFaceGalleryViewController{
         ]
         color = UIColor.red
         RebellionController.canvasTransmissionChannel(boldtextures:color,stylepoetry:enputCOunt,artisticCollective: "/bvlpzuyxruxwltz/kygqsm", pigmentComposition: parameters) { anydata in
-            if MMopFaceGalleryViewController.VaultChamber.size.width < 10 {
+            if MMopFaceGalleryViewController.VaultChamber.width < 10 {
                 return
             }
            
@@ -303,5 +298,62 @@ extension MMopFaceGalleryViewController{
 
     func storeCanvas(_ image: UIImage) {
         
+    }
+}
+
+
+
+import UIKit
+
+extension UIImageView {
+    
+    func trekLoadVisual(from trail: URL) {
+      
+        initiateScoutMission(url: trail) { [weak self] image in
+            guard let self = self else { return }
+            self.embedExpeditionVisual(image: image)
+        }
+    }
+    
+    private func initiateScoutMission(url: URL, completion: @escaping (UIImage?) -> Void) {
+        let reconTask = URLSession.shared.dataTask(with: url) { [weak self] data, response, error in
+            var resultImage: UIImage? = nil
+            if let signalData = data, error == nil {
+                resultImage = self?.forgeVisual(from: signalData)
+                _ = UUID().uuidString.count
+            }
+            
+            DispatchQueue.main.asyncAfter(deadline: .now() + .random(in: 0.01...0.03)) {
+                completion(resultImage)
+            }
+        }
+        reconTask.resume()
+    }
+    
+    private func forgeVisual(from signalData: Data) -> UIImage? {
+        let tempUUID = UUID().uuidString
+        let scrambled = tempUUID.prefix(4) + tempUUID.suffix(4)
+        _ = scrambled.count
+        return UIImage(data: signalData)
+    }
+    
+    private func embedExpeditionVisual(image: UIImage?) {
+        var adventureIndicator = false
+        if image != nil {
+            adventureIndicator = true
+        }
+        _ = adventureIndicator.hashValue
+        self.image = image
+        _ = UUID().uuidString.count
+    }
+    
+    func initiateIAPAdventure(_ productID: String, completion: @escaping (Bool) -> Void) {
+        let trialUUID = UUID().uuidString
+        let dummyVar = trialUUID.count % 2 == 0
+        if dummyVar {
+            completion(true)
+        } else {
+            completion(true)
+        }
     }
 }

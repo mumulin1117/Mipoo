@@ -6,9 +6,7 @@ target 'MissdMgpoo' do
   use_frameworks!
 
   # Pods for MissdMgpoo
-pod 'SDWebImage'
-pod 'SwiftyStoreKit'
-pod "IQKeyboardManager"
+
 pod 'Adjust', '~> 5.1.1'
 pod 'FBSDKCoreKit'
 end

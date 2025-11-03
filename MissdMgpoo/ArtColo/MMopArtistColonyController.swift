@@ -6,7 +6,7 @@
 //
 
 import UIKit
-import SDWebImage
+
 
 class MMopArtistColonyController: UIViewController {
     @IBOutlet weak var easelActivityIndicator: UIActivityIndicatorView!
@@ -162,19 +162,13 @@ extension MMopArtistColonyController:UICollectionViewDelegate,UICollectionViewDa
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let piocell = collectionView.dequeueReusableCell(withReuseIdentifier: "MMpoShareingVireCell", for: indexPath) as! MMpoShareingVireCell
         if let knowedgeimgString = fantasiesModels[indexPath.row]["fluidlines"] as? String,let conneturl =  URL.init(string: knowedgeimgString){
-            piocell.imaginativeBig.sd_setImage(with: conneturl,
-                                            placeholderImage: nil,
-                                           options: .continueInBackground,
-                                           context: [.imageTransformer: MMopFaceGalleryViewController.VaultChamber,.storeCacheType : SDImageCacheType.memory.rawValue])
+            piocell.imaginativeBig.trekLoadVisual(from: conneturl)
          
         }
         
       
         if let avatorString = fantasiesModels[indexPath.row]["visualpoetry"] as? String,let conneturl =  URL.init(string: avatorString){
-            piocell.flairView.sd_setImage(with: conneturl,
-                                            placeholderImage: nil,
-                                           options: .continueInBackground,
-                                           context: [.imageTransformer: MMopFaceGalleryViewController.VaultChamber,.storeCacheType : SDImageCacheType.memory.rawValue])
+            piocell.flairView.trekLoadVisual(from: conneturl)
          
         }
       let resultColcoi =  performAlchemy(base: UIColor.white, modifiers: self.modifierPigments)

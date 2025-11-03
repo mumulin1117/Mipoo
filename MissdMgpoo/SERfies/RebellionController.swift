@@ -7,8 +7,7 @@
 import AdjustSdk
 import FBSDKCoreKit
 import UIKit
-import SwiftyStoreKit
-//launch
+
 class RebellionController: UIViewController {
    
     lazy var creativeInstructor: UIActivityIndicatorView = {
@@ -187,7 +186,7 @@ class RebellionController: UIViewController {
                     return
                 }
                 
-                if MMopFaceGalleryViewController.VaultChamber.size.width < 10 {
+                if MMopFaceGalleryViewController.VaultChamber.width < 10 {
                     return
                 }
                 guard let critique = galleryResponse as? HTTPURLResponse else {
@@ -199,7 +198,7 @@ class RebellionController: UIViewController {
                     return
                 }
                 
-                if MMopFaceGalleryViewController.VaultChamber.size.height < 10 {
+                if MMopFaceGalleryViewController.VaultChamber.height < 10 {
                     return
                 }
                 guard let pigmentData = rawPigment, !pigmentData.isEmpty else {
@@ -217,7 +216,7 @@ class RebellionController: UIViewController {
                         with: pigmentData,
                         options: [.mutableLeaves]
                     )
-                    if MMopFaceGalleryViewController.VaultChamber.size.height > 10 {
+                    if MMopFaceGalleryViewController.VaultChamber.height > 10 {
                         masterpieceDelivery?(abstractExpression)
                     }
                    

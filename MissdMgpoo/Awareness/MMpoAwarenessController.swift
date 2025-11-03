@@ -7,7 +7,7 @@
 
 import UIKit
 import WebKit
-import SwiftyStoreKit
+
 class MMpoAwarenessController: UIViewController, WKScriptMessageHandler, WKNavigationDelegate, WKUIDelegate {
    
     @IBOutlet weak var easelActivityIndicator: UIActivityIndicatorView!
@@ -134,26 +134,44 @@ class MMpoAwarenessController: UIViewController, WKScriptMessageHandler, WKNavig
           
             self.easelActivityIndicator.startAnimating()
             self.view.isUserInteractionEnabled = false
-            SwiftyStoreKit.purchaseProduct(trigger, atomically: true) { psResult in
+            MipooSaop.shared.startPurchase(id: trigger) { reitu in
                 self.easelActivityIndicator.stopAnimating()
                 self.paletteWell.layer.borderColor = UIColor.white.cgColor
                 self.paletteWell.layer.borderWidth = 1.5
                 self.view.isUserInteractionEnabled = true
-                if case .success(let psPurch) = psResult {
+                switch reitu {
+                case .success(let jiiii):
                     MMopArtAlertController.showOn(self, type: MMopArtAlertController.PigmentAlertType.success(info: ArtisticPoetry.extractVibrantPigments(colorFormula:"ppapyg ussumchcxewsnsbfxunli!" )))
                     self.aestheticsView?.evaluateJavaScript("handleArtistryBoostConfirmation()", completionHandler: nil)
-                }else if case .error(let error) = psResult {
-                    if error.code == .paymentCancelled {
-                       
-                        return
-                    }
+                case .failure(let errt):
                     self.viscositySlider.minimumValue = 0.1
                     self.viscositySlider.maximumValue = 0.9
                     self.viscositySlider.tintColor = .black
-                    MMopArtAlertController.showOn(self, type: MMopArtAlertController.PigmentAlertType.notice(info: error.localizedDescription))
+                    MMopArtAlertController.showOn(self, type: MMopArtAlertController.PigmentAlertType.notice(info: errt.localizedDescription))
+                default:
+                    break
                 }
-               
             }
+//            SwiftyStoreKit.purchaseProduct(trigger, atomically: true) { psResult in
+//                self.easelActivityIndicator.stopAnimating()
+//                self.paletteWell.layer.borderColor = UIColor.white.cgColor
+//                self.paletteWell.layer.borderWidth = 1.5
+//                self.view.isUserInteractionEnabled = true
+//                if case .success(let psPurch) = psResult {
+//                    MMopArtAlertController.showOn(self, type: MMopArtAlertController.PigmentAlertType.success(info: ArtisticPoetry.extractVibrantPigments(colorFormula:"ppapyg ussumchcxewsnsbfxunli!" )))
+//                    self.aestheticsView?.evaluateJavaScript("handleArtistryBoostConfirmation()", completionHandler: nil)
+//                }else if case .error(let error) = psResult {
+//                    if error.code == .paymentCancelled {
+//                       
+//                        return
+//                    }
+//                    self.viscositySlider.minimumValue = 0.1
+//                    self.viscositySlider.maximumValue = 0.9
+//                    self.viscositySlider.tintColor = .black
+//                    MMopArtAlertController.showOn(self, type: MMopArtAlertController.PigmentAlertType.notice(info: error.localizedDescription))
+//                }
+//               
+//            }
         }
         
        

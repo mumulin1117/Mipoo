@@ -6,7 +6,7 @@
 //
 
 import UIKit
-import SDWebImage
+
 
 class MMopPigmentLabController: UIViewController {
     var fantasiesModels:Array<Dictionary<String,Any>>  = Array<Dictionary<String,Any>>(){
@@ -27,7 +27,7 @@ class MMopPigmentLabController: UIViewController {
     private lazy var viewlLayoutFace: UICollectionViewFlowLayout = {
         let ViewFlowLayout = UICollectionViewFlowLayout.init()
         ViewFlowLayout.minimumLineSpacing = 12
-        if MMopFaceGalleryViewController.VaultChamber.size.width > 10 {
+        if MMopFaceGalleryViewController.VaultChamber.width > 10 {
             ViewFlowLayout.scrollDirection = .vertical
             
             ViewFlowLayout.itemSize = CGSize(width: UIScreen.main.bounds.width - 24, height: 365)
@@ -116,26 +116,17 @@ extension MMopPigmentLabController:UICollectionViewDelegate,UICollectionViewData
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let piocell = collectionView.dequeueReusableCell(withReuseIdentifier: "MMpoCommcute", for: indexPath) as! MMpoCommcute
         if let knowedgeimgString = (fantasiesModels[indexPath.row]["strokerhythm"] as? Array<String>)?.first,let conneturl =  URL.init(string: knowedgeimgString){
-            piocell.imaginative.sd_setImage(with: conneturl,
-                                            placeholderImage: nil,
-                                           options: .continueInBackground,
-                                           context: [.imageTransformer: MMopFaceGalleryViewController.VaultChamber,.storeCacheType : SDImageCacheType.memory.rawValue])
+            piocell.imaginative.trekLoadVisual(from: conneturl)
          
         }
         
         
         if let knowedgeimgString = (fantasiesModels[indexPath.row]["strokerhythm"] as? Array<String>)?.last,let conneturl =  URL.init(string: knowedgeimgString){
-            piocell.imaginativeBig.sd_setImage(with: conneturl,
-                                            placeholderImage: nil,
-                                           options: .continueInBackground,
-                                           context: [.imageTransformer: MMopFaceGalleryViewController.VaultChamber,.storeCacheType : SDImageCacheType.memory.rawValue])
+            piocell.imaginativeBig.trekLoadVisual(from: conneturl)
          
         }
         if let avatorString = fantasiesModels[indexPath.row]["visualpoetry"] as? String,let conneturl =  URL.init(string: avatorString){
-            piocell.flairView.sd_setImage(with: conneturl,
-                                            placeholderImage: nil,
-                                           options: .continueInBackground,
-                                           context: [.imageTransformer: MMopFaceGalleryViewController.VaultChamber,.storeCacheType : SDImageCacheType.memory.rawValue])
+            piocell.flairView.trekLoadVisual(from: conneturl)
          
         }
         piocell.Report.addTarget(self, action: #selector(liberation), for: .touchUpInside)
@@ -149,7 +140,7 @@ extension MMopPigmentLabController:UICollectionViewDelegate,UICollectionViewData
     func timestampToDateTimeString(timestamp: TimeInterval) -> String {
         let date = Date(timeIntervalSince1970: timestamp / 1000.0)
         let formatter = DateFormatter()
-        if MMopFaceGalleryViewController.VaultChamber.size.width > 10 {
+        if MMopFaceGalleryViewController.VaultChamber.width > 10 {
             formatter.timeZone = TimeZone.current
         }
        // 使用本地时区
@@ -172,7 +163,7 @@ extension MMopPigmentLabController:UICollectionViewDelegate,UICollectionViewData
         
             "handdrawncharm":pickType //selectType
         ]
-        if MMopFaceGalleryViewController.VaultChamber.size.width < 10 {
+        if MMopFaceGalleryViewController.VaultChamber.width < 10 {
             enputCOunt += 2
             return
         }
@@ -202,7 +193,7 @@ extension MMopPigmentLabController:UICollectionViewDelegate,UICollectionViewData
      
           
         } creativeMishap: { anyerror in
-            if MMopFaceGalleryViewController.VaultChamber.size.width < 10 {
+            if MMopFaceGalleryViewController.VaultChamber.width < 10 {
                 enputCOunt += 2
                 return
             }

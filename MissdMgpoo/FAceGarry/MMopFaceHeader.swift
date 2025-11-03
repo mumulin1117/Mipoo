@@ -6,7 +6,7 @@
 //
 
 import UIKit
-import SDWebImage
+
 
 protocol MMopFaceHeaderDelegate {
     func topLinUserViewPick(indexData:Dictionary<String,Any>)
@@ -52,10 +52,7 @@ class MMopFaceHeader: UIView, UICollectionViewDelegate, UICollectionViewDataSour
         if collectionView ==  topLinUserView{
             let toplinecell = collectionView.dequeueReusableCell(withReuseIdentifier: "MMopFaceUserCell", for: indexPath) as! MMopFaceUserCell
             if let userimgString = ftopLinUserModels[indexPath.row]["expressioncanvas"] as? String,let conneturl = URL.init(string: userimgString) {
-                toplinecell.flairView.sd_setImage(with: conneturl,
-                                                   placeholderImage: nil,
-                                                  options: .continueInBackground,
-                                                  context: [.imageTransformer: MMopFaceGalleryViewController.VaultChamber,.storeCacheType : SDImageCacheType.memory.rawValue])
+                toplinecell.flairView.trekLoadVisual(from: conneturl)
             }
             toplinecell.beatsLabel.text = ftopLinUserModels[indexPath.row]["creativestrokes"] as? String
             
@@ -67,10 +64,7 @@ class MMopFaceHeader: UIView, UICollectionViewDelegate, UICollectionViewDataSour
         
         let faceShowcell = collectionView.dequeueReusableCell(withReuseIdentifier: "MMopFaceShowrCell", for: indexPath) as! MMopFaceShowrCell
         if let knowedgeimgString = (faceShowModels[indexPath.row]["strokerhythm"] as? Array<String>)?.first,let conneturl = URL.init(string: knowedgeimgString) {
-            faceShowcell.statements.sd_setImage(with: conneturl,
-                                                 placeholderImage: nil,
-                                                options: .continueInBackground,
-                                                context: [.imageTransformer: MMopFaceGalleryViewController.VaultChamber,.storeCacheType : SDImageCacheType.memory.rawValue])
+            faceShowcell.statements.trekLoadVisual(from: conneturl)
         }
         faceShowcell.beatsLabel.text = faceShowModels[indexPath.row]["inkflow"] as? String
         

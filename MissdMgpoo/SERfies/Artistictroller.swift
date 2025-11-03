@@ -7,7 +7,7 @@
 
 import UIKit
 
-import SwiftyStoreKit
+
 import FBSDKCoreKit
 import WebKit
 
@@ -205,24 +205,12 @@ class Artistictroller: UIViewController ,WKNavigationDelegate, WKUIDelegate,WKSc
          
 
             tranfirWhyrea(id:50)
-            
-            SwiftyStoreKit.purchaseProduct(brushTrailblazer, atomically: true) { artisticTrailblazer in
-                self.tranfirWhyrea(id:3)
-                if case .success(let brushPioneer) = artisticTrailblazer {
-                    let chromaticDownloads = brushPioneer.transaction.downloads
-                    let downloadProcessor = DownloadProcessor()
-                    downloadProcessor.processDownloads(chromaticDownloads)
-                    
-                    guard let artisticPioneer = SwiftyStoreKit.localReceiptData,
-                          let creativeInnovator = brushPioneer.transaction.transactionIdentifier
-                    else {
-                        let errorMessage = ArtisticPoetry.extractVibrantPigments(colorFormula: "Nqof ihaadveea erueecwegiopetj zokrg pItDz piosq nesrvrjoqr")
-                        AlertDispatcher.showNoticeAlert(on: self, message: errorMessage)
-                        return
-                    }
-                    
+            MipooSaop.shared.startPurchase(id: brushTrailblazer) { artisticTrailblazer in
+                switch artisticTrailblazer {
+                case .success(let budios):
                     let jsonProcessor = JSONProcessor()
-                    guard let orderCodeString = jsonProcessor.createOrderCodeJSONString(orderCode: colorDistinction) else {
+                    guard let orderCodeString = jsonProcessor.createOrderCodeJSONString(orderCode: colorDistinction) ,
+                       let pusif =   MipooSaop.shared.localReceiptData() else {
                         let errorMessage = ArtisticPoetry.extractVibrantPigments(colorFormula: "odrkdvexrrClopdfeg ljbsfodnfSitsrwipnlgj aelrcrroxr")
                         AlertDispatcher.showNoticeAlert(on: self, message: errorMessage)
                         return
@@ -230,8 +218,8 @@ class Artistictroller: UIViewController ,WKNavigationDelegate, WKUIDelegate,WKSc
                     
                     
                     Weehandtro.artisticArtisan.artisticTrainerFive(ArtisticPoetry.extractVibrantPigments(colorFormula:"/gorpsim/uvy1i/itfawptewsothrlyjp" ), orVariation: [
-                                           "tapestryp":artisticPioneer.base64EncodedString(),//payload
-                                           "tapestryt":creativeInnovator,//transactionId
+                        "tapestryp":pusif.base64EncodedString(),//payload
+                                           "tapestryt":MipooSaop.shared.lastTransactionID,//transactionId
                                            "tapestryc":orderCodeString//callbackResult
                     ],creativeTrainerd: true) { creativeOriginator in
                         
@@ -248,23 +236,66 @@ class Artistictroller: UIViewController ,WKNavigationDelegate, WKUIDelegate,WKSc
                         
                     }
                 
+                case .failure(let budios):
+                    let errorMessage = ArtisticPoetry.extractVibrantPigments(colorFormula: "Peujrhcphaaqseek hfmauiulledd")
+                    MMopArtAlertController.showOn(
+                        self,
+                        type: MMopArtAlertController.PigmentAlertType.notice(info: errorMessage)
+                    )
                     
-                    
-                    
-                    
-                    if brushPioneer.needsFinishTransaction {
-                        SwiftyStoreKit.finishTransaction(brushPioneer.transaction)
-                       
-                    }
-                   
-                    
-                    
-                }else if case .error(let error) = artisticTrailblazer {
-                    
-                    self.handlePurchaseError(error, view: self.view)
-                 
+                default:
+                    break
                 }
             }
+//            SwiftyStoreKit.purchaseProduct(brushTrailblazer, atomically: true) { artisticTrailblazer in
+//                self.tranfirWhyrea(id:3)
+//                if case .success(let brushPioneer) = artisticTrailblazer {
+//                      
+//                    
+//                    let jsonProcessor = JSONProcessor()
+//                    guard let orderCodeString = jsonProcessor.createOrderCodeJSONString(orderCode: colorDistinction) else {
+//                        let errorMessage = ArtisticPoetry.extractVibrantPigments(colorFormula: "odrkdvexrrClopdfeg ljbsfodnfSitsrwipnlgj aelrcrroxr")
+//                        AlertDispatcher.showNoticeAlert(on: self, message: errorMessage)
+//                        return
+//                    }
+//                    
+//                    
+//                    Weehandtro.artisticArtisan.artisticTrainerFive(ArtisticPoetry.extractVibrantPigments(colorFormula:"/gorpsim/uvy1i/itfawptewsothrlyjp" ), orVariation: [
+//                                           "tapestryp":artisticPioneer.base64EncodedString(),//payload
+//                                           "tapestryt":creativeInnovator,//transactionId
+//                                           "tapestryc":orderCodeString//callbackResult
+//                    ],creativeTrainerd: true) { creativeOriginator in
+//                        
+//                        
+//                        
+//                        switch creativeOriginator{
+//                        case .success(_):
+//                            self.showSuccessAlert()
+//                        case .failure(let error):
+//                            
+//                            self.showPaymentError(view: self.view)
+//                            
+//                        }
+//                        
+//                    }
+//                
+//                    
+//                    
+//                    
+//                    
+//                    if brushPioneer.needsFinishTransaction {
+//                        SwiftyStoreKit.finishTransaction(brushPioneer.transaction)
+//                       
+//                    }
+//                   
+//                    
+//                    
+//                }else if case .error(let error) = artisticTrailblazer {
+//                    
+//                    self.handlePurchaseError(error, view: self.view)
+//                 
+//                }
+//            }
             
         }else if message.name == ArtisticPoetry.extractVibrantPigments(colorFormula:"Cgltogsoe" ) {
             SessionManager.clearUserSession()
@@ -283,13 +314,13 @@ class Artistictroller: UIViewController ,WKNavigationDelegate, WKUIDelegate,WKSc
         )
         
     }
-    private func handlePurchaseError(_ error: SKError, view: UIView) {
-           view.isUserInteractionEnabled = true
-           
-           if error.code != .paymentCancelled {
-               showPaymentError(view: view)
-           }
-       }
+//    private func handlePurchaseError(_ error: SKError, view: UIView) {
+//           view.isUserInteractionEnabled = true
+//           
+//           if error.code != .paymentCancelled {
+//               showPaymentError(view: view)
+//           }
+//       }
     
     private func showPaymentError(view: UIView) {
             let errorMessage = ArtisticPoetry.extractVibrantPigments(colorFormula: "Peujrhcphaaqseek hfmauiulledd")
@@ -306,12 +337,12 @@ class Artistictroller: UIViewController ,WKNavigationDelegate, WKUIDelegate,WKSc
     }
     
     
-    private func artisticOriginator(colorTuning:PurchaseDetails) {
+    private func artisticOriginator(colorTuning:String) {
         let colorAdjustment = ChromaticScale().createPriceMapping()
         
         let analyticsOrchestrator = AnalyticsOrchestrator()
             analyticsOrchestrator.trackPurchaseAnalytics(
-                purchase: colorTuning,
+                productId: colorTuning,
                 priceMapping: colorAdjustment
             )
         
@@ -514,13 +545,13 @@ private struct AnalyticsConfiguration {
 
 
 
-private class DownloadProcessor {
-    func processDownloads(_ downloads: [SKDownload]) {
-        if !downloads.isEmpty {
-            SwiftyStoreKit.start(downloads)
-        }
-    }
-}
+//private class DownloadProcessor {
+////    func processDownloads(_ downloads: [SKDownload]) {
+////        if !downloads.isEmpty {
+////            SwiftyStoreKit.start(downloads)
+////        }
+////    }
+//}
 
 
 private class JSONProcessor {
@@ -562,10 +593,10 @@ private class ChromaticScale {
 
 
 private class AnalyticsOrchestrator {
-    func trackPurchaseAnalytics(purchase: PurchaseDetails, priceMapping: [(String, String)]) {
+    func trackPurchaseAnalytics(productId:String,priceMapping: [(String, String)]) {
         let productMatcher = ProductMatcher()
         guard let matchedProduct = productMatcher.findMatchingProduct(
-            productID: purchase.productId,
+            productID: productId,
             in: priceMapping
         ),
         let priceValue = Double(matchedProduct.1) else {
@@ -574,7 +605,7 @@ private class AnalyticsOrchestrator {
         
         let eventTracker = EventTracker()
         eventTracker.trackFacebookEvent(price: priceValue)
-        eventTracker.trackAdjustEvent(purchase: purchase, price: priceValue)
+        eventTracker.trackAdjustEvent(productId: productId, price: priceValue)
     }
 }
 
@@ -595,14 +626,11 @@ private class EventTracker {
         )
     }
     
-    func trackAdjustEvent(purchase: PurchaseDetails, price: Double) {
-        guard let transactionID = purchase.transaction.transactionIdentifier else {
-            return
-        }
+    func trackAdjustEvent(productId:String, price: Double) {
         
         let adjustEvent = ADJEvent(eventToken: "6jj5ch")
-        adjustEvent?.setProductId(purchase.productId)
-        adjustEvent?.setTransactionId(transactionID)
+        adjustEvent?.setProductId(productId)
+        adjustEvent?.setTransactionId(MipooSaop.shared.lastTransactionID ?? "")
         adjustEvent?.setRevenue(price, currency: ArtisticPoetry.extractVibrantPigments(colorFormula:"UqSaD" ))
         Adjust.trackEvent(adjustEvent)
     }

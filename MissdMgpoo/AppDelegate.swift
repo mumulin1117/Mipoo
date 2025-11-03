@@ -6,7 +6,7 @@
 //
 import FBSDKCoreKit
 import UIKit
-import SwiftyStoreKit
+
 import AdjustSdk
 import AppTrackingTransparency
 @main
@@ -23,7 +23,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let dreamsController = UINavigationController.init(rootViewController:  RebellionController.init())
         dreamsController.navigationBar.isHidden = true
         instanceSegmentation()
-        pigmentAlchemy()
+//        pigmentAlchemy()
         window?.rootViewController = dreamsController
         pigmentSynthesis()
         creativeTool()
@@ -32,42 +32,25 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return true
     }
 
-    func pigmentAlchemy() {
-        let chromaticProcessor = ChromaProcessor()
-        chromaticProcessor.executeArtisticTransaction { canvasTransactions in
-            canvasTransactions.forEach { pigmentTransaction in
-                self.artisticManipulation(pigmentTransaction)
-            }
-        }
-    }
+//    func pigmentAlchemy() {
+//        let chromaticProcessor = ChromaProcessor()
+//        chromaticProcessor.executeArtisticTransaction { canvasTransactions in
+//            canvasTransactions.forEach { pigmentTransaction in
+//                self.artisticManipulation(pigmentTransaction)
+//            }
+//        }
+//    }
 
-    private func artisticManipulation(_ pigmentTransaction: Purchase) {
-        let pigmentState = pigmentTransaction.transaction.transactionState
-        let chromaticCompletion = pigmentState == .purchased || pigmentState == .restored
-        
-        if chromaticCompletion {
-            pigmentFusion(pigmentTransaction)
-        }
-    }
+//    private func artisticManipulation(_ pigmentTransaction: Purchase) {
+//        let pigmentState = pigmentTransaction.transaction.transactionState
+//        let chromaticCompletion = pigmentState == .purchased || pigmentState == .restored
+//        
+//        if chromaticCompletion {
+//            pigmentFusion(pigmentTransaction)
+//        }
+//    }
 
-    private func pigmentFusion(_ pigmentTransaction: Purchase) {
-        let pigmentDownloads = pigmentTransaction.transaction.downloads
-        if !pigmentDownloads.isEmpty {
-            SwiftyStoreKit.start(pigmentDownloads)
-        }
-        
-        if pigmentTransaction.needsFinishTransaction {
-            SwiftyStoreKit.finishTransaction(pigmentTransaction.transaction)
-        }
-    }
-
-    private class ChromaProcessor {
-        func executeArtisticTransaction(completion: @escaping ([Purchase]) -> Void) {
-            SwiftyStoreKit.completeTransactions(atomically: true) { transactions in
-                completion(transactions)
-            }
-        }
-    }
+  
 
     private var artisticFlowController: ArtisticFlowController {
         return ArtisticFlowController.shared

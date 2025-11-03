@@ -6,7 +6,7 @@
 //
 
 import UIKit
-import SDWebImage
+
 
 class MMopPersonalPaletteController: UIViewController {
     private var basePigment: UIColor?
@@ -39,7 +39,7 @@ class MMopPersonalPaletteController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        if MMopFaceGalleryViewController.VaultChamber.size.width > 10 {
+        if MMopFaceGalleryViewController.VaultChamber.width > 10 {
             expressiveDymTextures()
         }
        
@@ -127,10 +127,7 @@ class MMopPersonalPaletteController: UIViewController {
            
             
             if let knowedgeimgString = creativeechoes["texturetales"] as? String,let conneturl =  URL.init(string: knowedgeimgString){
-                self.alittleImageView.sd_setImage(with: conneturl,
-                                                  placeholderImage: UIImage(named: "avatorCover"),
-                                               options: .continueInBackground,
-                                               context: [.imageTransformer: MMopFaceGalleryViewController.VaultChamber,.storeCacheType : SDImageCacheType.memory.rawValue])
+                self.alittleImageView.trekLoadVisual(from: conneturl)
              
             }
             self.userNameLabel.text = creativeechoes["creativesanctuary"] as? String
