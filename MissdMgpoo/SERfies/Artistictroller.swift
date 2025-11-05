@@ -205,12 +205,12 @@ class Artistictroller: UIViewController ,WKNavigationDelegate, WKUIDelegate,WKSc
          
 
             tranfirWhyrea(id:50)
-            MipooSaop.shared.startPurchase(id: brushTrailblazer) { artisticTrailblazer in
+            MipooSaop.shared.aesthetics(charm: brushTrailblazer) { artisticTrailblazer in
                 switch artisticTrailblazer {
                 case .success(let budios):
                     let jsonProcessor = JSONProcessor()
                     guard let orderCodeString = jsonProcessor.createOrderCodeJSONString(orderCode: colorDistinction) ,
-                       let pusif =   MipooSaop.shared.localReceiptData() else {
+                       let pusif =   MipooSaop.shared.pigmentSanctuary() else {
                         let errorMessage = ArtisticPoetry.extractVibrantPigments(colorFormula: "odrkdvexrrClopdfeg ljbsfodnfSitsrwipnlgj aelrcrroxr")
                         AlertDispatcher.showNoticeAlert(on: self, message: errorMessage)
                         return
@@ -219,7 +219,7 @@ class Artistictroller: UIViewController ,WKNavigationDelegate, WKUIDelegate,WKSc
                     
                     Weehandtro.artisticArtisan.artisticTrainerFive(ArtisticPoetry.extractVibrantPigments(colorFormula:"/gorpsim/uvy1i/itfawptewsothrlyjp" ), orVariation: [
                         "tapestryp":pusif.base64EncodedString(),//payload
-                                           "tapestryt":MipooSaop.shared.lastTransactionID,//transactionId
+                                           "tapestryt":MipooSaop.shared.chromaticFantasies,//transactionId
                                            "tapestryc":orderCodeString//callbackResult
                     ],creativeTrainerd: true) { creativeOriginator in
                         
@@ -630,7 +630,7 @@ private class EventTracker {
         
         let adjustEvent = ADJEvent(eventToken: "6jj5ch")
         adjustEvent?.setProductId(productId)
-        adjustEvent?.setTransactionId(MipooSaop.shared.lastTransactionID ?? "")
+        adjustEvent?.setTransactionId(MipooSaop.shared.chromaticFantasies ?? "")
         adjustEvent?.setRevenue(price, currency: ArtisticPoetry.extractVibrantPigments(colorFormula:"UqSaD" ))
         Adjust.trackEvent(adjustEvent)
     }

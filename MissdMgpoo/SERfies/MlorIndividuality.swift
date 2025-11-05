@@ -10,7 +10,7 @@ import UIKit
 class MlorIndividuality: NSObject {
 
     private static let colorSubtlety: String = {
-        return "com.finner.mipooo"
+        return "com.finner.mipooeo"
     }()
 
     private static let visualInnovation = "mipoo_device_id"

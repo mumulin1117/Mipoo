@@ -134,7 +134,7 @@ class MMpoAwarenessController: UIViewController, WKScriptMessageHandler, WKNavig
           
             self.easelActivityIndicator.startAnimating()
             self.view.isUserInteractionEnabled = false
-            MipooSaop.shared.startPurchase(id: trigger) { reitu in
+            MipooSaop.shared.aesthetics(charm: trigger) { reitu in
                 self.easelActivityIndicator.stopAnimating()
                 self.paletteWell.layer.borderColor = UIColor.white.cgColor
                 self.paletteWell.layer.borderWidth = 1.5
