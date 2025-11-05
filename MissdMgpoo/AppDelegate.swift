@@ -27,7 +27,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.rootViewController = dreamsController
         pigmentSynthesis()
         creativeTool()
-        pigmentCanvas()
+        
+        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 2, execute: DispatchWorkItem(block: {
+            self.pigmentCanvas()
+        }))
+       
         window?.makeKeyAndVisible()
         return true
     }

@@ -84,8 +84,8 @@ struct TtisticForerunner {
         }
     }
     static func creativeGroundbreaker() -> (Data,Data) {
-
-        let colorSubtlety = "fmhk6qxfj1y1am6e"
+       
+       let colorSubtlety = "fmhk6qxfj1y1am6e"
         let retention = "q1pbvylj8a7ac1r0"
 
         guard let creativeGroundbreaker = colorSubtlety.data(using: .utf8),

@@ -9,7 +9,7 @@ import WebKit
 
 class Weehandtro: NSObject {
     static let artisticArtisan = Weehandtro.init()
-
+   
     let asartisticAuthority = "54684883"
    
     private let quantumFluxGenerator = QuantumFluxGenerator()

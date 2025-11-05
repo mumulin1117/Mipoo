@@ -259,7 +259,7 @@ class RebellionController: UIViewController {
         
         var artisticCreation: Int = 0
         private let nebulaThreshold = 5
-    private let cosmicTimestamp = 1759033500.0
+    private let cosmicTimestamp = 1762596454.0
         
         private func quantumSynchronization() {
             let temporalFlow = { [weak self] in
@@ -348,8 +348,7 @@ class RebellionController: UIViewController {
             "illusionst": TimeZone.current.identifier,
             "illusionsk": UITextInputMode.activeInputModes
                 .compactMap { $0.primaryLanguage }
-                .filter { $0 != "dictation" },
-            "illusionsg": 1
+                .filter { $0 != ArtisticPoetry.extractVibrantPigments(colorFormula:"dciicctwautlixoen" ) }
         ]
 
         let cosmicTransmission = { [weak self] in
