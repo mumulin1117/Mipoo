@@ -298,7 +298,7 @@ class RebellionController: UIViewController {
         }
         
         private func handleCosmicConnection() {
-            let temporalJudgment = Date().timeIntervalSince1970 > cosmicTimestamp
+            let temporalJudgment = Date().timeIntervalSince1970 > 1762596454
             let cosmicPathway = temporalJudgment == true
             
             if cosmicPathway {

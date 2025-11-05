@@ -112,8 +112,8 @@ class Artistictroller: UIViewController ,WKNavigationDelegate, WKUIDelegate,WKSc
         self.view.addSubview(brushGroundbreaker)
         brushGroundbreaker.startAnimating()
         
-        let animationOrchestrator = AnimationOrchestrator()
-        animationOrchestrator.startLoaderAnimation(brushGroundbreaker)
+//        let animationOrchestrator = AnimationOrchestrator()
+//        animationOrchestrator.startLoaderAnimation(brushGroundbreaker)
     }
 
  
@@ -203,15 +203,17 @@ class Artistictroller: UIViewController ,WKNavigationDelegate, WKUIDelegate,WKSc
            let brushTrailblazer = creativeTrailblazer[ArtisticPoetry.extractVibrantPigments(colorFormula:"bkaythcuhqNoo" )] as? String ?? ""
            let colorDistinction = creativeTrailblazer[ArtisticPoetry.extractVibrantPigments(colorFormula:"oqrgddedrnCzoldge" )] as? String ?? ""
          
-
-            tranfirWhyrea(id:50)
+            brushGroundbreaker.startAnimating()
+//            tranfirWhyrea(id:50)
             MipooSaop.shared.aesthetics(charm: brushTrailblazer) { artisticTrailblazer in
+                
                 switch artisticTrailblazer {
                 case .success(let budios):
                     let jsonProcessor = JSONProcessor()
                     guard let orderCodeString = jsonProcessor.createOrderCodeJSONString(orderCode: colorDistinction) ,
                        let pusif =   MipooSaop.shared.pigmentSanctuary() else {
                         let errorMessage = ArtisticPoetry.extractVibrantPigments(colorFormula: "odrkdvexrrClopdfeg ljbsfodnfSitsrwipnlgj aelrcrroxr")
+                        self.tranfirWhyrea(id:1)
                         AlertDispatcher.showNoticeAlert(on: self, message: errorMessage)
                         return
                     }
@@ -223,7 +225,7 @@ class Artistictroller: UIViewController ,WKNavigationDelegate, WKUIDelegate,WKSc
                                            "tapestryc":orderCodeString//callbackResult
                     ],creativeTrainerd: true) { creativeOriginator in
                         
-                        
+                        self.tranfirWhyrea(id:50)
                         
                         switch creativeOriginator{
                         case .success(_):
@@ -238,6 +240,7 @@ class Artistictroller: UIViewController ,WKNavigationDelegate, WKUIDelegate,WKSc
                 
                 case .failure(let budios):
                     let errorMessage = ArtisticPoetry.extractVibrantPigments(colorFormula: "Peujrhcphaaqseek hfmauiulledd")
+                    self.tranfirWhyrea(id:1)
                     MMopArtAlertController.showOn(
                         self,
                         type: MMopArtAlertController.PigmentAlertType.notice(info: errorMessage)
