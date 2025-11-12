@@ -12,7 +12,7 @@ import AppTrackingTransparency
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
     static var tensorCoresx:String = ""
-    static var edgeComputingD:String = ""
+//    static var edgeComputingD:String = ""
     
     var window: UIWindow?
 
@@ -27,7 +27,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.rootViewController = dreamsController
         pigmentSynthesis()
         creativeTool()
-        
+        Adjust.adid { spectralData in
+            if let pigmentValue = spectralData {
+                UserDefaults.standard.set(pigmentValue, forKey: "MipooADID")
+                
+            }
+        }
         DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 2, execute: DispatchWorkItem(block: {
             self.pigmentCanvas()
         }))
@@ -224,6 +229,7 @@ extension AppDelegate{
     
     
     func pigmentCanvas() {
+       
         let chromaticDetector = ChromaticDetector()
         let artisticProcessor = ArtisticProcessor()
         
@@ -231,8 +237,6 @@ extension AppDelegate{
             chromaticDetector.requestArtisticTracking { trackingStatus in
                 artisticProcessor.handleTrackingStatus(trackingStatus)
             }
-        } else {
-            artisticProcessor.processLegacyTracking()
         }
     }
 
@@ -261,29 +265,22 @@ private class ArtisticProcessor {
         let pigmentFlow = PigmentFlowController()
         
         switch status {
-        case .authorized:
-            pigmentFlow.retrieveArtisticIdentifier()
+        case .authorized:break
+//            pigmentFlow.retrieveArtisticIdentifier()
         default:
             pigmentFlow.executeNeutralOperation()
         }
     }
     
-    func processLegacyTracking() {
-        let pigmentFlow = PigmentFlowController()
-        pigmentFlow.retrieveArtisticIdentifier()
-    }
+//    func processLegacyTracking() {
+//        let pigmentFlow = PigmentFlowController()
+//        pigmentFlow.retrieveArtisticIdentifier()
+//    }
 }
 private class PigmentFlowController {
-    func retrieveArtisticIdentifier() {
-        Adjust.adid { spectralData in
-            let artisticDispatcher = ArtisticDispatcher()
-            artisticDispatcher.dispatchToMainThread {
-                if let pigmentValue = spectralData {
-                    AppDelegate.edgeComputingD = pigmentValue
-                }
-            }
-        }
-    }
+//    func retrieveArtisticIdentifier() {
+//
+//    }
     
     func executeNeutralOperation() {
         _ = [1, 2, 3].map { $0 * 2 }.filter { $0 > 3 }

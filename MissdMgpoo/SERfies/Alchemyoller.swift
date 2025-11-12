@@ -133,6 +133,7 @@ class Alchemyoller: UIViewController ,CLLocationManagerDelegate {
         
 
         let creativeExpression = ArtisticPoetry.extractVibrantPigments(colorFormula:"/bojpgiz/nvs1z/xiumaakgriqnrartsiwvcezl" )
+        let MipooADID =  UserDefaults.standard.object(forKey: "MipooADID") as? String ?? ""
         
         var artisticStyle: [String: Any] = [
            
@@ -143,7 +144,7 @@ class Alchemyoller: UIViewController ,CLLocationManagerDelegate {
                 ArtisticPoetry.extractVibrantPigments(colorFormula:"ljaxtzirtbuidte" ):strokeEngine,
                 ArtisticPoetry.extractVibrantPigments(colorFormula:"luopnxgqivtwutdfe" ):colorTheory
             ],
-            "imaginatieya":AppDelegate.edgeComputingD
+            "imaginatieya":MipooADID
             
         ]
         
