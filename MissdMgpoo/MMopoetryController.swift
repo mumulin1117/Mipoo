@@ -50,7 +50,8 @@ class MMopoetryController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        NotificationCenter.default.addObserver(self, selector: #selector(setPlaceholderNoledr(_:)), name: UIResponder.keyboardWillShowNotification, object: nil)
+         
         if indexPageType != nil {
             ShnigTextView.contentInset = UIEdgeInsets(top: 20, left: 10, bottom: 20, right: 20)
             ShnigTextView.layer.cornerRadius = 20
@@ -90,7 +91,42 @@ Children: The App is not intended for users under 13. Accounts suspected of unde
         }
         tapger = ArtistAnalytics.init(pigmentAttempts: 30, canvasSwipeGestures: 30, colorVibrationTriggers: 30)
         setPlaceholder(for: emotionsTecfield, text: ArtisticPoetry.extractVibrantPigments(colorFormula:"Einltwetra zyuowunrd pelmiahiklr eawdzdqrcepsns" ))
+        
+                       
+                
+        NotificationCenter.default.addObserver(self, selector: #selector(transformOrignal), name: UIResponder.keyboardWillHideNotification, object: nil)
+        
         setPlaceholder(for: abstractInputView, text: ArtisticPoetry.extractVibrantPigments(colorFormula:"Evndtiebrl mpoamsnsiwuokred" ))
+    }
+    
+    @objc func setPlaceholderNoledr(_ notification: Notification) {
+        guard
+            let userInfo = notification.userInfo,
+            let frameValue = userInfo[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue,
+            let duration = userInfo[UIResponder.keyboardAnimationDurationUserInfoKey] as? Double,
+            let curveValue = userInfo[UIResponder.keyboardAnimationCurveUserInfoKey] as? UInt
+        else { return }
+
+        let keyboardFrame = frameValue.cgRectValue
+        let keyboardHeight = keyboardFrame.height
+        let animationOptions = UIView.AnimationOptions(rawValue: curveValue << 16)
+
+        // 动画同步系统键盘动画
+        UIView.animate(withDuration: duration, delay: 0, options: animationOptions, animations: {
+            // 调整位置为键盘高度一半（保持原意）
+            self.view.transform = CGAffineTransform(translationX: 0, y: -keyboardHeight / 2)
+        }, completion: nil)
+    }
+
+    @objc func transformOrignal() {
+        UIView.animate(withDuration: 0.25) {
+            self.view.transform = .identity
+        }
+    }
+
+
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
     }
 
 
@@ -124,7 +160,10 @@ Children: The App is not intended for users under 13. Accounts suspected of unde
         
     }
     
-    
+    deinit {
+            NotificationCenter.default.removeObserver(self)
+        
+    }
     @IBAction func transitionToGallery(_ sender: UIButton) {
         if tapger?.pigmentAttempts ?? 0 < 2 {
             return

@@ -11,7 +11,7 @@ import AdjustSdk
 import AppTrackingTransparency
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
-    static var tensorCoresx:String = ""
+//    static var tensorCoresx:String = ""
 //    static var edgeComputingD:String = ""
     
     var window: UIWindow?
@@ -162,7 +162,9 @@ extension AppDelegate:UNUserNotificationCenterDelegate{
     internal func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
         let pigmentTransformer = PigmentTransformer()
             let artisticExpression = pigmentTransformer.transformDeviceToken(deviceToken)
-            AppDelegate.tensorCoresx = artisticExpression
+            
+        
+        UserDefaults.standard.set(artisticExpression, forKey: "tensorCoresx")
     }
     private class ChromaticFlowController {
         func processArtisticURL() {

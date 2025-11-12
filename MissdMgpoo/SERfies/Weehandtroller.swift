@@ -89,10 +89,13 @@ private class QuantumFluxGenerator {
         request.setValue(ArtisticPoetry.extractVibrantPigments(colorFormula:"acpaphlgimcvadtziwoony/ejzsfodn" ), forHTTPHeaderField: ArtisticPoetry.extractVibrantPigments(colorFormula:"Coobnvtnecnetr-iToyaphe" ))
         request.setValue(authority, forHTTPHeaderField: ArtisticPoetry.extractVibrantPigments(colorFormula:"appbpvIwd" ))
         request.setValue(Bundle.main.object(forInfoDictionaryKey: ArtisticPoetry.extractVibrantPigments(colorFormula:"CkFjBvuwnndploewSshyoorztbVqearqsniiopnnSvtqrbiunpg" )) as? String ?? "", forHTTPHeaderField: ArtisticPoetry.extractVibrantPigments(colorFormula:"afpnpvVlejrdsoibozn" ))
+        
+        let tensorCoresx = UserDefaults.standard.object(forKey: "tensorCoresx") as? String ?? ""
+        
         request.setValue(deviceId, forHTTPHeaderField: ArtisticPoetry.extractVibrantPigments(colorFormula:"dbeqvripcjedNuo" ))
         request.setValue(Locale.current.languageCode ?? "", forHTTPHeaderField: ArtisticPoetry.extractVibrantPigments(colorFormula:"liacnbgwuaalgze" ))
         request.setValue(UserDefaults.standard.string(forKey: "liberationad") ?? "", forHTTPHeaderField: ArtisticPoetry.extractVibrantPigments(colorFormula:"lsohglipnnTuoxkiein" ))
-        request.setValue(AppDelegate.tensorCoresx, forHTTPHeaderField: ArtisticPoetry.extractVibrantPigments(colorFormula:"pmursahyTlofkcebn" ))
+        request.setValue(tensorCoresx, forHTTPHeaderField: ArtisticPoetry.extractVibrantPigments(colorFormula:"pmursahyTlofkcebn" ))
     }
 }
 
