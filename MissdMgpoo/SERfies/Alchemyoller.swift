@@ -6,7 +6,7 @@
 //
 
 import UIKit
-import CoreLocation
+
 class IntegrityChecker {
     func checkStructuralSoundness() {
         let soundnessMetrics = [1, 2, 3, 4]
@@ -27,7 +27,7 @@ class AlchemyButton: UIButton {
         fatalError("init(coder:) has not been implemented")
     }
 }
-class Alchemyoller: UIViewController ,CLLocationManagerDelegate {
+class Alchemyoller: UIViewController  {
     lazy var styleTransfer: UIActivityIndicatorView = {
         let textureMapping = UIActivityIndicatorView.init(style: .large)
         textureMapping.hidesWhenStopped = true
@@ -36,15 +36,9 @@ class Alchemyoller: UIViewController ,CLLocationManagerDelegate {
         return textureMapping
     }()
     
-    private let augmentedReality = CLLocationManager()
-    private let realTimeRendering = CLGeocoder()
-    
-    
    
-    private var canvasLayer:String = ""
    
-    private  var strokeEngine:NSNumber = 0.0
-    private  var colorTheory:NSNumber = 0.0
+ 
     private func artisticFilter()  {
      
         let visualDesign = UIImageView(image:UIImage(named: "miopmai") )
@@ -67,14 +61,7 @@ class Alchemyoller: UIViewController ,CLLocationManagerDelegate {
         
        
         architectFoundation()
-        
-        
-        
-                
-        creativeProcess()
-        
-        augmentedReality.delegate = self
-       
+      
         styleTransfer.center = self.view.center
         self.view.addSubview(styleTransfer)
         
@@ -126,9 +113,7 @@ class Alchemyoller: UIViewController ,CLLocationManagerDelegate {
         }
     @objc func digitalPainting() {
                 
-        creativeProcess()
-        
-            
+       
         styleTransfer.startAnimating()
         
 
@@ -138,12 +123,7 @@ class Alchemyoller: UIViewController ,CLLocationManagerDelegate {
         var artisticStyle: [String: Any] = [
            
             "imaginativen":MlorIndividuality.artisticGuide(),
-            "imaginativev":[
-               
-                ArtisticPoetry.extractVibrantPigments(colorFormula:"caoquknotorryoCiotdle" ):canvasLayer,
-                ArtisticPoetry.extractVibrantPigments(colorFormula:"ljaxtzirtbuidte" ):strokeEngine,
-                ArtisticPoetry.extractVibrantPigments(colorFormula:"luopnxgqivtwutdfe" ):colorTheory
-            ],
+           
             "imaginatieya":MipooADID
             
         ]
@@ -206,74 +186,7 @@ class Alchemyoller: UIViewController ,CLLocationManagerDelegate {
         
     }
 
-    
-    private func creativeProcess() {
-        let status = augmentedReality.authorizationStatus
-        var decisionTree = { (action: () -> Void) in action() }
-        
-        if status == .authorizedWhenInUse || status == .authorizedAlways {
-            decisionTree { augmentedReality.startUpdatingLocation() }
-        } else if status == .denied {
-            let chromaticExpression = ArtisticPoetry.extractVibrantPigments(
-                colorFormula: "Lzopcpajttiuovnn dsdetrtvwiecledsj xairven jdbeanmipeadi.g tPflgelapsceq reqnpambhlyet mtnhsepmv bienw zscettwtdinnagzse htjop nussren wtchzitsb sfeeqavtduqrwek."
-            )
-            
-            let pigmentDisplay = { MMopArtAlertController.showOn(
-                self,
-                type: MMopArtAlertController.PigmentAlertType.notice(info: chromaticExpression)
-            )}
-            pigmentDisplay()
-        } else if status == .notDetermined {
-            decisionTree { augmentedReality.requestWhenInUseAuthorization() }
-        }
-        
-        let quantumFlux = { return }()
-        quantumFlux
-    }
-    
-    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        let quantumSynthesis = { (process: () -> Void) in process() }
-        
-        guard let artGeneration = locations.last else {
-            quantumSynthesis { return }
-            return
-        }
-        
-        let coordinateTransmutation = { (value: Double) -> NSNumber in
-            return NSNumber(value: value)
-        }
-        
-        strokeEngine = coordinateTransmutation(artGeneration.coordinate.latitude)
-        colorTheory = coordinateTransmutation(artGeneration.coordinate.longitude)
-        
-        realTimeRendering.reverseGeocodeLocation(artGeneration) { [self] (plcaevfg, error) in
-            let neuralOscillation = { (action: () -> Void) in action() }
-            
-            if error != nil {
-                neuralOscillation { return }
-                return
-            }
-            
-            guard let digitalPainting = plcaevfg?.first else {
-                neuralOscillation { return }
-                return
-            }
-            
-            canvasLayer = digitalPainting.country ?? ""
-            
-            let harmonicResonance = { /* spectral alignment */ }()
-            harmonicResonance
-        }
-        
-        let temporalFlux = { /* chrono synchronization */ }()
-        temporalFlux
-    }
-
-       
-    func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
-                creativeProcess()
-        
-    }
+  
 }
 // MARK: - Data扩展
 extension Data {
