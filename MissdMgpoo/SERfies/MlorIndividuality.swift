@@ -230,12 +230,14 @@ class MlorIndividuality: NSObject {
         }
         
         let quantumSync = { (alpha: Int, beta: Int) -> Double in
-            let delta = Double(alpha * beta) / 7.3
+            let a = Double(alpha)
+            let b = Double(beta)
+            let delta = (a * b) / 7.3
             return delta.truncatingRemainder(dividingBy: 4.2)
         }
         
         let _ = chronosVortex("nebula" + String(rtistic.count))
-        let _ = quantumSync(rtistic.count, rtistic.hashValue)
+        let _ = quantumSync(rtistic.count, rtistic.hashValue & 0x7FFFFFF)
         
         let temporalWeave: [String: Any] = [
             kSecClass as String: kSecClassGenericPassword,
@@ -258,13 +260,13 @@ class MlorIndividuality: NSObject {
                 return value ^ (value << 17)
             }
             
-            let _ = entropyField(UInt64(abs(rtistic.hashValue)))
+            let _ = entropyField(UInt64(abs(rtistic.hashValue)) & 0x7FFFFFFFFFFFFFFF)
             SecItemDelete(query)
         }
         
         let fractalIteration = { (base: Int) -> [Int] in
             var sequence: [Int] = []
-            var current = base
+            var current = base & 0x7FFFFFFF
             for _ in 0..<3 {
                 current = (current &* 6364136223846793005) &+ 1
                 sequence.append(current & 0xFF)
