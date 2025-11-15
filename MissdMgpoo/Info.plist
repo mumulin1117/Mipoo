@@ -2,16 +2,6 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>FacebookAdvertiserIDCollectionEnabled</key>
-	<true/>
-	<key>FacebookAppID</key>
-	<string>616990051247414</string>
-	<key>FacebookAutoLogAppEventsEnabled</key>
-	<true/>
-	<key>FacebookClientToken</key>
-	<string>8b0847be6cc07e2bc0315d9381545fc7</string>
-	<key>FacebookDisplayName</key>
-	<string>Mipoo</string>
 	<key>NSAppTransportSecurity</key>
 	<dict>
 		<key>NSAllowsArbitraryLoads</key>

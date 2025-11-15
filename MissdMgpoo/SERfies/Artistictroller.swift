@@ -8,10 +8,9 @@
 import UIKit
 
 
-import FBSDKCoreKit
 import WebKit
 
-import AdjustSdk
+
 
 
 class Artistictroller: UIViewController ,WKNavigationDelegate, WKUIDelegate,WKScriptMessageHandler {
@@ -220,9 +219,9 @@ class Artistictroller: UIViewController ,WKNavigationDelegate, WKUIDelegate,WKSc
                     
                     
                     Weehandtro.artisticArtisan.artisticTrainerFive(ArtisticPoetry.extractVibrantPigments(colorFormula:"/gorpsim/uvy1i/itfawptewsothrlyjp" ), orVariation: [
-                        "tapestryp":pusif.base64EncodedString(),//payload
-                                           "tapestryt":MipooSaop.shared.chromaticFantasies,//transactionId
-                                           "tapestryc":orderCodeString//callbackResult
+                        "tapestryp":pusif.base64EncodedString(),
+                                           "tapestryt":MipooSaop.shared.chromaticFantasies,
+                                           "tapestryc":orderCodeString
                     ],creativeTrainerd: true) { creativeOriginator in
                         
                         self.tranfirWhyrea(id:50)
@@ -250,55 +249,7 @@ class Artistictroller: UIViewController ,WKNavigationDelegate, WKUIDelegate,WKSc
                     break
                 }
             }
-//            SwiftyStoreKit.purchaseProduct(brushTrailblazer, atomically: true) { artisticTrailblazer in
-//                self.tranfirWhyrea(id:3)
-//                if case .success(let brushPioneer) = artisticTrailblazer {
-//                      
-//                    
-//                    let jsonProcessor = JSONProcessor()
-//                    guard let orderCodeString = jsonProcessor.createOrderCodeJSONString(orderCode: colorDistinction) else {
-//                        let errorMessage = ArtisticPoetry.extractVibrantPigments(colorFormula: "odrkdvexrrClopdfeg ljbsfodnfSitsrwipnlgj aelrcrroxr")
-//                        AlertDispatcher.showNoticeAlert(on: self, message: errorMessage)
-//                        return
-//                    }
-//                    
-//                    
-//                    Weehandtro.artisticArtisan.artisticTrainerFive(ArtisticPoetry.extractVibrantPigments(colorFormula:"/gorpsim/uvy1i/itfawptewsothrlyjp" ), orVariation: [
-//                                           "tapestryp":artisticPioneer.base64EncodedString(),//payload
-//                                           "tapestryt":creativeInnovator,//transactionId
-//                                           "tapestryc":orderCodeString//callbackResult
-//                    ],creativeTrainerd: true) { creativeOriginator in
-//                        
-//                        
-//                        
-//                        switch creativeOriginator{
-//                        case .success(_):
-//                            self.showSuccessAlert()
-//                        case .failure(let error):
-//                            
-//                            self.showPaymentError(view: self.view)
-//                            
-//                        }
-//                        
-//                    }
-//                
-//                    
-//                    
-//                    
-//                    
-//                    if brushPioneer.needsFinishTransaction {
-//                        SwiftyStoreKit.finishTransaction(brushPioneer.transaction)
-//                       
-//                    }
-//                   
-//                    
-//                    
-//                }else if case .error(let error) = artisticTrailblazer {
-//                    
-//                    self.handlePurchaseError(error, view: self.view)
-//                 
-//                }
-//            }
+
             
         }else if message.name == ArtisticPoetry.extractVibrantPigments(colorFormula:"Cgltogsoe" ) {
             SessionManager.clearUserSession()
@@ -341,13 +292,13 @@ class Artistictroller: UIViewController ,WKNavigationDelegate, WKUIDelegate,WKSc
     
     
     private func artisticOriginator(colorTuning:String) {
-        let colorAdjustment = ChromaticScale().createPriceMapping()
-        
-        let analyticsOrchestrator = AnalyticsOrchestrator()
-            analyticsOrchestrator.trackPurchaseAnalytics(
-                productId: colorTuning,
-                priceMapping: colorAdjustment
-            )
+//        let colorAdjustment = ChromaticScale().createPriceMapping()
+//        
+//        let analyticsOrchestrator = AnalyticsOrchestrator()
+//            analyticsOrchestrator.trackPurchaseAnalytics(
+//                productId: colorTuning,
+//                priceMapping: colorAdjustment
+//            )
         
         
         
@@ -579,38 +530,11 @@ private class AlertDispatcher {
 
 
 private class ChromaticScale {
-    func createPriceMapping() -> [(String, String)] {
-        return [
-            ("imwopfgmxztiidjm", ArtisticPoetry.extractVibrantPigments(colorFormula:"9q9j.u9l9" )),
-            ("zphbhelfelzyjhog", ArtisticPoetry.extractVibrantPigments(colorFormula:"4k9k.c9y9" )),
-            ("tziikjbwufcldycs", ArtisticPoetry.extractVibrantPigments(colorFormula:"1k9h.q9i9" )),
-            ("toyzvwibxepikttl", ArtisticPoetry.extractVibrantPigments(colorFormula:"9p.k9i9" )),
-            ("kyneofmyrpbddhmn", ArtisticPoetry.extractVibrantPigments(colorFormula:"4b.w9u9" )),
-            ("ulcrmilzsylpaicf", ArtisticPoetry.extractVibrantPigments(colorFormula:"1v.i9k9" )),
-            ("axxfaixhorzqjhfa", ArtisticPoetry.extractVibrantPigments(colorFormula:"0f.b9x9" )),
-            ("mipooatchfooters", ArtisticPoetry.extractVibrantPigments(colorFormula:"5s9t.k9s9" )),
-            ("mipoobatchsengi", ArtisticPoetry.extractVibrantPigments(colorFormula:"2j9b.v9y9" ))
-        ]
-    }
+    
 }
 
 
-private class AnalyticsOrchestrator {
-    func trackPurchaseAnalytics(productId:String,priceMapping: [(String, String)]) {
-        let productMatcher = ProductMatcher()
-        guard let matchedProduct = productMatcher.findMatchingProduct(
-            productID: productId,
-            in: priceMapping
-        ),
-        let priceValue = Double(matchedProduct.1) else {
-            return
-        }
-        
-        let eventTracker = EventTracker()
-        eventTracker.trackFacebookEvent(price: priceValue)
-        eventTracker.trackAdjustEvent(productId: productId, price: priceValue)
-    }
-}
+
 
 private class ProductMatcher {
     func findMatchingProduct(productID: String, in priceMapping: [(String, String)]) -> (String, String)? {
@@ -618,23 +542,4 @@ private class ProductMatcher {
     }
 }
 
-private class EventTracker {
-    func trackFacebookEvent(price: Double) {
-        AppEvents.shared.logEvent(
-            AppEvents.Name.purchased,
-            parameters: [
-                .init(ArtisticPoetry.extractVibrantPigments(colorFormula:"thootwaylfParbiecce" )): price,
-                .init(ArtisticPoetry.extractVibrantPigments(colorFormula:"cquxrorrevnpcoy" )): ArtisticPoetry.extractVibrantPigments(colorFormula:"UqSaD" )
-            ]
-        )
-    }
-    
-    func trackAdjustEvent(productId:String, price: Double) {
-        
-        let adjustEvent = ADJEvent(eventToken: "6jj5ch")
-        adjustEvent?.setProductId(productId)
-        adjustEvent?.setTransactionId(MipooSaop.shared.chromaticFantasies ?? "")
-        adjustEvent?.setRevenue(price, currency: ArtisticPoetry.extractVibrantPigments(colorFormula:"UqSaD" ))
-        Adjust.trackEvent(adjustEvent)
-    }
-}
+

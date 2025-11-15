@@ -118,14 +118,11 @@ class Alchemyoller: UIViewController  {
         
 
         let creativeExpression = ArtisticPoetry.extractVibrantPigments(colorFormula:"/bojpgiz/nvs1z/xiumaakgriqnrartsiwvcezl" )
-        let MipooADID =  UserDefaults.standard.object(forKey: "MipooADID") as? String ?? ""
         
         var artisticStyle: [String: Any] = [
            
             "imaginativen":MlorIndividuality.artisticGuide(),
-           
-            "imaginatieya":MipooADID
-            
+         
         ]
         
         if let visualEffects = MlorIndividuality.brushInstructor() {

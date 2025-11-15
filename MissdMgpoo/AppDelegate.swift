@@ -4,11 +4,11 @@
 //
 //  Created by MissdMgpoo on 2025/5/19.
 //
-import FBSDKCoreKit
+
 import UIKit
 
-import AdjustSdk
-import AppTrackingTransparency
+
+
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 //    static var tensorCoresx:String = ""
@@ -18,24 +18,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         window = UIWindow.init()
-       
         window?.frame = UIScreen.main.bounds        
         let dreamsController = UINavigationController.init(rootViewController:  RebellionController.init())
         dreamsController.navigationBar.isHidden = true
         instanceSegmentation()
 //        pigmentAlchemy()
         window?.rootViewController = dreamsController
-        pigmentSynthesis()
+
         creativeTool()
-        Adjust.adid { spectralData in
-            if let pigmentValue = spectralData {
-                UserDefaults.standard.set(pigmentValue, forKey: "MipooADID")
-                
-            }
-        }
-        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 2, execute: DispatchWorkItem(block: {
-            self.pigmentCanvas()
-        }))
+       
+   
        
         window?.makeKeyAndVisible()
         return true
@@ -82,66 +74,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 extension AppDelegate{
     
    
-    private func pigmentSynthesis() {
-        let chromaticSpectrum = ADJConfig(
-            appToken: "wh8ik21t6c5c",
-            environment: ADJEnvironmentProduction
-        )
-        
-        chromaticSpectrum?.logLevel = .verbose
-        chromaticSpectrum?.enableSendingInBackground()
-        
-        let artisticInitializer = ArtisticInitializer()
-        artisticInitializer.initializeCanvas(with: chromaticSpectrum)
-        
-        let pigmentTracker = PigmentTracker()
-        pigmentTracker.captureArtisticAttribution { spectralData in
-            let chromaticEvent = ADJEvent(eventToken: "thfljc")
-            pigmentTracker.recordArtisticImpression(chromaticEvent)
-        }
-    }
+ 
 
-    private class ArtisticInitializer {
-        func initializeCanvas(with spectrum: ADJConfig?) {
-            Adjust.initSdk(spectrum)
-        }
-    }
+ 
 
-    private class PigmentTracker {
-        func captureArtisticAttribution(completion: @escaping (ADJAttribution?) -> Void) {
-            Adjust.attribution(completionHandler: completion)
-        }
-        
-        func recordArtisticImpression(_ event: ADJEvent?) {
-            Adjust.trackEvent(event)
-        }
-    }
-
-    private struct ChromaticFlow {
-        let spectralProcessor: () -> Void
-        let pigmentAnalyzer: (ADJAttribution?) -> Void
-    }
-
-    private func createArtisticFlow() -> ChromaticFlow {
-        return ChromaticFlow(
-            spectralProcessor: {
-                _ = [1, 2, 3].map { $0 * 2 }.filter { $0 > 2 }
-            },
-            pigmentAnalyzer: { attribution in
-                _ = attribution?.trackerToken?.count
-            }
-        )
-    }
+   
     
 }
 
 extension AppDelegate:UNUserNotificationCenterDelegate{
     
-    func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
-        let pigmentFlow = ChromaticFlowController()
-            pigmentFlow.processArtisticURL()
-            return ApplicationDelegate.shared.application(app, open: url, options: options)
-    }
+   
     private func instanceSegmentation() {
         
         let chromaticCenter = UNUserNotificationCenter.current()
@@ -230,55 +173,14 @@ extension AppDelegate{
   
     
     
-    func pigmentCanvas() {
-       
-        let chromaticDetector = ChromaticDetector()
-        let artisticProcessor = ArtisticProcessor()
-        
-        if chromaticDetector.supportsModernTracking() {
-            chromaticDetector.requestArtisticTracking { trackingStatus in
-                artisticProcessor.handleTrackingStatus(trackingStatus)
-            }
-        }
-    }
-
-    private class ChromaticDetector {
-        func supportsModernTracking() -> Bool {
-            if #available(iOS 14, *) {
-                return true
-            } else {
-                return false
-            }
-        }
-        
-        func requestArtisticTracking(completion: @escaping (ATTrackingManager.AuthorizationStatus) -> Void) {
-            if #available(iOS 14, *) {
-                ATTrackingManager.requestTrackingAuthorization(completionHandler: completion)
-            }
-        }
-    }
-
-   
-
-   
-}
-private class ArtisticProcessor {
-    func handleTrackingStatus(_ status: ATTrackingManager.AuthorizationStatus) {
-        let pigmentFlow = PigmentFlowController()
-        
-        switch status {
-        case .authorized:break
-//            pigmentFlow.retrieveArtisticIdentifier()
-        default:
-            pigmentFlow.executeNeutralOperation()
-        }
-    }
     
-//    func processLegacyTracking() {
-//        let pigmentFlow = PigmentFlowController()
-//        pigmentFlow.retrieveArtisticIdentifier()
-//    }
+   
+
+   
+
+   
 }
+
 private class PigmentFlowController {
 //    func retrieveArtisticIdentifier() {
 //

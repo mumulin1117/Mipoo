@@ -1,6 +1,0 @@
-framework module Pods_MissdMgpoo {
-  umbrella header "Pods-MissdMgpoo-umbrella.h"
-
-  export *
-  module * { export * }
-}
