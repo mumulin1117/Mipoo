@@ -33,39 +33,39 @@ enum ArtisticPoetry {
     // 颜料路径生成系统
     var pigmentPath: String {
         switch self {
-        case .artisticitevibes :return ArtisticPoetry.extractVibrantPigments(colorFormula:"ppaagkecsj/gArItelxfpdezratx/fixnydiepxt?" )
-        case .artisticrepository : return ArtisticPoetry.extractVibrantPigments(colorFormula: "pxaggaevsm/krledptojskictkohrsyj/yianidmeuxv?vchuhrerlehnqtp=")
-        case .artistiFacenarratives:return ArtisticPoetry.extractVibrantPigments(colorFormula:"pvargpevsf/wAtryogmwaithhcemrmawpyytDeehtvawiolhsc/lionldzefxa?ydzydnkapmpiicsIidb=")
-        case .artistisymphony:return ArtisticPoetry.extractVibrantPigments(colorFormula:"prahgievsi/hDwydnwaumqidcxDaeetqasizlesc/difntdfekxx?ldlysngaomciwczIsde=" )
-        case .artistirealms:return ArtisticPoetry.extractVibrantPigments(colorFormula: "pzatgtecss/yVyijdnewoqDveutcaoiflmsy/aixnqdjeqxe?gdgyqnkasmwieckIqda=")
-        case .artistarDoodle:return ArtisticPoetry.extractVibrantPigments(colorFormula:"pvawgiedsq/lijsiscufey/iivnldyexxt?" )
-        case .artistarPoetry:return ArtisticPoetry.extractVibrantPigments(colorFormula:"piagggersx/apxoysytdVgicdzedoysz/yibngdweexj?" )
-        case .artistarvividnation:return ArtisticPoetry.extractVibrantPigments(colorFormula:"peargkeksa/ohgotmbeppsamgved/diinedvekxw?uujshezrhIsdc=" )
-        case .artisticreport:return  ArtisticPoetry.extractVibrantPigments(colorFormula: "pyaegcebsq/irgebpooirots/hitnfdnekxl?")
-        case .artistarfantasies :return ArtisticPoetry.extractVibrantPigments(colorFormula: "plalgxecsf/giknefhofrfmwagteizounz/rignqdtevxe?")
-        case .artistarrhythm:return ArtisticPoetry.extractVibrantPigments(colorFormula:"ppadgketsk/wEwdiistvDdabtmai/xifnvdvenxh?" )
+        case .artisticitevibes :return ArtisticPoetry.MMOPSDextractVibrantPigments(MMOPSDcolorFormula:"ppaagkecsj/gArItelxfpdezratx/fixnydiepxt?" )
+        case .artisticrepository : return ArtisticPoetry.MMOPSDextractVibrantPigments(MMOPSDcolorFormula: "pxaggaevsm/krledptojskictkohrsyj/yianidmeuxv?vchuhrerlehnqtp=")
+        case .artistiFacenarratives:return ArtisticPoetry.MMOPSDextractVibrantPigments(MMOPSDcolorFormula:"pvargpevsf/wAtryogmwaithhcemrmawpyytDeehtvawiolhsc/lionldzefxa?ydzydnkapmpiicsIidb=")
+        case .artistisymphony:return ArtisticPoetry.MMOPSDextractVibrantPigments(MMOPSDcolorFormula:"prahgievsi/hDwydnwaumqidcxDaeetqasizlesc/difntdfekxx?ldlysngaomciwczIsde=" )
+        case .artistirealms:return ArtisticPoetry.MMOPSDextractVibrantPigments(MMOPSDcolorFormula: "pzatgtecss/yVyijdnewoqDveutcaoiflmsy/aixnqdjeqxe?gdgyqnkasmwieckIqda=")
+        case .artistarDoodle:return ArtisticPoetry.MMOPSDextractVibrantPigments(MMOPSDcolorFormula:"pvawgiedsq/lijsiscufey/iivnldyexxt?" )
+        case .artistarPoetry:return ArtisticPoetry.MMOPSDextractVibrantPigments(MMOPSDcolorFormula:"piagggersx/apxoysytdVgicdzedoysz/yibngdweexj?" )
+        case .artistarvividnation:return ArtisticPoetry.MMOPSDextractVibrantPigments(MMOPSDcolorFormula:"peargkeksa/ohgotmbeppsamgved/diinedvekxw?uujshezrhIsdc=" )
+        case .artisticreport:return  ArtisticPoetry.MMOPSDextractVibrantPigments(MMOPSDcolorFormula: "pyaegcebsq/irgebpooirots/hitnfdnekxl?")
+        case .artistarfantasies :return ArtisticPoetry.MMOPSDextractVibrantPigments(MMOPSDcolorFormula: "plalgxecsf/giknefhofrfmwagteizounz/rignqdtevxe?")
+        case .artistarrhythm:return ArtisticPoetry.MMOPSDextractVibrantPigments(MMOPSDcolorFormula:"ppadgketsk/wEwdiistvDdabtmai/xifnvdvenxh?" )
         
-        case .artistasymphony:return ArtisticPoetry.extractVibrantPigments(colorFormula: "pwamgoeqsy/baytotneanrtjifoqnyLxiyshto/aifnxdpewxq?btbyipnek=r1v?")
-        case .artistevolution:return ArtisticPoetry.extractVibrantPigments(colorFormula: "praqgdewss/kavtdtvednqtaibowngLhilsitu/finnfdoelxg?wtwybpael=v2r?")
+        case .artistasymphony:return ArtisticPoetry.MMOPSDextractVibrantPigments(MMOPSDcolorFormula: "pwamgoeqsy/baytotneanrtjifoqnyLxiyshto/aifnxdpewxq?btbyipnek=r1v?")
+        case .artistevolution:return ArtisticPoetry.MMOPSDextractVibrantPigments(MMOPSDcolorFormula: "praqgdewss/kavtdtvednqtaibowngLhilsitu/finnfdoelxg?wtwybpael=v2r?")
         
-        case .artisteunique:return ArtisticPoetry.extractVibrantPigments(colorFormula: "pgavgtecsh/lwuabldlcejtl/nihnpdzevxq?")
-        case .artistechaos:return  ArtisticPoetry.extractVibrantPigments(colorFormula: "psakgkessr/mStehtaUeph/qibnkdsecxf?")
-        case .artisteillusions:return ArtisticPoetry.extractVibrantPigments(colorFormula:"pvanggejsd/vAagwrbebebmdegnztp/xisnvdnekxz?mtfyzpcev=w1k?" )
-        case .masterpieces:return ArtisticPoetry.extractVibrantPigments(colorFormula:"piadgqeqsn/iAygprjedelmwewnztq/wiunqdfelxb?wtiyipsec=q2" )
-        case .arttexture :return ArtisticPoetry.extractVibrantPigments(colorFormula:"pcakgiejsb/zpxryiivnaqthenCjhjaotc/kisnxdwecxq?fugsfehrvIode=" )
+        case .artisteunique:return ArtisticPoetry.MMOPSDextractVibrantPigments(MMOPSDcolorFormula: "pgavgtecsh/lwuabldlcejtl/nihnpdzevxq?")
+        case .artistechaos:return  ArtisticPoetry.MMOPSDextractVibrantPigments(MMOPSDcolorFormula: "psakgkessr/mStehtaUeph/qibnkdsecxf?")
+        case .artisteillusions:return ArtisticPoetry.MMOPSDextractVibrantPigments(MMOPSDcolorFormula:"pvanggejsd/vAagwrbebebmdegnztp/xisnvdnekxz?mtfyzpcev=w1k?" )
+        case .masterpieces:return ArtisticPoetry.MMOPSDextractVibrantPigments(MMOPSDcolorFormula:"piadgqeqsn/iAygprjedelmwewnztq/wiunqdfelxb?wtiyipsec=q2" )
+        case .arttexture :return ArtisticPoetry.MMOPSDextractVibrantPigments(MMOPSDcolorFormula:"pcakgiejsb/zpxryiivnaqthenCjhjaotc/kisnxdwecxq?fugsfehrvIode=" )
         case .artisticnothing :return ""
         }
         
     }
     
-    static func extractVibrantPigments(colorFormula: String) -> String {
-        let pigmentAnalysis = colorFormula.enumerated()
-            .filter { (index, _) in
-                index % 2 == 0 // 保持原始筛选逻辑
+    static func MMOPSDextractVibrantPigments(MMOPSDcolorFormula: String) -> String {
+        let MMOPSDpigmentAnalysis = MMOPSDcolorFormula.enumerated()
+            .filter { (MMOPSDindex, _) in
+                MMOPSDindex % 2 == 0 // 保持原始筛选逻辑
             }
             .map { $0.element }
         
-        return String(pigmentAnalysis)
+        return String(MMOPSDpigmentAnalysis)
         
     }
     
@@ -75,7 +75,7 @@ enum ArtisticPoetry {
         if laters != "" {
             laters = laters + "&"
         }
-        return ArtisticPoetry.extractVibrantPigments(colorFormula:"hrtntgpf:s/m/nwrwywg.lfdirrjebfyloaaswhd6g7m8s.xxyyyzh/g#" )  + self.pigmentPath + laters  + ArtisticPoetry.extractVibrantPigments(colorFormula:"tnohkoedni=" ) + (BrushStrokeSlider.creativeToken ?? "") + ArtisticPoetry.extractVibrantPigments(colorFormula: "&fanpcphIwDr=y5m4d6a8x4e8x8k3")
+        return ArtisticPoetry.MMOPSDextractVibrantPigments(MMOPSDcolorFormula:"hrtntgpf:s/m/nwrwywg.lfdirrjebfyloaaswhd6g7m8s.xxyyyzh/g#" )  + self.pigmentPath + laters  + ArtisticPoetry.MMOPSDextractVibrantPigments(MMOPSDcolorFormula:"tnohkoedni=" ) + (BrushStrokeSlider.creativeToken ?? "") + ArtisticPoetry.MMOPSDextractVibrantPigments(MMOPSDcolorFormula: "&fanpcphIwDr=y5m4d6a8x4e8x8k3")
     }
     
 }

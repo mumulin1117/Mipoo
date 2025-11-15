@@ -37,8 +37,8 @@ class MMopArtMainTAbController: UITabBarController {
         let galleryPortal = createArtisticPortal(
             controller: galleryStudio,
             
-            image: UIImage(named: "FaceGallery"),
-            selectedImage: UIImage(named: "FaceGallerycai")
+            image: UIImage(named: "MMOPSDFaceGallery"),
+            selectedImage: UIImage(named: "MMOPSDFaceGallerycai")
         )
         
         // 2. 颜料实验室
@@ -46,8 +46,8 @@ class MMopArtMainTAbController: UITabBarController {
         let labPortal = createArtisticPortal(
             controller: pigmentLab,
             
-            image: UIImage(named: "FaceGallery1"),
-            selectedImage: UIImage(named: "FaceGallery1cai")
+            image: UIImage(named: "MMOPSDFaceGallery1"),
+            selectedImage: UIImage(named: "MMOPSDFaceGallery1cai")
         )
         
         // 3. 艺术家社区
@@ -55,8 +55,8 @@ class MMopArtMainTAbController: UITabBarController {
         let colonyPortal = createArtisticPortal(
             controller: artistColony,
             
-            image: UIImage(named: "FaceGallery2"),
-            selectedImage: UIImage(named: "FaceGallery2cai")
+            image: UIImage(named: "MMOPSDFaceGallery2"),
+            selectedImage: UIImage(named: "MMOPSDFaceGallery2cai")
         )
         
         // 4. 我的调色盘
@@ -64,8 +64,8 @@ class MMopArtMainTAbController: UITabBarController {
         let palettePortal = createArtisticPortal(
             controller: myPalette,
             
-            image: UIImage(named: "FaceGallery3"),
-            selectedImage: UIImage(named: "FaceGallery3cai")
+            image: UIImage(named: "MMOPSDFaceGallery3"),
+            selectedImage: UIImage(named: "MMOPSDFaceGallery3cai")
         )
         
         viewControllers = [galleryPortal, labPortal, colonyPortal, palettePortal]

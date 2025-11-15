@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="MMpoCommcute" customModule="MissdMgpoo" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="485" height="353"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="485" height="353"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J5E-Tc-Xgo">
+                        <rect key="frame" x="0.0" y="311" width="102" height="42"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.1015093537414966" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="42" id="Hyb-MS-Ivk"/>
+                            <constraint firstAttribute="width" constant="102" id="Ovi-NX-w1g"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                        <state key="normal" title="  0" image="illusions">
+                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </state>
+                    </button>
+                    <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="78X-cc-lhu">
+                        <rect key="frame" x="110" y="311" width="375" height="42"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.1015093537" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="42" id="VEH-kt-cP6"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                        <state key="normal" image="MMOPSDmakecomment">
+                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </state>
+                    </button>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="2RU-GT-xTK">
+                        <rect key="frame" x="10" y="108" width="133" height="193"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="193" id="fSx-5U-MK6"/>
+                            <constraint firstAttribute="width" constant="133" id="fwe-Rr-3lx"/>
+                        </constraints>
+                    </imageView>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="vnk-9W-eAB">
+                        <rect key="frame" x="149" y="108" width="326" height="193"/>
+                        <constraints>
+                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="193" id="O4m-Vr-cJO"/>
+                            <constraint firstAttribute="height" constant="193" id="j2Y-oV-aep"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qaV-hv-KZk">
+                        <rect key="frame" x="65" y="18" width="0.0" height="0.0"/>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OLC-1N-nIf">
+                        <rect key="frame" x="65" y="22" width="0.0" height="0.0"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="7lr-C6-aHN" userLabel="Avator">
+                        <rect key="frame" x="10" y="10" width="50" height="50"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="50" id="F9n-cl-SZL"/>
+                            <constraint firstAttribute="height" constant="50" id="aRh-dp-Zl0"/>
+                        </constraints>
+                    </imageView>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MMOPSDavatorCover" translatesAutoresizingMaskIntoConstraints="NO" id="EcE-D6-bVa" userLabel="Cover">
+                        <rect key="frame" x="10" y="10" width="50" height="50"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="50" id="TWD-3Z-k8O"/>
+                            <constraint firstAttribute="width" constant="50" id="hbp-2m-jlI"/>
+                        </constraints>
+                    </imageView>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oG7-cE-TRQ">
+                        <rect key="frame" x="451" y="24" width="22" height="22"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="22" id="non-Hs-57K"/>
+                            <constraint firstAttribute="height" constant="22" id="w1S-aQ-yJ9"/>
+                        </constraints>
+                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                        <state key="normal" image="MMOPSDFaceReport"/>
+                    </button>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tVA-iP-TDc">
+                        <rect key="frame" x="10" y="30" width="459" height="0.0"/>
+                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <color key="backgroundColor" red="0.14509803921568626" green="0.14509803921568626" blue="0.1764705882352941" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="vnk-9W-eAB" firstAttribute="leading" secondItem="2RU-GT-xTK" secondAttribute="trailing" constant="6" id="0Il-f2-XJz"/>
+                <constraint firstItem="qaV-hv-KZk" firstAttribute="leading" secondItem="7lr-C6-aHN" secondAttribute="trailing" constant="5" id="3td-Qs-Ux2"/>
+                <constraint firstAttribute="bottom" secondItem="J5E-Tc-Xgo" secondAttribute="bottom" id="8OJ-MX-09X"/>
+                <constraint firstAttribute="trailing" secondItem="tVA-iP-TDc" secondAttribute="trailing" constant="16" id="A8f-iw-DXn"/>
+                <constraint firstItem="EcE-D6-bVa" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="10" id="Anz-Il-tI5"/>
+                <constraint firstItem="J5E-Tc-Xgo" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="CVJ-1Z-E6v"/>
+                <constraint firstItem="J5E-Tc-Xgo" firstAttribute="top" secondItem="2RU-GT-xTK" secondAttribute="bottom" constant="10" id="HGs-Kn-iY5"/>
+                <constraint firstAttribute="trailing" secondItem="78X-cc-lhu" secondAttribute="trailing" id="L3i-Mr-1nC"/>
+                <constraint firstItem="oG7-cE-TRQ" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="24" id="VC7-gh-EgT"/>
+                <constraint firstItem="2RU-GT-xTK" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="10" id="Y97-td-TUJ"/>
+                <constraint firstItem="tVA-iP-TDc" firstAttribute="leading" secondItem="EcE-D6-bVa" secondAttribute="leading" id="bSy-1g-5wV"/>
+                <constraint firstItem="qaV-hv-KZk" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="18" id="c0I-r5-bCy"/>
+                <constraint firstItem="OLC-1N-nIf" firstAttribute="top" secondItem="qaV-hv-KZk" secondAttribute="bottom" constant="4" id="e0u-R3-VPk"/>
+                <constraint firstItem="tVA-iP-TDc" firstAttribute="top" secondItem="OLC-1N-nIf" secondAttribute="bottom" constant="8" id="fIq-bp-z13"/>
+                <constraint firstItem="EcE-D6-bVa" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="10" id="gR4-vK-pZA"/>
+                <constraint firstItem="7lr-C6-aHN" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="10" id="gtk-Da-KKO"/>
+                <constraint firstAttribute="bottom" secondItem="78X-cc-lhu" secondAttribute="bottom" id="gvr-Ul-Mhi"/>
+                <constraint firstAttribute="trailing" secondItem="oG7-cE-TRQ" secondAttribute="trailing" constant="12" id="jeR-bc-BGW"/>
+                <constraint firstItem="78X-cc-lhu" firstAttribute="leading" secondItem="J5E-Tc-Xgo" secondAttribute="trailing" constant="8" id="lXn-yc-3LS"/>
+                <constraint firstItem="OLC-1N-nIf" firstAttribute="leading" secondItem="qaV-hv-KZk" secondAttribute="leading" id="mfZ-VX-EYo"/>
+                <constraint firstItem="78X-cc-lhu" firstAttribute="top" secondItem="vnk-9W-eAB" secondAttribute="bottom" constant="10" id="oLF-Ek-Yzj"/>
+                <constraint firstAttribute="trailing" secondItem="vnk-9W-eAB" secondAttribute="trailing" constant="10" id="uvK-Kw-YiD"/>
+                <constraint firstItem="7lr-C6-aHN" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="10" id="xEY-7F-C9O"/>
+            </constraints>
+            <size key="customSize" width="485" height="353"/>
+            <connections>
+                <outlet property="Report" destination="oG7-cE-TRQ" id="Pbl-Ny-9oM"/>
+                <outlet property="beatsLabel" destination="qaV-hv-KZk" id="ZYZ-O5-eMe"/>
+                <outlet property="flairView" destination="7lr-C6-aHN" id="yFz-O9-E9q"/>
+                <outlet property="followements" destination="OLC-1N-nIf" id="CmQ-KG-XL6"/>
+                <outlet property="imaginative" destination="2RU-GT-xTK" id="QxP-pR-q8D"/>
+                <outlet property="imaginativeBig" destination="vnk-9W-eAB" id="bl1-mZ-YjO"/>
+                <outlet property="liberation" destination="78X-cc-lhu" id="hyk-7Q-jop"/>
+                <outlet property="liberationINK" destination="J5E-Tc-Xgo" id="kT4-tn-Wyg"/>
+                <outlet property="liberationLabel" destination="tVA-iP-TDc" id="tnt-5h-ToV"/>
+            </connections>
+            <point key="canvasLocation" x="121.37404580152672" y="94.014084507042256"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="MMOPSDFaceReport" width="22" height="22"/>
+        <image name="MMOPSDavatorCover" width="110" height="110"/>
+        <image name="MMOPSDmakecomment" width="128" height="128"/>
+        <image name="illusions" width="26" height="26"/>
+    </resources>
+</document>

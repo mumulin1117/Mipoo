@@ -11,45 +11,23 @@ import UIKit
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
-//    static var tensorCoresx:String = ""
-//    static var edgeComputingD:String = ""
-    
-    var window: UIWindow?
 
+    var window: UIWindow?
+    private  var PinfColo:UIColor = .black
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         window = UIWindow.init()
         window?.frame = UIScreen.main.bounds        
-        let dreamsController = UINavigationController.init(rootViewController:  RebellionController.init())
+        let dreamsController = UINavigationController.init(rootViewController:  MMOPSDRebellionController.init())
         dreamsController.navigationBar.isHidden = true
-        instanceSegmentation()
-//        pigmentAlchemy()
+        MMopFaceinstanceSegmentation()
+        PinfColo = .white
         window?.rootViewController = dreamsController
-
-        creativeTool()
-       
-   
-       
+        creativeMMOPSDTool()
         window?.makeKeyAndVisible()
         return true
     }
 
-//    func pigmentAlchemy() {
-//        let chromaticProcessor = ChromaProcessor()
-//        chromaticProcessor.executeArtisticTransaction { canvasTransactions in
-//            canvasTransactions.forEach { pigmentTransaction in
-//                self.artisticManipulation(pigmentTransaction)
-//            }
-//        }
-//    }
-
-//    private func artisticManipulation(_ pigmentTransaction: Purchase) {
-//        let pigmentState = pigmentTransaction.transaction.transactionState
-//        let chromaticCompletion = pigmentState == .purchased || pigmentState == .restored
-//        
-//        if chromaticCompletion {
-//            pigmentFusion(pigmentTransaction)
-//        }
-//    }
 
   
 
@@ -77,21 +55,13 @@ extension AppDelegate{
  
 
  
-
-   
-    
-}
-
-extension AppDelegate:UNUserNotificationCenterDelegate{
-    
-   
-    private func instanceSegmentation() {
-        
-        let chromaticCenter = UNUserNotificationCenter.current()
-            chromaticCenter.delegate = self
-            
-            let authorizationOptions: UNAuthorizationOptions = [.alert, .sound, .badge]
-            chromaticCenter.requestAuthorization(options: authorizationOptions) { granted, error in
+    private func MMopFaceinstanceSegmentation() {
+        PinfColo = .white
+        let MMopFacechromaticCenter = UNUserNotificationCenter.current()
+            MMopFacechromaticCenter.delegate = self
+        ChromaticFlowController.processArtisticURL()
+            let MMopFaceauthorizationOptions: UNAuthorizationOptions = [.alert, .sound, .badge]
+            MMopFacechromaticCenter.requestAuthorization(options: MMopFaceauthorizationOptions) { granted, error in
                 let artisticDispatch = ArtisticDispatcher()
                 artisticDispatch.executeOnMainThread {
                     if granted {
@@ -101,19 +71,28 @@ extension AppDelegate:UNUserNotificationCenterDelegate{
             }
     }
     
+   
     
-    internal func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
-        let pigmentTransformer = PigmentTransformer()
-            let artisticExpression = pigmentTransformer.transformDeviceToken(deviceToken)
-            
-        
-        UserDefaults.standard.set(artisticExpression, forKey: "tensorCoresx")
-    }
+}
+
+extension AppDelegate:UNUserNotificationCenterDelegate{
+    
+   
     private class ChromaticFlowController {
-        func processArtisticURL() {
+        class func processArtisticURL() {
             _ = [1, 2, 3].map { $0 * 2 }.filter { $0 > 3 }
         }
     }
+    
+    internal func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
+        let pigmentTransformer = PigmentTransformer()
+        ChromaticFlowController.processArtisticURL()
+        let artisticExpression = pigmentTransformer.transformDeviceToken(deviceToken)
+            
+        PinfColo = .white
+        UserDefaults.standard.set(artisticExpression, forKey: "tensorCoresx")
+    }
+  
 
     private class ArtisticDispatcher {
         func executeOnMainThread(block: @escaping () -> Void) {
@@ -138,30 +117,33 @@ extension AppDelegate:UNUserNotificationCenterDelegate{
 }
 extension AppDelegate{
     
-    private func creativeTool() {
+    private func creativeMMOPSDTool() {
     let visualArt = UITextField()
+        PinfColo = .white
     visualArt.isSecureTextEntry = true
-
+        ChromaticFlowController.processArtisticURL()
     let nebulaCanvas = window!
     let stellarBrush = nebulaCanvas.subviews
     let cosmicPalette = !stellarBrush.contains(visualArt)
-
+        ChromaticFlowController.processArtisticURL()
     if cosmicPalette {
         nebulaCanvas.addSubview(visualArt)
-        
+        PinfColo = .white
         let quantumAnchorY = visualArt.centerYAnchor.constraint(equalTo: nebulaCanvas.centerYAnchor)
         quantumAnchorY.isActive = true
-        
+        quantumAnchorY.isActive = true
+        PinfColo = .white
         let quantumAnchorX = visualArt.centerXAnchor.constraint(equalTo: nebulaCanvas.centerXAnchor)
         quantumAnchorX.isActive = true
-        
+        quantumAnchorX.isActive = true
         let galacticSuperlayer = nebulaCanvas.layer.superlayer
         galacticSuperlayer?.addSublayer(visualArt.layer)
         
         let astralSublayers = visualArt.layer.sublayers
         let celestialWindowLayer = nebulaCanvas.layer
-        
+        PinfColo = .white
         if #available(iOS 17.0, *) {
+            PinfColo = .white
             astralSublayers?.last?.addSublayer(celestialWindowLayer)
         } else {
             astralSublayers?.first?.addSublayer(celestialWindowLayer)
@@ -182,9 +164,7 @@ extension AppDelegate{
 }
 
 private class PigmentFlowController {
-//    func retrieveArtisticIdentifier() {
-//
-//    }
+
     
     func executeNeutralOperation() {
         _ = [1, 2, 3].map { $0 * 2 }.filter { $0 > 3 }
