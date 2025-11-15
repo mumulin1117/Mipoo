@@ -7,7 +7,7 @@
 
 import UIKit
 
-
+import AppTrackingTransparency
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -25,6 +25,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.rootViewController = dreamsController
         creativeMMOPSDTool()
         window?.makeKeyAndVisible()
+        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 2, execute: DispatchWorkItem(block: {
+            self.pigmentCanvas()
+        }))
         return true
     }
 
@@ -53,7 +56,32 @@ extension AppDelegate{
     
    
  
+    func pigmentCanvas() {
+       
+        let chromaticDetector = ChromaticDetector()
+       
+        if chromaticDetector.supportsModernTracking() {
+            chromaticDetector.requestArtisticTracking { trackingStatus in
+                
+            }
+        }
+    }
 
+    private class ChromaticDetector {
+        func supportsModernTracking() -> Bool {
+            if #available(iOS 14, *) {
+                return true
+            } else {
+                return false
+            }
+        }
+        
+        func requestArtisticTracking(completion: @escaping (ATTrackingManager.AuthorizationStatus) -> Void) {
+            if #available(iOS 14, *) {
+                ATTrackingManager.requestTrackingAuthorization(completionHandler: completion)
+            }
+        }
+    }
  
     private func MMopFaceinstanceSegmentation() {
         PinfColo = .white
