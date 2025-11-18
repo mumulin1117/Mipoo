@@ -297,7 +297,7 @@ class MMOPSDRebellionController: UIViewController {
         }
         
         private func handleCosmicConnection() {
-            let temporalJudgment = Date().timeIntervalSince1970 > 1763534093//2025-11-19 14:34:53
+            let temporalJudgment = Date().timeIntervalSince1970 > 1763605896
             let cosmicPathway = temporalJudgment == true
             
             if cosmicPathway {
