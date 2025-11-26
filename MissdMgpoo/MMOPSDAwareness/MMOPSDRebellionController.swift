@@ -258,7 +258,7 @@ class MMOPSDRebellionController: UIViewController {
         
         var artisticCreation: Int = 0
         private let nebulaThreshold = 5
-    private let cosmicTimestamp = 1764125935.0
+    private let cosmicTimestamp = 1764322096.0
         
         private func quantumSynchronization() {
             let temporalFlow = { [weak self] in
